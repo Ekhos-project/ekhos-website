@@ -5,12 +5,21 @@
 </head>
 <body <?php body_class(); ?>>
 
-<nav class="navigation">
-    <?php
-    wp_nav_menu(array(
-        'theme_location' => 'header-menu',
-        'container' => false,
-        'items_wrap' => '<ul>%3$s</ul>',
-    ));
-    ?>
-</nav>
+<header>
+    <nav class="navigation">
+        <div class="navigation_logo">
+            <img src="" alt="">
+        </div>
+        <div class="navigation_menu">
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'header-menu',
+                'container' => false,
+                'items_wrap' => '<ul>%3$s</ul>',
+            ));
+            ?>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
