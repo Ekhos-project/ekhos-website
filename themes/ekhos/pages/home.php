@@ -6,7 +6,7 @@
     <p>Découvrez IDSound, le plug-in ultime de sound design qui
         propulse vos sites e-commerce vers de nouveaux sommets</p>
 
-    <button>Découvrir</button>
+    <a href="" class="button">Découvrir</a>
 </section>
 
 <section class="section section-home" id="video">
@@ -123,7 +123,7 @@
                 vraiment extraordinaire.</p>
         </div>
         <div class="stories_description_action">
-            <button>En savoir plus</button>
+            <a href="" class="button">En savoir plus</a>
         </div>
     </div>
 
@@ -157,7 +157,7 @@
         </div>
     </div>
 
-    <button>Nos accompagnements</button>
+    <a href="" class="button">Nos accompagnements</a>
 </section>
 
 <section class="section section-home" id="blog">

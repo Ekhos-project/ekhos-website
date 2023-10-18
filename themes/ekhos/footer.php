@@ -8,7 +8,7 @@
             <p>Découvrez notre solution à travers une démo depuis un navigateur web.</p>
         </div>
         <div class="footer_demo_try">
-            <button>Essayer</button>
+            <a href="" class="button">Essayer</a>
         </div>
     </div>
 
