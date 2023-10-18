@@ -103,3 +103,31 @@
         </div>
     </div>
 </section>
+
+<section class="section section-home" id="stories">
+    <div class="stories_description">
+        <div class="stories_description_title">
+            <h2>Votre histoire, votre voix</h2>
+        </div>
+        <div class="stories_description_text">
+            <p>Exploitez la puissance de technique de
+                synthèse avancées grâce à notre plug-in à
+                la pointe de la technologie.
+                Façonnez et manipulez les voix avec
+                précision, créant des sons complexes et
+                évolutifs qui défient les limites.</p>
+
+            <p>Expérimentez avec les filtres, les sources
+                de modulation et les enveloppes pour
+                sculpter votre audio en quelque chose de
+                vraiment extraordinaire.</p>
+        </div>
+        <div class="stories_description_action">
+            <button>En savoir plus</button>
+        </div>
+    </div>
+
+    <div class="stories_visual">
+        <img src="" alt="">
+    </div>
+</section>
