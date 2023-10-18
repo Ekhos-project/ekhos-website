@@ -1,10 +1,37 @@
-
 $text: 'Montserrat', sans-serif;
 $title: 'OwnersWide';
 
 $color0: #FFFFFF;
 $color1: #1E1E1E;
 $color2: #5DC4E5;
+
+$desktop: 1500px;
+$laptop: 1024px;
+$tablet: 767px;
+
+@mixin desktop{
+  @media (min-width: #{$desktop + 1px}) {
+    @content;
+  }
+}
+
+@mixin laptop{
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin tablet{
+  @media (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin mobile{
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
 
 @mixin font(
   $fontFamily: $text,
@@ -20,4 +47,10 @@ $color2: #5DC4E5;
   color: $fontColor;
   text-transform: $textTransform;
   line-height: $lineHeight;
+}
+
+@mixin container(
+  $maxWidth: 172rem,
+) {
+
 }
