@@ -159,3 +159,39 @@
 
     <button>Nos accompagnements</button>
 </section>
+
+<section class="section section-home" id="blog">
+    <h2>Vous en voulez plus ?!</h2>
+    <div class="blog_cards">
+        <a href="" class="blog_card">
+            <div class="blog_card_image">
+                <img src="" alt="">
+            </div>
+            <div class="blog_card_content">
+                <h3>L’Importance Cruciale du Sound Design pour un site E-commerce</h3>
+                <p>Dans le monde du commerce en ligne en constante évolution, il est essentiel de se démarquer de la concurrence.</p>
+            </div>
+        </a>
+
+        <a href="" class="blog_card">
+            <div class="blog_card_image">
+                <img src="" alt="">
+            </div>
+            <div class="blog_card_content">
+                <h3>L’optimisation l’expérience utilisateur</h3>
+                <p>Dans le domaine des sites web et des applications, le sound design peut considérablement améliorer l’expérience utilisateur.</p>
+            </div>
+        </a>
+
+        <a href="" class="blog_card">
+            <div class="blog_card_image">
+                <img src="" alt="">
+            </div>
+            <div class="blog_card_content">
+                <h3>Création d’une identité sonore</h3>
+                <p>Le sound design peut également contribuer à créer une identité sonore distinctive pour votre projet.</p>
+            </div>
+        </a>
+    </div>
+    <a href="">Découvrir le blog</a>
+</section>
