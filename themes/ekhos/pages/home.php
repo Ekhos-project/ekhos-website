@@ -131,3 +131,31 @@
         <img src="" alt="">
     </div>
 </section>
+
+<section class="section section-home" id="build">
+    <h2>Conçu par vous et pour vous !</h2>
+
+    <div class="build_container">
+        <div class="build_content">
+            <div class="build_content_image">
+                <img src="" alt="">
+            </div>
+            <div class="build_content_description">
+                <h3>Réinventer votre histoire</h3>
+                <p>L’avenir de votre site web en quelques étapes avec ou sans accompagnement. Tout ce dont vous avez besoin pour construire un site web unique.</p>
+            </div>
+        </div>
+
+        <div class="build_content">
+            <div class="build_content_image">
+                <img src="" alt="">
+            </div>
+            <div class="build_content_description">
+                <h3>Disponible depuis vos plateformes préférées</h3>
+                <p>Retrouvez le plug-in « IdSound » d’EKHOS depuis la bibliothèque de plugins de WordPress, Woocommerce et Shopify.</p>
+            </div>
+        </div>
+    </div>
+
+    <button>Nos accompagnements</button>
+</section>
