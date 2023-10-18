@@ -9,8 +9,12 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
   font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #1E1E1E;
+  text-transform: unset;
+  line-height: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */

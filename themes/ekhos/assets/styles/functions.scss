@@ -1,3 +1,23 @@
 
 $text: 'Montserrat', sans-serif;
 $title: 'OwnersWide';
+
+$color0: #FFFFFF;
+$color1: #1E1E1E;
+$color2: #5DC4E5;
+
+@mixin font(
+  $fontFamily: $text,
+  $fontSize: 1.6rem,
+  $fontWeight: 500,
+  $fontColor: $color1,
+  $lineHeight: 1em,
+  $textTransform: unset,
+) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  color: $fontColor;
+  text-transform: $textTransform;
+  line-height: $lineHeight;
+}
