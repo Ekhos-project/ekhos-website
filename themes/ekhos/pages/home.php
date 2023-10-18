@@ -8,3 +8,7 @@
 
     <button>Découvrir</button>
 </section>
+
+<section class="section section-video" id="video">
+    <video muted autoplay loop src=""></video>
+</section>
