@@ -2,6 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
     <?php wp_head(); ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/styles/style.css">
 </head>
 <body <?php body_class(); ?>>
 

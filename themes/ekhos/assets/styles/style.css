@@ -1,0 +1,16 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "OwnersWide";
+  src: url("/wp-content/themes/ekhos/assets/fonts/owners-wide.ttf") format("truetype");
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */
