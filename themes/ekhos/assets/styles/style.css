@@ -1,5 +1,55 @@
 @import "reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.section-home#hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 30rem 0;
+  background-color: #1E1E1E;
+}
+.section-home#hero h1 {
+  font-family: "OwnersWide";
+  font-size: 5.5rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-transform: unset;
+  text-align: center;
+  line-height: 1em;
+}
+.section-home#hero h1 b {
+  color: #5DC4E5;
+  white-space: nowrap;
+}
+.section-home#hero p {
+  padding-top: 8rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-transform: unset;
+  text-align: center;
+  line-height: 1em;
+}
+.section-home#hero .hero_container {
+  position: relative;
+  box-sizing: border-box;
+  width: calc(100% - 204px);
+  max-width: 172rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 1024px) {
+  .section-home#hero .hero_container {
+    width: calc(100% - 80px);
+  }
+}
+@media (max-width: 767px) {
+  .section-home#hero .hero_container {
+    width: calc(100% - 40px);
+  }
+}
+
 @font-face {
   font-family: "OwnersWide";
   src: url("/wp-content/themes/ekhos/assets/fonts/owners-wide.ttf") format("truetype");
@@ -14,6 +64,7 @@ body {
   font-weight: 500;
   color: #1E1E1E;
   text-transform: unset;
+  text-align: left;
   line-height: 1em;
   display: flex;
   flex-direction: column;

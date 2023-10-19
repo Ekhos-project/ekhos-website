@@ -1,0 +1,32 @@
+@import "./../functions.scss";
+
+.section-home#hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 30rem 0;
+  background-color: $color1;
+
+  h1 {
+    @include font($title, 5.5rem, 600, $color0, $textAlign:center);
+
+    b {
+      color: $color2;
+      white-space: nowrap;
+    }
+  }
+
+  p {
+    padding-top: 8rem;
+    @include font($text, 3.5rem, 500, $color0, $textAlign:center);
+  }
+
+  .hero {
+    &_container {
+      @include container();
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}

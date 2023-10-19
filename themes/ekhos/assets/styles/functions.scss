@@ -40,12 +40,14 @@ $tablet: 767px;
   $fontColor: $color1,
   $lineHeight: 1em,
   $textTransform: unset,
+  $textAlign: left,
 ) {
   font-family: $fontFamily;
   font-size: $fontSize;
   font-weight: $fontWeight;
   color: $fontColor;
   text-transform: $textTransform;
+  text-align: $textAlign;
   line-height: $lineHeight;
 }
 
