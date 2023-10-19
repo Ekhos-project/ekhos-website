@@ -147,39 +147,48 @@
         </div>
 
         <div class="stories_visual">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_stories_visual.png" alt="Jennifer KARAT">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_stories_visual.png"
+                 alt="Jennifer KARAT">
         </div>
     </div>
 </section>
 
 <section class="section section-home" id="build">
-    <h2>Conçu par vous et pour vous !</h2>
-
     <div class="build_container">
-        <div class="build_content">
-            <div class="build_content_image">
-                <img src="" alt="">
+        <h2>Conçu par vous et pour vous !</h2>
+
+        <div class="build_contents">
+            <div class="build_content">
+                <div class="build_content_image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_build_image-1.png"
+                         alt="Ordinateur">
+                </div>
+                <div class="build_content_description">
+                    <div class="build_content_description_title">
+                        <h3>Réinventer votre histoire</h3>
+                    </div>
+                    <p>L’avenir de votre site web en quelques étapes avec ou sans accompagnement. Tout ce dont vous avez
+                        besoin pour construire un site web unique.</p>
+                </div>
             </div>
-            <div class="build_content_description">
-                <h3>Réinventer votre histoire</h3>
-                <p>L’avenir de votre site web en quelques étapes avec ou sans accompagnement. Tout ce dont vous avez
-                    besoin pour construire un site web unique.</p>
+
+            <div class="build_content build_content-reverse">
+                <div class="build_content_image build_content_image-reverse">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_build_image-2.png" alt="Sons">
+                </div>
+                <div class="build_content_description">
+                    <div class="build_content_description_title build_content_description_title-reverse">
+                        <h3>Disponible depuis vos plateformes préférées</h3>
+                    </div>
+                    <p>Retrouvez le plug-in «IdSound» d’EKHOS depuis la bibliothèque de plugins de WordPress,
+                        Woocommerce
+                        et Shopify.</p>
+                </div>
             </div>
         </div>
 
-        <div class="build_content">
-            <div class="build_content_image">
-                <img src="" alt="">
-            </div>
-            <div class="build_content_description">
-                <h3>Disponible depuis vos plateformes préférées</h3>
-                <p>Retrouvez le plug-in « IdSound » d’EKHOS depuis la bibliothèque de plugins de WordPress, Woocommerce
-                    et Shopify.</p>
-            </div>
-        </div>
+        <a href="" class="button endicon">Nos accompagnements</a>
     </div>
-
-    <a href="" class="button">Nos accompagnements</a>
 </section>
 
 <section class="section section-home" id="blog">

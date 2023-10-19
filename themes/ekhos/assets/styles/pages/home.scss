@@ -28,7 +28,7 @@
             $borderColor: $color0,
             $hoverBorderColor: $color0,
             $backgroundColor: transparent,
-            $hoverBackgroundColor: transparentize($color0, 0.8),
+            $hoverBackgroundColor: transparentize($color0, 0.8)
     );
   }
 
@@ -168,7 +168,7 @@
       justify-content: space-between;
       align-items: center;
 
-      @include tablet{
+      @include tablet {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -182,7 +182,7 @@
       flex-direction: column;
       width: 50%;
 
-      @include tablet{
+      @include tablet {
         width: 100%;
       }
 
@@ -192,7 +192,7 @@
         h2 {
           @include font($title, 5.5rem, 500, $color0);
 
-          @include tablet{
+          @include tablet {
             text-align: center;
           }
         }
@@ -207,7 +207,7 @@
         p {
           @include font($text, 3.5rem, 400, $color0);
 
-          @include tablet{
+          @include tablet {
             text-align: center;
           }
         }
@@ -220,11 +220,11 @@
 
         a.button {
           @include button(
-            $endIcon: "\e5c8",
-            $borderColor: $color0,
-            $hoverBorderColor: $color0,
-            $backgroundColor: transparent,
-            $hoverBackgroundColor: transparentize($color0, 0.8),
+                  $endIcon: "\e5c8",
+                  $borderColor: $color0,
+                  $hoverBorderColor: $color0,
+                  $backgroundColor: transparent,
+                  $hoverBackgroundColor: transparentize($color0, 0.8),
           );
         }
       }
@@ -236,7 +236,7 @@
       justify-content: center;
       width: 50%;
 
-      @include tablet{
+      @include tablet {
         width: 100%;
       }
 
@@ -244,6 +244,177 @@
         width: 90%;
         max-width: 86rem;
         height: auto;
+      }
+    }
+  }
+}
+
+.section-home#build {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 14rem 0;
+  overflow-x: hidden;
+
+  h2 {
+    @include font($title, 5.5rem, 600, $color1, $textAlign: center);
+  }
+
+  a.button {
+    margin-top: 13rem;
+    @include button(
+            $endIcon: "\e5c8",
+    );
+
+    @include tablet{
+      margin-top: 8rem;
+    }
+  }
+
+  .build {
+    &_container {
+      @include container();
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &_contents {
+      position: relative;
+      padding-top: 18rem;
+      display: flex;
+      flex-direction: column;
+      gap: 18rem;
+
+      @include tablet {
+        padding-top: 8rem;
+        gap: 8rem;
+      }
+    }
+
+    &_content {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      @include tablet {
+        flex-direction: column-reverse;
+      }
+
+      &-reverse {
+        flex-direction: row-reverse;
+
+        @include tablet {
+          flex-direction: column-reverse;
+        }
+      }
+
+      &_image {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 50%;
+
+        @include tablet {
+          width: 100%;
+          padding-top: 4rem;
+        }
+
+        img {
+          position: relative;
+          width: 90%;
+          height: auto;
+          z-index: 1;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          z-index: 0;
+          user-select: none;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+          width: 50vw;
+          height: 28rem;
+          background-color: #F4F4F4;
+
+          @include tablet {
+            display: none;
+          }
+        }
+
+        &-reverse {
+          &:before {
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+
+      &_description {
+        display: flex;
+        flex-direction: column;
+        width: calc(50% - 13rem);
+
+        @include tablet {
+          width: 100%;
+        }
+
+        &_title {
+          position: relative;
+          width: fit-content;
+
+          @include tablet {
+            width: 100%;
+          }
+
+          h3 {
+            @include font($text, 3.5rem, 600, $color1);
+            width: fit-content;
+
+            @include tablet {
+              text-align: center;
+              width: 100%;
+            }
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            z-index: 0;
+            user-select: none;
+            top: 50%;
+            transform: translate(100%, -50%);
+            right: -4rem;
+            width: 50vw;
+            height: .4rem;
+            background-color: $color1;
+
+            @include tablet {
+              display: none;
+            }
+          }
+
+          &-reverse {
+            &:before {
+              left: -4rem;
+              right: unset;
+              transform: translate(-100%, -50%);
+            }
+          }
+        }
+
+        p {
+          padding-top: 4rem;
+          @include font($text, 3.5rem, 400, $color1);
+
+          @include tablet {
+            text-align: center;
+          }
+        }
       }
     }
   }
