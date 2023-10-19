@@ -7,7 +7,7 @@
         <p>Découvrez IDSound, le plug-in ultime de sound design qui
             propulse vos sites e-commerce vers de nouveaux sommets</p>
 
-        <a href="" class="button">Découvrir</a>
+        <a href="" class="button endicon">Découvrir</a>
     </div>
 </section>
 

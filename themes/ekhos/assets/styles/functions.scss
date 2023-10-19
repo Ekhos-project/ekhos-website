@@ -41,14 +41,24 @@ $tablet: 767px;
   $lineHeight: 1em,
   $textTransform: unset,
   $textAlign: left,
+  $textDecoration: none,
 ) {
   font-family: $fontFamily;
   font-size: $fontSize;
   font-weight: $fontWeight;
   color: $fontColor;
+  line-height: $lineHeight;
   text-transform: $textTransform;
   text-align: $textAlign;
-  line-height: $lineHeight;
+  text-decoration: $textDecoration;
+
+  @include tablet {
+    font-size: calc($fontSize * .9);
+  }
+
+  @include mobile {
+    font-size: calc($fontSize * .8);
+  }
 }
 
 @mixin container(
@@ -65,5 +75,80 @@ $tablet: 767px;
 
   @include mobile {
     width: calc(100% - 40px);
+  }
+}
+
+@mixin icon($code: "\e88a", $fontSize: 2.4rem) {
+  content: $code;
+  font-family: "Material Symbols Rounded";
+  font-weight: normal;
+  font-style: normal;
+  font-size: $fontSize;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin button(
+  $font: $text,
+  $fontSize: 3rem,
+  $fontWeight: 500,
+  $fontColor: $color0,
+  $startIcon: "\e88a",
+  $endIcon: "\e88a",
+  $hoverFontColor: $color0,
+  $borderColor: $color2,
+  $borderRadius: calc($fontSize * 2),
+  $hoverBorderColor: darken($color2, 25%),
+  $backgroundColor: $color2,
+  $hoverBackgroundColor: darken($color2, 25%),
+  $padding: 2.5rem 3.5rem,
+  $hoverPadding: 2.5rem 3.5rem,
+) {
+  position: relative;
+  padding: $padding;
+  border-radius: $borderRadius;
+  border: 0.3rem solid $borderColor;
+  box-sizing: border-box;
+  background-color: $backgroundColor;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  cursor: pointer;
+  @include font($fontFamily: $text, $fontSize: $fontSize, $fontWeight: $fontWeight, $fontColor: $fontColor);
+  transition-property: background-color, border-color, color, padding;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  outline: none;
+
+  &:focus-visible {
+    outline: 0.2rem solid $color0;
+  }
+
+  &:hover {
+    padding: $hoverPadding;
+    color: $hoverFontColor;
+    border-color: $hoverBorderColor;
+    background-color: $hoverBackgroundColor;
+  }
+
+  &.starticon {
+    &::before {
+      @include icon($code: $startIcon, $fontSize: 4rem);
+      padding-right: 1rem;
+    }
+  }
+
+  &.endicon {
+    &::after {
+      @include icon($code: $endIcon, $fontSize: 4rem);
+      padding-left: 1rem;
+    }
   }
 }
