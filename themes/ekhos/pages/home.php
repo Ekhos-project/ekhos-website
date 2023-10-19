@@ -25,7 +25,8 @@
         <div class="identity_cards">
             <div class="identity_card">
                 <div class="identity_card_icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_identity_icon-1.png" alt="Expérience Immersive">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_identity_icon-1.png"
+                         alt="Expérience Immersive">
                 </div>
                 <div class="identity_card_title">
                     <h3>Expérience Immersive Inégalée</h3>
@@ -40,7 +41,8 @@
 
             <div class="identity_card">
                 <div class="identity_card_icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_identity_icon-1.png" alt="Différenciation Instantanée">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_identity_icon-1.png"
+                         alt="Différenciation Instantanée">
                 </div>
                 <div class="identity_card_title">
                     <h3>Différenciation Instantanée</h3>
@@ -55,7 +57,8 @@
 
             <div class="identity_card">
                 <div class="identity_card_icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_identity_icon-3.png" alt="Optimisation des Taux de Conversion">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_identity_icon-3.png"
+                         alt="Optimisation des Taux de Conversion">
                 </div>
                 <div class="identity_card_title">
                     <h3>Optimisation des Taux de Conversion</h3>
@@ -70,7 +73,8 @@
 
             <div class="identity_card">
                 <div class="identity_card_icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_identity_icon-4.png" alt="Personnalisation Sans Limite">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_identity_icon-4.png"
+                         alt="Personnalisation Sans Limite">
                 </div>
                 <div class="identity_card_title">
                     <h3>Personnalisation Sans Limite</h3>
@@ -85,7 +89,8 @@
 
             <div class="identity_card">
                 <div class="identity_card_icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_identity_icon-5.png" alt="Compatibilité Multiplateforme">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_identity_icon-5.png"
+                         alt="Compatibilité Multiplateforme">
                 </div>
                 <div class="identity_card_title">
                     <h3>Compatibilité Multiplateforme</h3>
@@ -100,7 +105,8 @@
 
             <div class="identity_card">
                 <div class="identity_card_icon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_identity_icon-6.png" alt="Analytique Audio">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_identity_icon-6.png"
+                         alt="Analytique Audio">
                 </div>
                 <div class="identity_card_title">
                     <h3>Analytique Audio</h3>
@@ -117,30 +123,32 @@
 </section>
 
 <section class="section section-home" id="stories">
-    <div class="stories_description">
-        <div class="stories_description_title">
-            <h2>Votre histoire, votre voix</h2>
-        </div>
-        <div class="stories_description_text">
-            <p>Exploitez la puissance de technique de
-                synthèse avancées grâce à notre plug-in à
-                la pointe de la technologie.
-                Façonnez et manipulez les voix avec
-                précision, créant des sons complexes et
-                évolutifs qui défient les limites.</p>
+    <div class="stories_container">
+        <div class="stories_description">
+            <div class="stories_description_title">
+                <h2>Votre histoire, votre voix</h2>
+            </div>
+            <div class="stories_description_text">
+                <p>Exploitez la puissance de technique de
+                    synthèse avancées grâce à notre plug-in à
+                    la pointe de la technologie.
+                    Façonnez et manipulez les voix avec
+                    précision, créant des sons complexes et
+                    évolutifs qui défient les limites.</p>
 
-            <p>Expérimentez avec les filtres, les sources
-                de modulation et les enveloppes pour
-                sculpter votre audio en quelque chose de
-                vraiment extraordinaire.</p>
+                <p>Expérimentez avec les filtres, les sources
+                    de modulation et les enveloppes pour
+                    sculpter votre audio en quelque chose de
+                    vraiment extraordinaire.</p>
+            </div>
+            <div class="stories_description_action">
+                <a href="" class="button endicon">En savoir plus</a>
+            </div>
         </div>
-        <div class="stories_description_action">
-            <a href="" class="button">En savoir plus</a>
-        </div>
-    </div>
 
-    <div class="stories_visual">
-        <img src="" alt="">
+        <div class="stories_visual">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_stories_visual.png" alt="Jennifer KARAT">
+        </div>
     </div>
 </section>
 
