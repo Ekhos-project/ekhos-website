@@ -12,95 +12,105 @@
 </section>
 
 <section class="section section-home" id="video">
-    <video muted autoplay loop src=<?php echo get_template_directory_uri(); ?>/assets/images/home_video_pifapapa.mp4"></video>
+    <video muted autoplay loop
+           src="<?php echo get_template_directory_uri(); ?>/assets/images/home_video_pifapapa.mp4"></video>
 </section>
 
 <section class="section section-home" id="identity">
-    <h2>Votre identité à vous</h2>
-    <p>EKHOS vous accompagne pour créer votre propre identité sonore et vocale</p>
+    <div class="identity_container">
 
-    <div class="identity_cards">
-        <div class="identity_card">
-            <div class="identity_card_icon">
-                <img src="" alt="">
-            </div>
-            <div class="identity_card_title">
-                <h3>Expérience Immersive Inégalée</h3>
-            </div>
-            <div class="identity_card_description">
-                <p>
-                    Offrez à vos utilisateurs une immersion sensorielle exceptionnelle qui transcende les simples visuels grâce à des interactions et effets sonores captivants.
-                </p>
-            </div>
-        </div>
+        <h2 class="identity_title">Votre identité à vous</h2>
+        <p class="identity_description">EKHOS vous accompagne pour créer votre propre identité sonore et vocale</p>
 
-        <div class="identity_card">
-            <div class="identity_card_icon">
-                <img src="" alt="">
+        <div class="identity_cards">
+            <div class="identity_card">
+                <div class="identity_card_icon">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_identity_icon-1.png" alt="Expérience Immersive">
+                </div>
+                <div class="identity_card_title">
+                    <h3>Expérience Immersive Inégalée</h3>
+                </div>
+                <div class="identity_card_description">
+                    <p>
+                        Offrez à vos utilisateurs une immersion sensorielle exceptionnelle qui transcende les simples
+                        visuels grâce à des interactions et effets sonores captivants.
+                    </p>
+                </div>
             </div>
-            <div class="identity_card_title">
-                <h3>Différenciation Instantanée</h3>
-            </div>
-            <div class="identity_card_description">
-                <p>
-                    C’est l’opportunité de se démarquer de la concurrence en renforçant votre identité de marque et en créant une expérience unique pour les utilisateurs.
-                </p>
-            </div>
-        </div>
 
-        <div class="identity_card">
-            <div class="identity_card_icon">
-                <img src="" alt="">
+            <div class="identity_card">
+                <div class="identity_card_icon">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_identity_icon-1.png" alt="Différenciation Instantanée">
+                </div>
+                <div class="identity_card_title">
+                    <h3>Différenciation Instantanée</h3>
+                </div>
+                <div class="identity_card_description">
+                    <p>
+                        C’est l’opportunité de se démarquer de la concurrence en renforçant votre identité de marque et
+                        en créant une expérience unique pour les utilisateurs.
+                    </p>
+                </div>
             </div>
-            <div class="identity_card_title">
-                <h3>Optimisation des Taux de Conversion</h3>
-            </div>
-            <div class="identity_card_description">
-                <p>
-                    Utilisez le websound pour influencer positivement le comportement des visiteurs, renforçant ainsi la confiance et favorisant l’action.
-                </p>
-            </div>
-        </div>
 
-        <div class="identity_card">
-            <div class="identity_card_icon">
-                <img src="" alt="">
+            <div class="identity_card">
+                <div class="identity_card_icon">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_identity_icon-3.png" alt="Optimisation des Taux de Conversion">
+                </div>
+                <div class="identity_card_title">
+                    <h3>Optimisation des Taux de Conversion</h3>
+                </div>
+                <div class="identity_card_description">
+                    <p>
+                        Utilisez le websound pour influencer positivement le comportement des visiteurs, renforçant
+                        ainsi la confiance et favorisant l’action.
+                    </p>
+                </div>
             </div>
-            <div class="identity_card_title">
-                <h3>Personnalisation Sans Limite</h3>
-            </div>
-            <div class="identity_card_description">
-                <p>
-                    Personnalisez entièrement l’expérience sonore de votre site web en choisissant des musiques, des effets sonores et des ambiances qui correspondent à votre identité de marque.
-                </p>
-            </div>
-        </div>
 
-        <div class="identity_card">
-            <div class="identity_card_icon">
-                <img src="" alt="">
+            <div class="identity_card">
+                <div class="identity_card_icon">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_identity_icon-4.png" alt="Personnalisation Sans Limite">
+                </div>
+                <div class="identity_card_title">
+                    <h3>Personnalisation Sans Limite</h3>
+                </div>
+                <div class="identity_card_description">
+                    <p>
+                        Personnalisez entièrement l’expérience sonore de votre site web en choisissant des musiques, des
+                        effets sonores et des ambiances qui correspondent à votre identité de marque.
+                    </p>
+                </div>
             </div>
-            <div class="identity_card_title">
-                <h3>Compatibilité Multiplateforme</h3>
-            </div>
-            <div class="identity_card_description">
-                <p>
-                    Notre plugin s’intègre harmonieusement sur diverses plateformes afin d’offrir une expérience audio exceptionnelle sur tous les supports.
-                </p>
-            </div>
-        </div>
 
-        <div class="identity_card">
-            <div class="identity_card_icon">
-                <img src="" alt="">
+            <div class="identity_card">
+                <div class="identity_card_icon">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_identity_icon-5.png" alt="Compatibilité Multiplateforme">
+                </div>
+                <div class="identity_card_title">
+                    <h3>Compatibilité Multiplateforme</h3>
+                </div>
+                <div class="identity_card_description">
+                    <p>
+                        Notre plugin s’intègre harmonieusement sur diverses plateformes afin d’offrir une expérience
+                        audio exceptionnelle sur tous les supports.
+                    </p>
+                </div>
             </div>
-            <div class="identity_card_title">
-                <h3>Analytique Audio</h3>
-            </div>
-            <div class="identity_card_description">
-                <p>
-                    Mesurez l’impact de l’expérience sonore avec des outils d’analyse avancés, identifiant les points forts et les domaines à améliorer pour maximiser l’engagement utilisateur.
-                </p>
+
+            <div class="identity_card">
+                <div class="identity_card_icon">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_identity_icon-6.png" alt="Analytique Audio">
+                </div>
+                <div class="identity_card_title">
+                    <h3>Analytique Audio</h3>
+                </div>
+                <div class="identity_card_description">
+                    <p>
+                        Mesurez l’impact de l’expérience sonore avec des outils d’analyse avancés, identifiant les
+                        points forts et les domaines à améliorer pour maximiser l’engagement utilisateur.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -144,7 +154,8 @@
             </div>
             <div class="build_content_description">
                 <h3>Réinventer votre histoire</h3>
-                <p>L’avenir de votre site web en quelques étapes avec ou sans accompagnement. Tout ce dont vous avez besoin pour construire un site web unique.</p>
+                <p>L’avenir de votre site web en quelques étapes avec ou sans accompagnement. Tout ce dont vous avez
+                    besoin pour construire un site web unique.</p>
             </div>
         </div>
 
@@ -154,7 +165,8 @@
             </div>
             <div class="build_content_description">
                 <h3>Disponible depuis vos plateformes préférées</h3>
-                <p>Retrouvez le plug-in « IdSound » d’EKHOS depuis la bibliothèque de plugins de WordPress, Woocommerce et Shopify.</p>
+                <p>Retrouvez le plug-in « IdSound » d’EKHOS depuis la bibliothèque de plugins de WordPress, Woocommerce
+                    et Shopify.</p>
             </div>
         </div>
     </div>
@@ -171,7 +183,8 @@
             </div>
             <div class="blog_card_content">
                 <h3>L’Importance Cruciale du Sound Design pour un site E-commerce</h3>
-                <p>Dans le monde du commerce en ligne en constante évolution, il est essentiel de se démarquer de la concurrence.</p>
+                <p>Dans le monde du commerce en ligne en constante évolution, il est essentiel de se démarquer de la
+                    concurrence.</p>
             </div>
         </a>
 
@@ -181,7 +194,8 @@
             </div>
             <div class="blog_card_content">
                 <h3>L’optimisation l’expérience utilisateur</h3>
-                <p>Dans le domaine des sites web et des applications, le sound design peut considérablement améliorer l’expérience utilisateur.</p>
+                <p>Dans le domaine des sites web et des applications, le sound design peut considérablement améliorer
+                    l’expérience utilisateur.</p>
             </div>
         </a>
 
@@ -191,7 +205,8 @@
             </div>
             <div class="blog_card_content">
                 <h3>Création d’une identité sonore</h3>
-                <p>Le sound design peut également contribuer à créer une identité sonore distinctive pour votre projet.</p>
+                <p>Le sound design peut également contribuer à créer une identité sonore distinctive pour votre
+                    projet.</p>
             </div>
         </a>
     </div>
