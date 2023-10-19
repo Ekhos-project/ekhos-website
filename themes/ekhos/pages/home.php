@@ -12,7 +12,7 @@
 </section>
 
 <section class="section section-home" id="video">
-    <video muted autoplay loop src=""></video>
+    <video muted autoplay loop src=<?php echo get_template_directory_uri(); ?>/assets/images/home_video_pifapapa.mp4"></video>
 </section>
 
 <section class="section section-home" id="identity">

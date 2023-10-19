@@ -41,3 +41,19 @@
     }
   }
 }
+
+.section-home#video {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: $color2;
+  padding-bottom: 8rem;
+
+  video {
+    position: relative;
+    top: -18rem;
+    margin-bottom: -18rem;
+    width: 90%;
+    max-width: 108rem;
+  }
+}

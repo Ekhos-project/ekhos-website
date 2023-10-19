@@ -151,6 +151,21 @@
   }
 }
 
+.section-home#video {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: #5DC4E5;
+  padding-bottom: 8rem;
+}
+.section-home#video video {
+  position: relative;
+  top: -18rem;
+  margin-bottom: -18rem;
+  width: 90%;
+  max-width: 108rem;
+}
+
 @font-face {
   font-family: "OwnersWide";
   src: url("/wp-content/themes/ekhos/assets/fonts/owners-wide.ttf") format("truetype");
