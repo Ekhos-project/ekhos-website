@@ -52,5 +52,16 @@ $tablet: 767px;
 @mixin container(
   $maxWidth: 172rem,
 ) {
+  position: relative;
+  box-sizing: border-box;
+  width: calc(100% - 204px);
+  max-width: $maxWidth;
 
+  @include tablet {
+    width: calc(100% - 80px);
+  }
+
+  @include mobile {
+    width: calc(100% - 40px);
+  }
 }
