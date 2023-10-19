@@ -3,12 +3,14 @@
 
 <footer>
     <div class="footer_demo">
-        <div class="footer_demo_text">
-            <h3>Testez, c’est approuvé !</h3>
-            <p>Découvrez notre solution à travers une démo depuis un navigateur web.</p>
-        </div>
-        <div class="footer_demo_try">
-            <a href="" class="button">Essayer</a>
+        <div class="footer_demo_container">
+            <div class="footer_demo_text">
+                <h3>Testez, c’est approuvé !</h3>
+                <p>Découvrez notre solution à travers une démo depuis un navigateur web.</p>
+            </div>
+            <div class="footer_demo_try">
+                <a href="" class="button endicon">Essayer</a>
+            </div>
         </div>
     </div>
 

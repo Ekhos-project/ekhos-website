@@ -105,9 +105,9 @@ $tablet: 767px;
   $hoverFontColor: $color0,
   $borderColor: $color2,
   $borderRadius: calc($fontSize * 2),
-  $hoverBorderColor: darken($color2, 25%),
+  $hoverBorderColor: darken($borderColor, 25%),
   $backgroundColor: $color2,
-  $hoverBackgroundColor: darken($color2, 25%),
+  $hoverBackgroundColor: darken($backgroundColor, 25%),
   $padding: 2.5rem 3.5rem,
   $hoverPadding: 2.5rem 3.5rem,
 ) {

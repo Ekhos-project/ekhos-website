@@ -1,6 +1,7 @@
 @import "reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+/* PAGES */
 .section-home#hero {
   position: relative;
   display: flex;
@@ -1077,6 +1078,208 @@
   -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
   padding-left: 1rem;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+footer .footer_demo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 10rem 0;
+  background: #1E1E1E;
+  background: linear-gradient(171deg, #5DC4E5 0%, #4D95C3 100%);
+}
+footer .footer_demo:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  user-select: none;
+  background-image: url("/wp-content/themes/ekhos/assets/images/footer_test_background.png");
+  background-size: cover;
+}
+footer .footer_demo_container {
+  position: relative;
+  box-sizing: border-box;
+  width: calc(100% - 204px);
+  max-width: 172rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+@media (max-width: 1024px) {
+  footer .footer_demo_container {
+    width: calc(100% - 80px);
+  }
+}
+@media (max-width: 767px) {
+  footer .footer_demo_container {
+    width: calc(100% - 40px);
+  }
+}
+@media (max-width: 767px) {
+  footer .footer_demo_container {
+    flex-direction: column;
+  }
+}
+footer .footer_demo_text {
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1024px) {
+  footer .footer_demo_text {
+    width: 68%;
+  }
+}
+@media (max-width: 767px) {
+  footer .footer_demo_text {
+    width: 100%;
+    align-items: center;
+  }
+}
+footer .footer_demo_text h3 {
+  font-family: "OwnersWide";
+  font-size: 4.5rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1em;
+  text-transform: unset;
+  text-align: left;
+  text-decoration: none;
+}
+@media (max-width: 1024px) {
+  footer .footer_demo_text h3 {
+    font-size: 4.05rem;
+  }
+}
+@media (max-width: 767px) {
+  footer .footer_demo_text h3 {
+    font-size: 3.6rem;
+  }
+}
+@media (max-width: 767px) {
+  footer .footer_demo_text h3 {
+    text-align: center;
+  }
+}
+footer .footer_demo_text p {
+  padding-top: 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 1em;
+  text-transform: unset;
+  text-align: left;
+  text-decoration: none;
+}
+@media (max-width: 1024px) {
+  footer .footer_demo_text p {
+    font-size: 3.15rem;
+  }
+}
+@media (max-width: 767px) {
+  footer .footer_demo_text p {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 767px) {
+  footer .footer_demo_text p {
+    text-align: center;
+  }
+}
+footer .footer_demo_try a.button {
+  position: relative;
+  padding: 2.5rem 3.5rem;
+  border-radius: 6rem;
+  border: 0.3rem solid #FFFFFF;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #1E1E1E;
+  line-height: 1em;
+  text-transform: unset;
+  text-align: left;
+  text-decoration: none;
+  transition-property: background-color, border-color, color, padding;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  outline: none;
+}
+@media (max-width: 1024px) {
+  footer .footer_demo_try a.button {
+    font-size: 2.7rem;
+  }
+}
+@media (max-width: 767px) {
+  footer .footer_demo_try a.button {
+    font-size: 2.4rem;
+  }
+}
+footer .footer_demo_try a.button:focus-visible {
+  outline: 0.2rem solid #FFFFFF;
+}
+footer .footer_demo_try a.button:hover {
+  padding: 2.5rem 3.5rem;
+  color: #1E1E1E;
+  border-color: #bfbfbf;
+  background-color: #bfbfbf;
+}
+footer .footer_demo_try a.button.starticon::before {
+  content: "\e88a";
+  font-family: "Material Symbols Rounded";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 4rem;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  padding-right: 1rem;
+}
+footer .footer_demo_try a.button.endicon::after {
+  content: "\e5c8";
+  font-family: "Material Symbols Rounded";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 4rem;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  padding-left: 1rem;
+}
+@media (max-width: 767px) {
+  footer .footer_demo_try {
+    padding-top: 4rem;
+  }
 }
 
 @font-face {

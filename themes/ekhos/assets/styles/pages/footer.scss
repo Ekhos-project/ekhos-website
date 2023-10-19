@@ -1,0 +1,93 @@
+@import "./../functions.scss";
+
+footer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .footer {
+    &_demo {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding: 10rem 0;
+      background: $color1;
+      background: linear-gradient(171deg, $color2 0%, #4D95C3 100%);
+
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        user-select: none;
+        background-image: url("/wp-content/themes/ekhos/assets/images/footer_test_background.png");
+        background-size: cover;
+      }
+
+      &_container {
+        @include container();
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+
+        @include mobile {
+          flex-direction: column;
+        }
+      }
+
+      &_text {
+        position: relative;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+          width: 68%;
+        }
+
+        @include mobile {
+          width: 100%;
+          align-items: center;
+        }
+
+        h3 {
+          @include font($title, 4.5rem, 500, $color0);
+
+          @include mobile {
+            text-align: center;
+          }
+        }
+
+        p {
+          padding-top: 3rem;
+          @include font($text, 3.5rem, 400, $color0);
+
+          @include mobile {
+            text-align: center;
+          }
+        }
+      }
+
+      &_try {
+        a.button {
+          @include button(
+                  $endIcon: "\e5c8",
+                  $fontColor: $color1,
+                  $hoverFontColor: $color1,
+                  $borderColor: $color0,
+                  $backgroundColor: $color0
+          );
+        }
+
+        @include mobile {
+          padding-top: 4rem;
+        }
+      }
+    }
+  }
+}
