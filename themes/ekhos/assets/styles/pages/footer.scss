@@ -274,7 +274,7 @@ footer {
       &_title {
         position: relative;
         width: 90%;
-        @include font($text, 2.5rem, 400, $color0, $textAlign:center);
+        @include font($text, 2.5rem, 400, $color0, $textAlign: center);
         font-style: italic;
       }
 
@@ -285,6 +285,60 @@ footer {
         padding-top: 4rem;
         display: flex;
         justify-content: space-between;
+      }
+
+      &_link {
+        position: relative;
+        width: 5rem;
+        height: 5rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    &_legals {
+      position: relative;
+      padding: 6rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $color1;
+      width: 100%;
+
+      ul {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      li {
+        position: relative;
+
+        &:before{
+          content: "•";
+          position: absolute;
+          top: 50%;
+          left: -.8rem;
+          transform: translate(-50%, -50%);
+          @include font($text, 2.4rem, 400, $color0);
+        }
+
+        &:first-child {
+          &:before {
+            content: unset;
+          }
+        }
+
+        a {
+          @include font($text, 1.2rem, 400, $color0);
+          font-style: italic;
+        }
       }
     }
   }
