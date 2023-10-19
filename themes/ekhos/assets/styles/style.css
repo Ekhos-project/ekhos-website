@@ -1617,6 +1617,46 @@ footer .footer_navigation_menu li a {
 footer .footer_navigation_menu li a:hover {
   color: #bfbfbf;
 }
+footer .footer_social {
+  position: relative;
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1E1E1E;
+  width: 100%;
+}
+footer .footer_social_title {
+  position: relative;
+  width: 90%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 1em;
+  text-transform: unset;
+  text-align: center;
+  text-decoration: none;
+  font-style: italic;
+}
+@media (max-width: 1024px) {
+  footer .footer_social_title {
+    font-size: 2.25rem;
+  }
+}
+@media (max-width: 767px) {
+  footer .footer_social_title {
+    font-size: 2rem;
+  }
+}
+footer .footer_social_links {
+  position: relative;
+  width: 90%;
+  max-width: 35rem;
+  padding-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
 
 @font-face {
   font-family: "OwnersWide";

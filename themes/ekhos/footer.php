@@ -45,23 +45,23 @@
 
     <div class="footer_social">
         <div class="footer_social_title">
-            Suivez-nous sur les réseaux sociaux !
+            <span>Suivez-nous sur les réseaux sociaux !</span>
         </div>
         <div class="footer_social_links">
             <a href="" class="footer_social_link">
-                <img src="" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer_social_linkedin.png" alt="Linkedin">
             </a>
 
             <a href="" class="footer_social_link">
-                <img src="" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer_social_facebook.png" alt="Facebook">
             </a>
 
             <a href="" class="footer_social_link">
-                <img src="" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer_social_twitter.png" alt="Twitter">
             </a>
 
             <a href="" class="footer_social_link">
-                <img src="" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer_social_instagram.png" alt="Instagram">
             </a>
         </div>
     </div>

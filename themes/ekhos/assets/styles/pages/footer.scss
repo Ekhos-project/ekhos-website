@@ -251,7 +251,7 @@ footer {
           }
         }
 
-        li a{
+        li a {
           @include font($title, 3rem, 500, $color0);
           transition: color .3s ease;
 
@@ -262,6 +262,30 @@ footer {
       }
     }
 
+    &_social {
+      position: relative;
+      padding-top: 10rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $color1;
+      width: 100%;
 
+      &_title {
+        position: relative;
+        width: 90%;
+        @include font($text, 2.5rem, 400, $color0, $textAlign:center);
+        font-style: italic;
+      }
+
+      &_links {
+        position: relative;
+        width: 90%;
+        max-width: 35rem;
+        padding-top: 4rem;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
   }
 }
