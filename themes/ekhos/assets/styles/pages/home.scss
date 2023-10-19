@@ -266,7 +266,7 @@
             $endIcon: "\e5c8",
     );
 
-    @include tablet{
+    @include tablet {
       margin-top: 8rem;
     }
   }
@@ -415,6 +415,132 @@
             text-align: center;
           }
         }
+      }
+    }
+  }
+}
+
+.section-home#blog {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 12rem;
+
+  h2 {
+    @include font($title, 5.5rem, 600, $color1, $textAlign: center);
+  }
+
+  .blog {
+    &_container {
+      @include container();
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &_cards {
+      position: relative;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding-top: 12rem;
+
+      @include tablet {
+        flex-wrap: wrap;
+        gap: 4rem;
+      }
+    }
+
+    &_card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: calc(33.33% - 2.6rem);
+      box-shadow: .3rem .3rem 1rem #ADABAB85;
+      text-decoration: none;
+      background-color: $color0;
+
+      @include tablet {
+        width: calc(50% - 2rem);
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+
+      &:nth-child(3n + 2) {
+        transform: translateY(4rem);
+
+        @include tablet {
+          transform: translateY(50%);
+        }
+
+        @include mobile {
+          transform: translateY(0);
+        }
+      }
+
+      &_image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &_content {
+        position: relative;
+        padding: 3rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+
+        @include mobile {
+          padding: 2rem;
+        }
+
+        h3 {
+          @include font($text, 2.5rem, 600, $color1);
+
+          @include laptop {
+            max-width: 38rem;
+          }
+        }
+
+        p {
+          padding-top: 2rem;
+          @include font($text, 2.5rem, 400, $color1);
+
+          @include laptop {
+            max-width: 38rem;
+          }
+        }
+      }
+    }
+
+    &_action {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      padding-top: 8rem;
+
+      a.button {
+        @include button(
+                $fontColor: #1C2AD9,
+                $hoverFontColor: $color1,
+                $endIcon: "\e5c8",
+                $padding: 0,
+                $hoverPadding: 0,
+                $borderRadius: 0,
+                $borderColor: transparent,
+                $hoverBorderColor: transparent,
+                $backgroundColor: transparent,
+                $hoverBackgroundColor: transparent
+        );
       }
     }
   }
