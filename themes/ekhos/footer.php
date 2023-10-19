@@ -27,17 +27,19 @@
     </div>
 
     <div class="footer_navigation">
-        <div class="footer_navigation_logo">
-            <img src="" alt="">
-        </div>
-        <div class="footer_navigation_menu">
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'footer-menu',
-                'container' => false,
-                'items_wrap' => '<ul>%3$s</ul>',
-            ));
-            ?>
+        <div class="footer_navigation_container">
+            <a href="" class="footer_navigation_logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.png" alt="Ekhos">
+            </a>
+            <div class="footer_navigation_menu">
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'footer-menu',
+                    'container' => false,
+                    'items_wrap' => '<ul>%3$s</ul>',
+                ));
+                ?>
+            </div>
         </div>
     </div>
 

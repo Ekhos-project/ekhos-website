@@ -1527,6 +1527,96 @@ footer .footer_newsletter_action .wpcf7-response-output {
     font-size: 1.6rem;
   }
 }
+footer .footer_navigation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: #1E1E1E;
+}
+footer .footer_navigation_container {
+  position: relative;
+  box-sizing: border-box;
+  width: calc(100% - 204px);
+  max-width: 172rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  footer .footer_navigation_container {
+    width: calc(100% - 80px);
+  }
+}
+@media (max-width: 767px) {
+  footer .footer_navigation_container {
+    width: calc(100% - 40px);
+  }
+}
+@media (max-width: 767px) {
+  footer .footer_navigation_container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+footer .footer_navigation_logo {
+  width: 15rem;
+  height: 15rem;
+  text-decoration: none;
+}
+footer .footer_navigation_logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+footer .footer_navigation_menu {
+  display: flex;
+  flex-grow: 1;
+  padding-left: 10rem;
+  box-sizing: border-box;
+}
+@media (max-width: 767px) {
+  footer .footer_navigation_menu {
+    width: 100%;
+    padding-left: unset;
+  }
+}
+footer .footer_navigation_menu ul {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  footer .footer_navigation_menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+footer .footer_navigation_menu li a {
+  font-family: "OwnersWide";
+  font-size: 3rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1em;
+  text-transform: unset;
+  text-align: left;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+@media (max-width: 1024px) {
+  footer .footer_navigation_menu li a {
+    font-size: 2.7rem;
+  }
+}
+@media (max-width: 767px) {
+  footer .footer_navigation_menu li a {
+    font-size: 2.4rem;
+  }
+}
+footer .footer_navigation_menu li a:hover {
+  color: #bfbfbf;
+}
 
 @font-face {
   font-family: "OwnersWide";

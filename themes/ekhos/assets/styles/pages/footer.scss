@@ -195,7 +195,73 @@ footer {
           @include font($text, 2rem, 500, $color0);
         }
       }
-
     }
+
+    &_navigation {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      background-color: $color1;
+
+      &_container {
+        @include container();
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mobile {
+          flex-direction: column;
+          gap: 2rem;
+        }
+      }
+
+      &_logo {
+        width: 15rem;
+        height: 15rem;
+        text-decoration: none;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      &_menu {
+        display: flex;
+        flex-grow: 1;
+        padding-left: 10rem;
+        box-sizing: border-box;
+
+        @include mobile {
+          width: 100%;
+          padding-left: unset;
+        }
+
+        ul {
+          position: relative;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+
+          @include mobile {
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+          }
+        }
+
+        li a{
+          @include font($title, 3rem, 500, $color0);
+          transition: color .3s ease;
+
+          &:hover {
+            color: darken($color0, 25%);
+          }
+        }
+      }
+    }
+
+
   }
 }
