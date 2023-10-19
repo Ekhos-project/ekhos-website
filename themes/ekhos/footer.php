@@ -15,13 +15,14 @@
     </div>
 
     <div class="footer_newsletter">
-        <div class="footer_newsletter_text">
-            <p>Restez connecté avec nous. Inscrivez-vous à la newsletter EKHOS !</p>
-        </div>
+        <div class="footer_newsletter_container">
+            <div class="footer_newsletter_text">
+                <p>Restez connecté avec nous. Inscrivez-vous à la newsletter EKHOS !</p>
+            </div>
 
-        <div class="footer_newsletter_action">
-            <input type="email" name="email" id="email">
-            <button type="submit">S’inscrire</button>
+            <div class="footer_newsletter_action">
+                <?= do_shortcode('[contact-form-7 id="44" title="newsletter"]'); ?>
+            </div>
         </div>
     </div>
 

@@ -89,5 +89,113 @@ footer {
         }
       }
     }
+
+    &_newsletter {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding-top: 20rem;
+      padding-bottom: 9rem;
+      background-color: $color1;
+
+      &_container {
+        @include container();
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include laptop {
+          gap: 4rem;
+          flex-direction: column;
+        }
+      }
+
+      &_text {
+        position: relative;
+        width: calc(50% - 2rem);
+
+        @include laptop {
+          width: 100%;
+        }
+
+        p {
+          @include font($text, 3.5rem, 500, $color0);
+        }
+      }
+
+      &_action {
+        position: relative;
+        width: 50%;
+
+        @include laptop {
+          width: 100%;
+        }
+
+        .wpcf7 {
+          width: 100%;
+        }
+
+        form.wpcf7-form {
+          position: relative;
+          display: flex;
+          justify-content: flex-end;
+          width: 100%;
+          box-sizing: border-box;
+        }
+
+        button[type="submit"].button {
+          @include button(
+                  $startIcon: "\e158",
+                  $fontColor: $color1,
+                  $hoverFontColor: $color1,
+                  $borderColor: $color0,
+                  $backgroundColor: $color0
+          );
+          font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+
+        input#email {
+          height: 100%;
+          padding: 2rem 4rem;
+          padding-right: 8rem;
+          box-sizing: border-box;
+          border-radius: 8rem 0 0 8rem;
+          border: .2rem solid $color0;
+          border-right: none;
+          background-color: transparent;
+          outline: none;
+          width: calc(100% + 5rem);
+          @include font($text, 3rem, 500, $color0);
+
+          &::placeholder {
+            @include font($text, 3rem, 500, #A7A7A7);
+            font-style: italic;
+          }
+        }
+
+        .wpcf7-not-valid-tip {
+          position: absolute;
+          top: -.5rem;
+          left: 0;
+          transform: translateY(-100%);
+        }
+
+        .wpcf7-spinner {
+          position: absolute;
+        }
+
+        .wpcf7-response-output {
+          position: absolute;
+          bottom: -1rem;
+          left: 0;
+          transform: translateY(100%);
+          margin: 0;
+          padding: 0;
+          border: none;
+          @include font($text, 2rem, 500, $color0);
+        }
+      }
+
+    }
   }
 }
