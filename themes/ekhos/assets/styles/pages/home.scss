@@ -50,8 +50,43 @@
   background-color: $color2;
   padding-bottom: 8rem;
 
+  .video {
+    &_container {
+      @include container();
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &_visual {
+      position: relative;
+
+      @include mobile {
+        display: none;
+      }
+
+      img {
+        width: auto;
+        height: 55rem;
+
+        @include laptop{
+          height: 45rem;
+        }
+
+        @include tablet{
+          height: 35rem;
+        }
+      }
+    }
+  }
+
   video {
     position: relative;
+    z-index: 0;
     top: -18rem;
     margin-bottom: -18rem;
     width: 90%;
