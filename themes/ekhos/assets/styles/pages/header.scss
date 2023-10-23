@@ -1,0 +1,102 @@
+@import "./../functions.scss";
+
+header {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: transparentize($color1, .1);
+  backdrop-filter: blur(3px);
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+
+  .navigation {
+    &_container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      max-width: calc($desktop + 60rem);
+    }
+
+    &_logo {
+      width: 6rem;
+      height: 6rem;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &_menu {
+      & > ul {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        gap: 10rem;
+
+        @include tablet{
+          gap: 4rem;
+        }
+      }
+
+      ul.sub-menu {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 100%);
+        z-index: 1;
+        background-color: $color1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+        min-width: 100%;
+        padding: 1.5rem;
+        border: .2rem solid $color0;
+        gap: 1rem;
+        opacity: 0;
+        user-select: none;
+        transition: opacity .3s ease, bottom .3s ease;
+
+        &.active {
+          bottom: -1rem;
+          opacity: 1;
+          user-select: all;
+        }
+      }
+
+      li {
+        position: relative;
+
+        & > a{
+          display: flex;
+          align-items: center;
+          @include font($text, 2.5rem, 500, $color0);
+          transition: color .3s ease;
+        }
+
+        &.menu-item-has-children {
+          & > a:after{
+            @include icon("\e5cf");
+          }
+        }
+
+        &:hover, &.current-menu-item{
+          & > a{
+            color: $color2;
+          }
+        }
+      }
+
+    }
+  }
+}

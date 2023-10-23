@@ -29,7 +29,7 @@
     <div class="footer_navigation">
         <div class="footer_navigation_container">
             <a href="" class="footer_navigation_logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.png" alt="Ekhos">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/header_logo_ekhos.png" alt="Ekhos">
             </a>
             <div class="footer_navigation_menu">
                 <?php

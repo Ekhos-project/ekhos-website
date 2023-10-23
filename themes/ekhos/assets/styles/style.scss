@@ -5,6 +5,7 @@
 
 /* PAGES */
 @import "./pages/home.scss";
+@import "./pages/header.scss";
 @import "./pages/footer.scss";
 
 @font-face {
@@ -23,6 +24,8 @@ body {
   align-items: center;
 
   & > .container {
+    position: relative;
+    z-index: 0;
     width: 100%;
   }
 }

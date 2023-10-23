@@ -7,18 +7,20 @@
 <body <?php body_class(); ?>>
 
 <header>
-    <nav class="navigation">
-        <div class="navigation_logo">
-            <img src="" alt="">
-        </div>
-        <div class="navigation_menu">
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'header-menu',
-                'container' => false,
-                'items_wrap' => '<ul>%3$s</ul>',
-            ));
-            ?>
+    <nav>
+        <div class="navigation_container">
+            <a href="/" class="navigation_logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/header_logo_ekhos.png" alt="Ekhos">
+            </a>
+            <div class="navigation_menu">
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'header-menu',
+                    'container' => false,
+                    'items_wrap' => '<ul>%3$s</ul>',
+                ));
+                ?>
+            </div>
         </div>
     </nav>
 </header>
