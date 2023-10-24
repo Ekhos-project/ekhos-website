@@ -591,6 +591,24 @@
           }
         }
       }
+      
+      &_date {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 3rem;
+
+        &-month{
+          @include font($text, 2.5rem, 600, $color0, $textTransform:uppercase);
+        }
+        &-year{
+          padding-top: .5rem;
+          @include font($text, 3rem, 600, $color0, $textTransform:uppercase);
+        }
+      }
     }
 
     &_action {

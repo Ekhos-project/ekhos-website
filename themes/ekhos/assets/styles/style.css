@@ -1076,6 +1076,56 @@
     max-width: 38rem;
   }
 }
+.section-home#blog .blog_card_date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 3rem;
+}
+.section-home#blog .blog_card_date-month {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 1em;
+  text-transform: uppercase;
+  text-align: left;
+  text-decoration: none;
+}
+@media (max-width: 1024px) {
+  .section-home#blog .blog_card_date-month {
+    font-size: 2.25rem;
+  }
+}
+@media (max-width: 767px) {
+  .section-home#blog .blog_card_date-month {
+    font-size: 2rem;
+  }
+}
+.section-home#blog .blog_card_date-year {
+  padding-top: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 1em;
+  text-transform: uppercase;
+  text-align: left;
+  text-decoration: none;
+}
+@media (max-width: 1024px) {
+  .section-home#blog .blog_card_date-year {
+    font-size: 2.7rem;
+  }
+}
+@media (max-width: 767px) {
+  .section-home#blog .blog_card_date-year {
+    font-size: 2.4rem;
+  }
+}
 .section-home#blog .blog_action {
   display: flex;
   justify-content: flex-end;

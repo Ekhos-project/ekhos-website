@@ -208,39 +208,44 @@
     <div class="blog_container">
         <h2>Vous en voulez plus ?!</h2>
         <div class="blog_cards">
-            <a href="" class="blog_card">
-                <div class="blog_card_image">
-                    <img src="" alt="">
-                </div>
-                <div class="blog_card_content">
-                    <h3>L’Importance Cruciale du Sound Design pour un site E-commerce</h3>
-                    <p>Dans le monde du commerce en ligne en constante évolution, il est essentiel de se démarquer de la
-                        concurrence.</p>
-                </div>
-            </a>
+            <?php
 
-            <a href="" class="blog_card">
-                <div class="blog_card_image">
-                    <img src="" alt="">
-                </div>
-                <div class="blog_card_content">
-                    <h3>L’optimisation l’expérience utilisateur</h3>
-                    <p>Dans le domaine des sites web et des applications, le sound design peut considérablement
-                        améliorer
-                        l’expérience utilisateur.</p>
-                </div>
-            </a>
+            $args = array(
+                'posts_per_page' => 3,
+                'orderby' => 'date',
+                'order' => 'DESC'
+            );
 
-            <a href="" class="blog_card">
-                <div class="blog_card_image">
-                    <img src="" alt="">
-                </div>
-                <div class="blog_card_content">
-                    <h3>Création d’une identité sonore</h3>
-                    <p>Le sound design peut également contribuer à créer une identité sonore distinctive pour votre
-                        projet.</p>
-                </div>
-            </a>
+            $query = new WP_Query($args);
+            if ($query->have_posts()) {
+                while ($query->have_posts()) {
+                    $query->the_post();
+                    ?>
+
+                    <a href="<?php the_permalink(); ?>" class="blog_card">
+                        <div class="blog_card_image">
+                            <?php if (has_post_thumbnail()) : ?>
+                                    <?php the_post_thumbnail(); ?>
+                            <?php endif; ?>
+                        </div>
+
+                        <div class="blog_card_content">
+                            <h3><?php the_title(); ?></h3>
+                            <p><?php the_excerpt(); ?></p>
+                        </div>
+
+                        <div class="blog_card_date">
+                            <div class="blog_card_date-month"><?php the_time('F'); ?></div>
+                            <div class="blog_card_date-year"><?php the_time('Y'); ?></div>
+                        </div>
+                    </a>
+
+                    <?php
+                }
+            }
+
+            wp_reset_postdata();
+            ?>
         </div>
 
         <div class="blog_action">

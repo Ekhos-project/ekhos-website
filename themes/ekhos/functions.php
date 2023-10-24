@@ -12,3 +12,5 @@ function register_my_menus() {
 add_action( 'init', 'register_my_menus' );
 
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+add_theme_support('post-thumbnails');
