@@ -156,6 +156,13 @@
                  alt="Jennifer KARAT">
         </div>
     </div>
+
+    <div class="stories_background">
+        <div class="stories_background_visual">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home_stories_background.png"
+                 alt="audios">
+        </div>
+    </div>
 </section>
 
 <section class="section section-home" id="build">
