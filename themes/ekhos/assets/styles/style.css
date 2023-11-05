@@ -1330,11 +1330,13 @@
   box-shadow: 0.3rem 0.3rem 1rem rgba(173, 173, 173, 0.5);
   transform: translateY(-8rem);
   background-color: #FFFFFF;
+  width: 100%;
 }
 .section-faq#questions .questions_items {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 100%;
 }
 .section-faq#questions .questions_item {
   position: relative;
@@ -1344,6 +1346,8 @@
   padding-bottom: 2rem;
   padding-right: 8rem;
   border-bottom: 0.2rem solid rgba(0, 0, 0, 0.3);
+  width: 100%;
+  box-sizing: border-box;
 }
 .section-faq#questions .questions_item:last-of-type {
   border-bottom: none;

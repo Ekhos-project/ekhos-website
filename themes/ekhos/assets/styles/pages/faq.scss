@@ -66,12 +66,14 @@
       box-shadow: .3rem .3rem 1rem rgba(173, 173, 173, 0.5);
       transform: translateY(-8rem);
       background-color: $color0;
+      width: 100%;
     }
 
     &_items {
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      width: 100%;
     }
 
     &_item {
@@ -82,6 +84,8 @@
       padding-bottom: 2rem;
       padding-right: 8rem;
       border-bottom: .2rem solid rgba(0, 0, 0, 0.3);
+      width: 100%;
+      box-sizing: border-box;
 
       &:last-of-type{
         border-bottom: none;
