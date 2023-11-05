@@ -17,6 +17,11 @@
     }
 
     &_title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
       h1 {
         @include font($title, 4.5rem, 600, $color0, $textAlign: center);
 
@@ -30,6 +35,115 @@
         padding-top: 6rem;
         @include font($text, 2.4rem, 500, $color0, $textAlign: center);
         max-width: 70rem;
+      }
+    }
+
+    &_form {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding-top: 8rem;
+
+      .wpcf7 {
+        width: 100%;
+      }
+
+      .wpcf7-form {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      &_col {
+        display: flex;
+        flex-direction: column;
+        width: calc(50% - 1.5rem);
+        gap: 3rem;
+
+        @include mobile{
+          width: 100%;
+        }
+      }
+
+      &_input {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @include mobile{
+          &.contact_form_textarea {
+            padding-top: 3rem;
+          }
+        }
+
+        &-label {
+          @include font($text, 2rem, 500, $color0);
+          padding-bottom: 1.4rem;
+
+          b {
+            color: red;
+          }
+        }
+
+        input, textarea {
+          width: 100%;
+          padding: 1.8rem 2.4rem;
+          box-sizing: border-box;
+          border-radius: .8rem;
+          border: none;
+          outline: none;
+          @include font($text, 2rem, 500, $color1);
+
+          &::placeholder {
+            @include font($text, 2rem, 500, #A7A7A7);
+            font-style: italic;
+          }
+        }
+      }
+
+      span[data-name=acceptance] {
+        position: relative;
+        display: flex;
+        width: 100%;
+        padding-top: 3rem;
+
+        .wpcf7-list-item {
+          margin: 0;
+
+          label {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+          }
+
+          input{
+            width: 2rem;
+            height: 2rem;
+            margin: 0;
+          }
+        }
+
+        .wpcf7-list-item-label {
+          @include font($text, 2rem, 500, $color0);
+        }
+      }
+
+      &_submit{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding-top: 4rem;
+
+        button[type="submit"].button {
+          @include button(
+                  $endIcon: "\e5c8",
+                  $fontColor: $color1,
+                  $hoverFontColor: $color1,
+                  $borderColor: $color2,
+                  $backgroundColor: $color2
+          );
+        }
       }
     }
   }

@@ -1241,6 +1241,12 @@
     width: calc(100% - 40px);
   }
 }
+.section-contact#contact .contact_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 .section-contact#contact .contact_title h1 {
   font-family: "OwnersWide";
   font-size: 4.5rem;
@@ -1286,6 +1292,235 @@
   .section-contact#contact .contact_title p {
     font-size: 1.92rem;
   }
+}
+.section-contact#contact .contact_form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 8rem;
+}
+.section-contact#contact .contact_form .wpcf7 {
+  width: 100%;
+}
+.section-contact#contact .contact_form .wpcf7-form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.section-contact#contact .contact_form_col {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 1.5rem);
+  gap: 3rem;
+}
+@media (max-width: 767px) {
+  .section-contact#contact .contact_form_col {
+    width: 100%;
+  }
+}
+.section-contact#contact .contact_form_input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .section-contact#contact .contact_form_input.contact_form_textarea {
+    padding-top: 3rem;
+  }
+}
+.section-contact#contact .contact_form_input-label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1em;
+  text-transform: unset;
+  text-align: left;
+  text-decoration: none;
+  padding-bottom: 1.4rem;
+}
+@media (max-width: 1024px) {
+  .section-contact#contact .contact_form_input-label {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .section-contact#contact .contact_form_input-label {
+    font-size: 1.6rem;
+  }
+}
+.section-contact#contact .contact_form_input-label b {
+  color: red;
+}
+.section-contact#contact .contact_form_input input, .section-contact#contact .contact_form_input textarea {
+  width: 100%;
+  padding: 1.8rem 2.4rem;
+  box-sizing: border-box;
+  border-radius: 0.8rem;
+  border: none;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #1E1E1E;
+  line-height: 1em;
+  text-transform: unset;
+  text-align: left;
+  text-decoration: none;
+}
+@media (max-width: 1024px) {
+  .section-contact#contact .contact_form_input input, .section-contact#contact .contact_form_input textarea {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .section-contact#contact .contact_form_input input, .section-contact#contact .contact_form_input textarea {
+    font-size: 1.6rem;
+  }
+}
+.section-contact#contact .contact_form_input input::placeholder, .section-contact#contact .contact_form_input textarea::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #A7A7A7;
+  line-height: 1em;
+  text-transform: unset;
+  text-align: left;
+  text-decoration: none;
+  font-style: italic;
+}
+@media (max-width: 1024px) {
+  .section-contact#contact .contact_form_input input::placeholder, .section-contact#contact .contact_form_input textarea::placeholder {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .section-contact#contact .contact_form_input input::placeholder, .section-contact#contact .contact_form_input textarea::placeholder {
+    font-size: 1.6rem;
+  }
+}
+.section-contact#contact .contact_form span[data-name=acceptance] {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding-top: 3rem;
+}
+.section-contact#contact .contact_form span[data-name=acceptance] .wpcf7-list-item {
+  margin: 0;
+}
+.section-contact#contact .contact_form span[data-name=acceptance] .wpcf7-list-item label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.section-contact#contact .contact_form span[data-name=acceptance] .wpcf7-list-item input {
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+}
+.section-contact#contact .contact_form span[data-name=acceptance] .wpcf7-list-item-label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1em;
+  text-transform: unset;
+  text-align: left;
+  text-decoration: none;
+}
+@media (max-width: 1024px) {
+  .section-contact#contact .contact_form span[data-name=acceptance] .wpcf7-list-item-label {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .section-contact#contact .contact_form span[data-name=acceptance] .wpcf7-list-item-label {
+    font-size: 1.6rem;
+  }
+}
+.section-contact#contact .contact_form_submit {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 4rem;
+}
+.section-contact#contact .contact_form_submit button[type=submit].button {
+  position: relative;
+  padding: 1.5rem 3rem;
+  border-radius: 4rem;
+  border: 0.3rem solid #5DC4E5;
+  box-sizing: border-box;
+  background-color: #5DC4E5;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #1E1E1E;
+  line-height: 1em;
+  text-transform: unset;
+  text-align: left;
+  text-decoration: none;
+  transition-property: background-color, border-color, color, padding;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  outline: none;
+}
+@media (max-width: 1024px) {
+  .section-contact#contact .contact_form_submit button[type=submit].button {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .section-contact#contact .contact_form_submit button[type=submit].button {
+    font-size: 1.6rem;
+  }
+}
+.section-contact#contact .contact_form_submit button[type=submit].button:focus-visible {
+  outline: 0.2rem solid #FFFFFF;
+}
+.section-contact#contact .contact_form_submit button[type=submit].button:hover {
+  padding: 1.5rem 3rem;
+  color: #1E1E1E;
+  border-color: #1b85a8;
+  background-color: #1b85a8;
+}
+.section-contact#contact .contact_form_submit button[type=submit].button.starticon::before {
+  content: "\e88a";
+  font-family: "Material Symbols Rounded";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  padding-right: 1rem;
+}
+.section-contact#contact .contact_form_submit button[type=submit].button.endicon::after {
+  content: "\e5c8";
+  font-family: "Material Symbols Rounded";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  padding-left: 1rem;
 }
 
 header {
