@@ -15,6 +15,22 @@
         <div class="questions_content">
             <div class="questions_items">
                 <div class="questions_item">
+                    <div class="questions_item_expand"></div>
+                    <div class="questions_item_title">
+                        <span>
+                            Des questions sur la compatibilité de notre plugin avec votre plateforme ? Besoin d'une démonstration personnalisée ? Contactez notre équipe de support technique.
+                        </span>
+                    </div>
+
+                    <div class="questions_item_response">
+                        <p>
+                            Des questions sur la compatibilité de notre plugin avec votre plateforme ? Besoin d'une démonstration personnalisée ? Contactez notre équipe de support technique.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="questions_item">
+                    <div class="questions_item_expand"></div>
                     <div class="questions_item_title">
                         <span>
                             Des questions sur la compatibilité de notre plugin avec votre plateforme ? Besoin d'une démonstration personnalisée ? Contactez notre équipe de support technique.
