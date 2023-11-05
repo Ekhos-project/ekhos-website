@@ -62,7 +62,7 @@ $tablet: 767px;
 }
 
 @mixin container(
-  $maxWidth: 172rem,
+  $maxWidth: 140rem,
 ) {
   position: relative;
   box-sizing: border-box;
@@ -97,7 +97,7 @@ $tablet: 767px;
 
 @mixin button(
   $font: $text,
-  $fontSize: 3rem,
+  $fontSize: 2rem,
   $fontWeight: 500,
   $fontColor: $color0,
   $startIcon: "\e88a",
@@ -108,8 +108,8 @@ $tablet: 767px;
   $hoverBorderColor: darken($borderColor, 25%),
   $backgroundColor: $color2,
   $hoverBackgroundColor: darken($backgroundColor, 25%),
-  $padding: 2.5rem 3.5rem,
-  $hoverPadding: 2.5rem 3.5rem,
+  $padding: 1.5rem 3rem,
+  $hoverPadding: 1.5rem 3rem,
 ) {
   position: relative;
   padding: $padding;
@@ -140,14 +140,14 @@ $tablet: 767px;
 
   &.starticon {
     &::before {
-      @include icon($code: $startIcon, $fontSize: 4rem);
+      @include icon($code: $startIcon, $fontSize: 3rem);
       padding-right: 1rem;
     }
   }
 
   &.endicon {
     &::after {
-      @include icon($code: $endIcon, $fontSize: 4rem);
+      @include icon($code: $endIcon, $fontSize: 3rem);
       padding-left: 1rem;
     }
   }

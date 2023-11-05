@@ -1,8 +1,11 @@
-<?php wp_footer(); ?>
+<?php
+wp_footer();
+global $page_slug;
+?>
 </div>
 
 <footer>
-    <div class="footer_demo">
+    <div class="footer_demo" data-page="<?=$page_slug?>">
         <div class="footer_demo_container">
             <div class="footer_demo_text">
                 <h3>Testez, c’est approuvé !</h3>

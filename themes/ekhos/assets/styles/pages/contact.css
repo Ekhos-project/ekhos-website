@@ -1,0 +1,10 @@
+.section-contact#contact {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 35rem;
+  padding-bottom: 30rem;
+  background-color: #1E1E1E;
+}
+
+/*# sourceMappingURL=contact.css.map */

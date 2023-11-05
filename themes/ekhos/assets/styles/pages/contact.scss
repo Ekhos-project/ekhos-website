@@ -1,0 +1,36 @@
+@import "./../functions.scss";
+
+.section-contact#contact {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 35rem;
+  padding-bottom: 30rem;
+  background-color: $color1;
+
+  .contact {
+    &_container {
+      @include container();
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &_title {
+      h1 {
+        @include font($title, 4.5rem, 600, $color0, $textAlign: center);
+
+        b {
+          color: $color2;
+          white-space: nowrap;
+        }
+      }
+
+      p {
+        padding-top: 6rem;
+        @include font($text, 2.4rem, 500, $color0, $textAlign: center);
+        max-width: 70rem;
+      }
+    }
+  }
+}

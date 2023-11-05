@@ -9,7 +9,7 @@
   background-color: $color1;
 
   h1 {
-    @include font($title, 5.5rem, 600, $color0, $textAlign: center);
+    @include font($title, 4.5rem, 600, $color0, $textAlign: center);
 
     b {
       color: $color2;
@@ -18,12 +18,12 @@
   }
 
   p {
-    padding-top: 8rem;
-    @include font($text, 3.5rem, 500, $color0, $textAlign: center);
+    padding-top: 6rem;
+    @include font($text, 2.4rem, 500, $color0, $textAlign: center);
   }
 
   a.button {
-    margin-top: 9.6rem;
+    margin-top: 8rem;
     @include button(
             $endIcon: "\e5c8",
             $borderColor: $color0,
@@ -98,8 +98,8 @@
   position: relative;
   display: flex;
   justify-content: center;
-  padding-top: 16rem;
-  padding-bottom: 20rem;
+  padding-top: 10rem;
+  padding-bottom: 16rem;
 
   .identity {
     &_container {
@@ -110,17 +110,17 @@
     }
 
     &_title {
-      @include font($title, 5.5rem, 500, $color1, $textAlign: center);
+      @include font($title, 3.2rem, 500, $color1, $textAlign: center);
     }
 
     &_description {
-      padding-top: 4.8rem;
-      @include font($text, 3.5rem, 500, $color1, $textAlign: center);
+      padding-top: 3.2rem;
+      @include font($text, 2.4rem, 500, $color1, $textAlign: center);
     }
 
     &_cards {
       position: relative;
-      padding-top: 10rem;
+      padding-top: 8rem;
       display: flex;
       flex-wrap: wrap;
       gap: 4rem;
@@ -168,7 +168,7 @@
         padding-top: 2.4rem;
 
         h3 {
-          @include font($text, 2.5rem, 600, $color1, $textAlign: center);
+          @include font($text, 1.8rem, 600, $color1, $textAlign: center);
           max-width: 27rem;
         }
       }
@@ -181,7 +181,7 @@
         padding-top: 2.4rem;
 
         p {
-          @include font($text, 2.5rem, 500, $color1, $textAlign: center);
+          @include font($text, 1.6rem, 500, $color1, $textAlign: center);
           max-width: 40rem;
         }
       }
@@ -193,8 +193,8 @@
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 14rem 0;
-  overflow-x: hidden;
+  padding: 10rem 0;
+  overflow: hidden;
   background: $color1;
   background: linear-gradient(0deg, rgba(141, 68, 180, 1) 0%, $color1 100%);
 
@@ -228,7 +228,7 @@
         width: 100%;
 
         h2 {
-          @include font($title, 5.5rem, 500, $color0);
+          @include font($title, 3.2rem, 500, $color0);
 
           @include tablet {
             text-align: center;
@@ -243,7 +243,7 @@
         gap: 2.4rem;
 
         p {
-          @include font($text, 3.5rem, 400, $color0);
+          @include font($text, 2.4rem, 400, $color0);
 
           @include tablet {
             text-align: center;
@@ -296,6 +296,11 @@
       display: flex;
       align-items: center;
 
+      &_visual {
+        width: 100%;
+        height: 85%;
+      }
+
       img {
         position: relative;
         height: 90%;
@@ -324,11 +329,11 @@
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 14rem 0;
+  padding: 12rem 0;
   overflow-x: hidden;
 
   h2 {
-    @include font($title, 5.5rem, 600, $color1, $textAlign: center);
+    @include font($title, 3.2rem, 600, $color1, $textAlign: center);
   }
 
   a.button {
@@ -352,7 +357,7 @@
 
     &_contents {
       position: relative;
-      padding-top: 18rem;
+      padding-top: 12rem;
       display: flex;
       flex-direction: column;
       gap: 18rem;
@@ -428,7 +433,7 @@
       &_description {
         display: flex;
         flex-direction: column;
-        width: calc(50% - 13rem);
+        width: calc(50% - 9rem);
 
         @include tablet {
           width: 100%;
@@ -443,7 +448,7 @@
           }
 
           h3 {
-            @include font($text, 3.5rem, 600, $color1);
+            @include font($text, 2.4rem, 600, $color1);
             width: fit-content;
 
             @include tablet {
@@ -480,7 +485,7 @@
 
         p {
           padding-top: 4rem;
-          @include font($text, 3.5rem, 400, $color1);
+          @include font($text, 1.8rem, 400, $color1);
 
           @include tablet {
             text-align: center;
@@ -495,10 +500,10 @@
   position: relative;
   display: flex;
   justify-content: center;
-  padding-bottom: 12rem;
+  padding-bottom: 8rem;
 
   h2 {
-    @include font($title, 5.5rem, 600, $color1, $textAlign: center);
+    @include font($title, 3.2rem, 600, $color1, $textAlign: center);
   }
 
   .blog {
@@ -575,7 +580,7 @@
         }
 
         h3 {
-          @include font($text, 2.5rem, 600, $color1);
+          @include font($text, 2.4rem, 600, $color1);
 
           @include laptop {
             max-width: 38rem;
@@ -584,7 +589,7 @@
 
         p {
           padding-top: 2rem;
-          @include font($text, 2.5rem, 400, $color1);
+          @include font($text, 1.8rem, 400, $color1);
 
           @include laptop {
             max-width: 38rem;
@@ -602,11 +607,11 @@
         padding: 3rem;
 
         &-month{
-          @include font($text, 2.5rem, 600, $color0, $textTransform:uppercase);
+          @include font($text, 1.8rem, 600, $color0, $textTransform:uppercase);
         }
         &-year{
           padding-top: .5rem;
-          @include font($text, 3rem, 600, $color0, $textTransform:uppercase);
+          @include font($text, 1.8rem, 600, $color0, $textTransform:uppercase);
         }
       }
     }
