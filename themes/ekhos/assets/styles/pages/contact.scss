@@ -145,6 +145,22 @@
           );
         }
       }
+
+      .wpcf7-spinner {
+        display: none;
+      }
+
+      .wpcf7-not-valid-tip {
+        padding-top: 1rem;
+      }
+
+      .wpcf7-response-output {
+        margin: 0;
+        padding: 0;
+        padding-top: 2rem;
+        border: none;
+        @include font($text, 2rem, 500, $color0);
+      }
     }
   }
 }
