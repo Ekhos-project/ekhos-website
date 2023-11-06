@@ -16,32 +16,64 @@
         <div class="blog_side">
             <div class="blog_side_recent">
                 <h2>Articles récents</h2>
-                <?php
-                $args = array(
-                    'posts_per_page' => 3,
-                    'orderby' => 'date',
-                    'order' => 'DESC'
-                );
-                $query = new WP_Query($args);
-                if ($query->have_posts()) {
-                    while ($query->have_posts()) {
-                        $query->the_post();
-                        ?>
-                        <a href="<?php the_permalink(); ?>" class="blog_side_recent_item">
-                            <h3><?php the_title(); ?></h3>
-                            <span><?php the_time('j F Y'); ?></span>
-                        </a>
-                        <?php
+                <div class="blog_side_recent_items">
+                    <?php
+                    $args = array(
+                        'posts_per_page' => 3,
+                        'orderby' => 'date',
+                        'order' => 'DESC'
+                    );
+                    $query = new WP_Query($args);
+                    if ($query->have_posts()) {
+                        while ($query->have_posts()) {
+                            $query->the_post();
+                            ?>
+                            <a href="<?php the_permalink(); ?>" class="blog_side_recent_item">
+                                <h3><?php the_title(); ?></h3>
+                                <span><?php the_time('j F Y'); ?></span>
+                            </a>
+                            <?php
+                        }
                     }
-                }
-                wp_reset_postdata();
-                ?>
+                    wp_reset_postdata();
+                    ?>
+                </div>
             </div>
             <div class="blog_side_categories">
-
+                <h2>Catégories</h2>
+                <div class="blog_side_categories_items">
+                    <?php
+                    $categories = get_categories(array(
+                        'orderby' => 'name',
+                        'order' => 'ASC'
+                    ));
+                    foreach ($categories as $category) {
+                        $category_link = get_category_link($category->term_id);
+                        echo '<a class="blog_side_categories_item" href="/blog/?' . esc_attr($category->slug) . '">' . esc_html($category->name) . '</a>';
+                    }
+                    ?>
+                </div>
             </div>
             <div class="blog_side_social">
-
+                <h2>Suivez-nous</h2>
+                <div class="blog_side_social_items">
+                    <a href="" class="blog_side_social_item">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer_social_linkedin.png"
+                             alt="Linkedin">
+                    </a>
+                    <a href="" class="blog_side_social_item">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer_social_facebook.png"
+                             alt="Facebook">
+                    </a>
+                    <a href="" class="blog_side_social_item">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer_social_twitter.png"
+                             alt="Twitter">
+                    </a>
+                    <a href="" class="blog_side_social_item">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer_social_instagram.png"
+                             alt="Instagram">
+                    </a>
+                </div>
             </div>
         </div>
         <div class="blog_cards">
