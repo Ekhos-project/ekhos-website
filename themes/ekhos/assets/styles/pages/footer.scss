@@ -329,7 +329,7 @@ footer {
       li {
         position: relative;
 
-        &:before{
+        &:before {
           content: "•";
           position: absolute;
           top: 50%;
@@ -347,6 +347,106 @@ footer {
         a {
           @include font($text, 1.2rem, 400, $color0);
           font-style: italic;
+        }
+      }
+    }
+
+    &_questions {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding: 8rem 0;
+      background-color: #F4F4F4;
+
+      &[data-page="faq"], &[data-page="accueil"], &[data-page="blog"]{
+        display: none;
+      }
+
+      &_container {
+        @include container();
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+
+        @include mobile {
+          flex-direction: column;
+        }
+      }
+
+      &_title {
+        h2 {
+          @include font($title, 3.2rem, 500, $color1);
+        }
+      }
+
+      &_content {
+        padding-top: 6rem;
+        width: 100%;
+      }
+
+      &_items {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+      }
+
+      &_item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-bottom: 2rem;
+        padding-right: 8rem;
+        border-bottom: .2rem solid rgba(0, 0, 0, 0.3);
+        width: 100%;
+        box-sizing: border-box;
+
+        &:last-of-type {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+
+        .questions_item_expand {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          top: 0;
+          right: 2rem;
+          width: 4rem;
+          height: 4rem;
+          cursor: pointer;
+
+          &:after {
+            @include icon("\e145");
+            font-size: 4rem;
+            font-weight: 800;
+            color: rgba(0, 0, 0, 0.7);
+          }
+
+          &.open {
+            &:after {
+              content: "\e15b";
+            }
+          }
+        }
+
+        &_title {
+          @include font($text, 2.4rem, 500, $color1);
+          min-height: 4rem;
+        }
+
+        &_response {
+          @include font($text, 1.8rem, 400, $color1);
+          display: none;
+        }
+
+        &.open {
+          .footer_questions_item_response {
+            display: block;
+          }
         }
       }
     }

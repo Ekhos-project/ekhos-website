@@ -5,7 +5,47 @@ global $page_slug;
 </div>
 
 <footer>
-    <div class="footer_demo" data-page="<?=$page_slug?>">
+    <div class="footer_questions" data-page="<?= $page_slug ?>">
+        <div class="footer_questions_container">
+            <div class="footer_questions_title">
+                <h2>Besoin d’aide ?</h2>
+            </div>
+            <div class="footer_questions_content">
+                <div class="footer_questions_items">
+                    <?php
+                    $args = array(
+                        'post_type' => 'questions',
+                        'posts_per_page' => -1,
+                    );
+                    $query = new WP_Query($args);
+                    if ($query->have_posts()) {
+                        while ($query->have_posts()) {
+                            $query->the_post();
+                            $title = get_the_title();
+                            $reponse = get_field('reponse');
+                            $mise_en_avant = get_field('avant');
+                            if($mise_en_avant){
+                            ?>
+                            <div class="footer_questions_item">
+                                <div class="questions_item_expand"></div>
+                                <div class="footer_questions_item_title">
+                                    <span><?= $title ?></span>
+                                </div>
+                                <div class="footer_questions_item_response">
+                                    <p><?= $reponse ?></p>
+                                </div>
+                            </div>
+                            <?php
+                            }
+                        }
+                    }
+                    wp_reset_postdata();
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_demo" data-page="<?= $page_slug ?>">
         <div class="footer_demo_container">
             <div class="footer_demo_text">
                 <h3>Testez, c’est approuvé !</h3>
@@ -52,19 +92,23 @@ global $page_slug;
         </div>
         <div class="footer_social_links">
             <a href="" class="footer_social_link">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer_social_linkedin.png" alt="Linkedin">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer_social_linkedin.png"
+                     alt="Linkedin">
             </a>
 
             <a href="" class="footer_social_link">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer_social_facebook.png" alt="Facebook">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer_social_facebook.png"
+                     alt="Facebook">
             </a>
 
             <a href="" class="footer_social_link">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer_social_twitter.png" alt="Twitter">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer_social_twitter.png"
+                     alt="Twitter">
             </a>
 
             <a href="" class="footer_social_link">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer_social_instagram.png" alt="Instagram">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer_social_instagram.png"
+                     alt="Instagram">
             </a>
         </div>
     </div>

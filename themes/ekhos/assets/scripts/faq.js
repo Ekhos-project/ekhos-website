@@ -21,7 +21,9 @@ class Question {
 }
 
 export default function () {
-    const questions = document.querySelectorAll(".section-faq#questions .questions_item");
+    const questions = document.querySelectorAll(
+        ".section-faq#questions .questions_item, .footer_questions .footer_questions_item"
+    );
     questions.forEach((selector) => {
         const question = new Question(selector);
     });
