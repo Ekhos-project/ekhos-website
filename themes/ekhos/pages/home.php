@@ -209,13 +209,11 @@
         <h2>Vous en voulez plus ?!</h2>
         <div class="blog_cards">
             <?php
-
             $args = array(
                 'posts_per_page' => 3,
                 'orderby' => 'date',
                 'order' => 'DESC'
             );
-
             $query = new WP_Query($args);
             if ($query->have_posts()) {
                 while ($query->have_posts()) {
@@ -228,12 +226,10 @@
                                     <?php the_post_thumbnail(); ?>
                             <?php endif; ?>
                         </div>
-
                         <div class="blog_card_content">
                             <h3><?php the_title(); ?></h3>
-                            <p><?php the_excerpt(); ?></p>
+                            <div><?php the_excerpt(); ?></div>
                         </div>
-
                         <div class="blog_card_date">
                             <div class="blog_card_date-month"><?php the_time('F'); ?></div>
                             <div class="blog_card_date-year"><?php the_time('Y'); ?></div>
