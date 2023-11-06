@@ -15,7 +15,7 @@ footer {
       background: $color1;
       background: linear-gradient(171deg, $color2 0%, #4D95C3 100%);
 
-      &[data-page="contact"] {
+      &[data-page="contact"], &[data-page="blog"], &[data-page="faq"] {
         display: none;
       }
 

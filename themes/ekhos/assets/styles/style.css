@@ -1214,6 +1214,92 @@
   padding-left: 1rem;
 }
 
+.section-blog#title {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 35rem;
+  padding-bottom: 30rem;
+  background: #1E1E1E;
+  background: linear-gradient(180deg, #1E1E1E 50%, #B65DE5 100%);
+}
+.section-blog#title .blog_container {
+  position: relative;
+  box-sizing: border-box;
+  width: calc(100% - 204px);
+  max-width: 140rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 1024px) {
+  .section-blog#title .blog_container {
+    width: calc(100% - 80px);
+  }
+}
+@media (max-width: 767px) {
+  .section-blog#title .blog_container {
+    width: calc(100% - 40px);
+  }
+}
+.section-blog#title .blog_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.section-blog#title .blog_title img {
+  width: 12rem;
+}
+.section-blog#title .blog_title h1 {
+  padding-top: 4rem;
+  font-family: "OwnersWide";
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 1em;
+  text-transform: unset;
+  text-align: center;
+  text-decoration: none;
+}
+@media (max-width: 1024px) {
+  .section-blog#title .blog_title h1 {
+    font-size: 4.05rem;
+  }
+}
+@media (max-width: 767px) {
+  .section-blog#title .blog_title h1 {
+    font-size: 3.6rem;
+  }
+}
+.section-blog#title .blog_title h1 b {
+  color: #5DC4E5;
+  white-space: nowrap;
+}
+.section-blog#title .blog_title p {
+  padding-top: 6rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1em;
+  text-transform: unset;
+  text-align: center;
+  text-decoration: none;
+  max-width: 70rem;
+}
+@media (max-width: 1024px) {
+  .section-blog#title .blog_title p {
+    font-size: 2.16rem;
+  }
+}
+@media (max-width: 767px) {
+  .section-blog#title .blog_title p {
+    font-size: 1.92rem;
+  }
+}
+
 .section-faq#title {
   position: relative;
   z-index: 0;
@@ -2003,7 +2089,7 @@ footer .footer_demo {
   background: #1E1E1E;
   background: linear-gradient(171deg, #5DC4E5 0%, #4D95C3 100%);
 }
-footer .footer_demo[data-page=contact] {
+footer .footer_demo[data-page=contact], footer .footer_demo[data-page=blog], footer .footer_demo[data-page=faq] {
   display: none;
 }
 footer .footer_demo:before {

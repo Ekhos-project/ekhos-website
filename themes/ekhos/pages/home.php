@@ -249,7 +249,7 @@
         </div>
 
         <div class="blog_action">
-            <a href="" class="button endicon">Découvrir le blog</a>
+            <a href="/blog/" class="button endicon">Découvrir le blog</a>
         </div>
     </div>
 </section>
