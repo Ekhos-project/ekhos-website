@@ -3,6 +3,7 @@ class Navigation {
     constructor(selector) {
         this.selector = selector;
         this.links = this.generateLinks();
+        this.burger = this.generateBurger();
     }
 
     generateLinks() {
@@ -13,6 +14,36 @@ class Navigation {
             linksObject.push(link);
         });
         return linksObject;
+    }
+
+    generateBurger() {
+        const burger = document.querySelector("header .navigation_burger");
+        const burgerObject = new Burger(burger, this);
+        return burgerObject;
+    }
+}
+
+
+class Burger {
+    constructor(selector, navigation) {
+        this.selector = selector;
+        this.navigation = navigation;
+        this.menu = this.navigation.selector.querySelector(".navigation_menu");
+        this.active = false;
+        this.events();
+    }
+
+    events() {
+        this.selector.addEventListener("click", ()=>{
+            if(this.active) {
+                this.menu.classList.remove("open");
+                this.selector.classList.remove("open");
+            } else{
+                this.menu.classList.add("open");
+                this.selector.classList.add("open");
+            }
+            this.active = !this.active;
+        });
     }
 }
 
