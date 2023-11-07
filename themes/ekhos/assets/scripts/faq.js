@@ -19,22 +19,25 @@ class Question {
             this.open = !this.open;
         });
 
-        this.search.querySelector("button").addEventListener("click", () => {
-            const value = this.search.querySelector("input").value;
+        if(this.search){
+            this.search.querySelector("button").addEventListener("click", () => {
+                const value = this.search.querySelector("input").value;
 
-            if(!this.selector.querySelector(".questions_item_title") || !value){
-                return;
-            }
+                if (!this.selector.querySelector(".questions_item_title") || !value) {
+                    return;
+                }
 
-            const questionTitle = this.selector.querySelector(".questions_item_title").innerText;
-            const questionResponse = this.selector.querySelector(".questions_item_response").innerText;
+                const questionTitle = this.selector.querySelector(".questions_item_title").innerText;
+                const questionResponse = this.selector.querySelector(".questions_item_response").innerText;
 
-            if(questionTitle.includes(value) || questionResponse.includes(value)){
-                this.open = true;
-                this.selector.classList.add("open");
-                this.expand.classList.add("open");
-            }
-        });
+                if (questionTitle.includes(value) || questionResponse.includes(value)) {
+                    this.open = true;
+                    this.selector.classList.add("open");
+                    this.expand.classList.add("open");
+                }
+            });
+        }
+
     }
 }
 

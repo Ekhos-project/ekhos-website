@@ -49,7 +49,7 @@
                     ));
                     foreach ($categories as $category) {
                         $category_link = get_category_link($category->term_id);
-                        echo '<a class="blog_side_categories_item" href="/blog/?' . esc_attr($category->slug) . '">' . esc_html($category->name) . '</a>';
+                        echo '<a class="blog_side_categories_item" href="/blog/?category=' . esc_attr($category->slug) . '">' . esc_html($category->name) . '</a>';
                     }
                     ?>
                 </div>
@@ -88,10 +88,10 @@
                 while ($query->have_posts()) {
                     $query->the_post();
                     $categories = get_the_category();
-                    $category = !empty($categories) ? $categories[0]->name : '';
+                    $category = !empty($categories) ? $categories[0]: '';
                     ?>
 
-                    <div class="blog_card">
+                    <div class="blog_card" style="display: none;">
                         <div class="blog_card_image">
                             <?php if (has_post_thumbnail()) : ?>
                                 <?php the_post_thumbnail(); ?>
@@ -99,7 +99,7 @@
                         </div>
                         <div class="blog_card_content">
                             <h3 class="blog_card_content_title"><?php the_title(); ?></h3>
-                            <span class="blog_card_content_category"><?= $category ?></span>
+                            <span class="blog_card_content_category" data-slug="<?= $category->slug ?>"><?= $category->name ?></span>
                             <span class="blog_card_content_date"><?php the_time('j F Y'); ?></span>
                             <div class="blog_card_content_text"><?php the_excerpt(); ?></div>
                         </div>
