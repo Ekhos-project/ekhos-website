@@ -1,0 +1,68 @@
+@import "./../functions.scss";
+
+.section-produits#title {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 35rem;
+  padding-bottom: 20rem;
+  background: $color1;
+  background: linear-gradient(180deg, $color1 50%, #182B6C 100%);
+
+  .title {
+    &_container {
+      @include container();
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &_title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      img {
+        width: 12rem;
+      }
+
+      h1 {
+        padding-top: 4rem;
+        @include font($title, 4.5rem, 600, $color0, $textAlign: center);
+
+        b {
+          color: $color2;
+          white-space: nowrap;
+        }
+      }
+
+      p {
+        padding-top: 6rem;
+        @include font($text, 2.4rem, 500, $color0, $textAlign: center);
+        max-width: 70rem;
+
+        b {
+          color: $color2;
+        }
+      }
+    }
+
+    &_actions {
+      padding-top: 4rem;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      width: 100%;
+
+      a.button {
+        @include button(
+                $endIcon: "\e5c8",
+                $fontColor: $color1,
+                $hoverFontColor: $color1
+        );
+      }
+    }
+  }
+}
