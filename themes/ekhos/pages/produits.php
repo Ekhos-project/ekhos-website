@@ -12,3 +12,26 @@
         </div>
     </div>
 </section>
+
+<section class="section section-produits" id="description">
+    <div class="description_container">
+        <div class="description_description">
+            <div class="description_description_title">
+                <h2>Presets Inspirants pour Votre Sound Design</h2>
+            </div>
+            <div class="description_description_text">
+                <p>Notre bibliothèque de presets soigneusement conçus vous offre un point de départ inspirant pour vos projets de sound design.
+                    </p>
+                <p>Des atmosphères envoûtantes aux effets percutants, en passant par les textures expérimentales, nos presets sont conçus pour vous aider à explorer de nouvelles sonorités et à stimuler votre inspiration.
+            </div>
+            <div class="description_description_action">
+                <a href="" class="button endicon">Essayer</a>
+            </div>
+        </div>
+
+        <div class="description_visual">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/produits_description_visual.png"
+                 alt="IdSound">
+        </div>
+    </div>
+</section>

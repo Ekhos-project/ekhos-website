@@ -66,3 +66,102 @@
     }
   }
 }
+
+.section-produits#description {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10rem;
+  overflow: hidden;
+  background-color: #182B6C;
+
+  .description {
+    &_container {
+      @include container();
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      @include tablet {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+      }
+    }
+
+    &_description {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      @include tablet {
+        width: 100%;
+      }
+
+      &_title {
+        width: 100%;
+
+        h2 {
+          @include font($title, 3.2rem, 500, $color0);
+
+          @include tablet {
+            text-align: center;
+          }
+        }
+      }
+
+      &_text {
+        padding-top: 3.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        p {
+          @include font($text, 2.4rem, 400, $color0);
+
+          @include tablet {
+            text-align: center;
+          }
+        }
+      }
+
+      &_action {
+        padding-top: 4rem;
+        display: flex;
+        justify-content: center;
+
+        a.button {
+          @include button(
+                  $endIcon: "\e5c8",
+                  $fontColor: $color1,
+                  $hoverFontColor: $color1
+          );
+        }
+      }
+    }
+
+    &_visual {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(0, -50%);
+      display: flex;
+      justify-content: center;
+      width: 50vw;
+      height: 60rem;
+
+      @include tablet{
+        display: none;
+      }
+
+      img {
+        height: 140%;
+        object-fit: cover;
+        object-position: top  center;
+      }
+    }
+  }
+}
