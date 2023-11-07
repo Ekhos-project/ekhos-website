@@ -153,14 +153,141 @@
       width: 50vw;
       height: 60rem;
 
-      @include tablet{
+      @include tablet {
         display: none;
       }
 
       img {
         height: 140%;
         object-fit: cover;
-        object-position: top  center;
+        object-position: top center;
+      }
+    }
+  }
+}
+
+.section-produits#details {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  padding: 10rem;
+
+  .details {
+    &_container {
+      @include container();
+      display: flex;
+      justify-content: space-between;
+
+      @include tablet {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &_visual {
+      width: calc(50% - 3rem);
+
+      @include tablet {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &_description {
+      display: flex;
+      flex-direction: column;
+      width: calc(50% - 3rem);
+
+      @include tablet {
+        width: 100%;
+      }
+
+      &_title {
+        display: flex;
+        width: 100%;
+
+        @include tablet{
+          justify-content: center;
+        }
+
+        h2 {
+          position: relative;
+          width: fit-content;
+          @include font($title, 3.2rem, 800, $color1);
+
+          &::after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            right: -2rem;
+            width: 50vw;
+            border-bottom: .3rem dashed $color2;
+            transform: translate(100%, -50%);
+
+            @include tablet{
+              display: none;
+            }
+          }
+
+          @include tablet {
+            text-align: center;
+          }
+        }
+      }
+
+      &_text {
+        width: 100%;
+        padding-top: 3.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        @include tablet {
+          justify-content: center;
+        }
+
+        p {
+          @include font($text, 2.4rem, 400, $color1);
+
+          @include tablet {
+            text-align: center;
+          }
+        }
+      }
+
+      &_adventage{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 3.4rem;
+        gap: 1.8rem;
+
+        @include tablet{
+          align-items: center;
+        }
+
+        span {
+          position: relative;
+          padding-left: 5rem;
+          @include font($text, 2.8rem, 500, $color1);
+
+          &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            @include icon("\e876", 4rem);
+            font-weight: 800;
+            color: #007223;
+          }
+        }
       }
     }
   }
