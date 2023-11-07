@@ -7,6 +7,10 @@
             <h1>Foire aux questions</h1>
             <p>Trouvez des réponses à vos questions.</p>
         </div>
+        <div class="faq_title_search">
+            <input type="text" placeholder="Vous avez une question ?">
+            <button>Rechercher</button>
+        </div>
     </div>
 </section>
 
