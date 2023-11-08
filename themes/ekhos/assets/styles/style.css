@@ -1602,6 +1602,7 @@
   display: flex;
   justify-content: center;
   padding: 10rem;
+  overflow-x: hidden;
 }
 .section-produits#details .details_container {
   position: relative;
@@ -1793,6 +1794,94 @@
   -webkit-font-smoothing: antialiased;
   font-weight: 800;
   color: #007223;
+}
+
+.section-produits#subscription {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 8rem 0;
+  overflow: hidden;
+  background-color: #1E1E1E;
+}
+.section-produits#subscription .subscription_container {
+  position: relative;
+  box-sizing: border-box;
+  width: calc(100% - 204px);
+  max-width: 140rem;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  .section-produits#subscription .subscription_container {
+    width: calc(100% - 80px);
+  }
+}
+@media (max-width: 767px) {
+  .section-produits#subscription .subscription_container {
+    width: calc(100% - 40px);
+  }
+}
+.section-produits#subscription .subscription_description {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.section-produits#subscription .subscription_description_title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.section-produits#subscription .subscription_description_title h2 {
+  font-family: "OwnersWide";
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1em;
+  text-transform: unset;
+  text-align: center;
+  text-decoration: none;
+}
+@media (max-width: 1024px) {
+  .section-produits#subscription .subscription_description_title h2 {
+    font-size: 2.88rem;
+  }
+}
+@media (max-width: 767px) {
+  .section-produits#subscription .subscription_description_title h2 {
+    font-size: 2.56rem;
+  }
+}
+.section-produits#subscription .subscription_description_title h2 b {
+  color: #5DC4E5;
+}
+.section-produits#subscription .subscription_description_text {
+  padding-top: 3.4rem;
+  display: flex;
+  justify-content: center;
+  gap: 2.4rem;
+}
+.section-produits#subscription .subscription_description_text p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 1em;
+  text-transform: unset;
+  text-align: center;
+  text-decoration: none;
+}
+@media (max-width: 1024px) {
+  .section-produits#subscription .subscription_description_text p {
+    font-size: 2.16rem;
+  }
+}
+@media (max-width: 767px) {
+  .section-produits#subscription .subscription_description_text p {
+    font-size: 1.92rem;
+  }
 }
 
 .section-blog#title {

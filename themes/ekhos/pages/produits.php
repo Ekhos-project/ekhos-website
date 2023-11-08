@@ -62,3 +62,16 @@
         </div>
     </div>
 </section>
+
+<section class="section section-produits" id="subscription">
+    <div class="subscription_container">
+        <div class="subscription_description">
+            <div class="subscription_description_title">
+                <h2>Choisissez votre <b>abonnement</b> !</h2>
+            </div>
+            <div class="subscription_description_text">
+                <p>Votre plugin à porter de main et en quelques clics. Choisissez la formule qui vous correspond le mieux.</p>
+            </div>
+        </div>
+    </div>
+</section>

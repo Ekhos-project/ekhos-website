@@ -172,6 +172,7 @@
   display: flex;
   justify-content: center;
   padding: 10rem;
+  overflow-x: hidden;
 
   .details {
     &_container {
@@ -212,7 +213,7 @@
         display: flex;
         width: 100%;
 
-        @include tablet{
+        @include tablet {
           justify-content: center;
         }
 
@@ -230,7 +231,7 @@
             border-bottom: .3rem dashed $color2;
             transform: translate(100%, -50%);
 
-            @include tablet{
+            @include tablet {
               display: none;
             }
           }
@@ -261,7 +262,7 @@
         }
       }
 
-      &_adventage{
+      &_adventage {
         position: relative;
         width: 100%;
         display: flex;
@@ -269,7 +270,7 @@
         padding-top: 3.4rem;
         gap: 1.8rem;
 
-        @include tablet{
+        @include tablet {
           align-items: center;
         }
 
@@ -287,6 +288,56 @@
             font-weight: 800;
             color: #007223;
           }
+        }
+      }
+    }
+  }
+}
+
+.section-produits#subscription {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 8rem 0;
+  overflow: hidden;
+  background-color: $color1;
+
+  .subscription {
+    &_container {
+      @include container();
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    &_description {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      &_title {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        h2 {
+          @include font($title, 3.2rem, 500, $color0, $textAlign: center);
+
+          b {
+            color: $color2;
+          }
+        }
+      }
+
+      &_text {
+        padding-top: 3.4rem;
+        display: flex;
+        justify-content: center;
+        gap: 2.4rem;
+
+        p {
+          @include font($text, 2.4rem, 400, $color0, $textAlign: center);
         }
       }
     }
