@@ -9,7 +9,7 @@
                 <b>une histoire sonore captivante</b>.</p>
         </div>
         <div class="title_actions">
-            <a href="" class="button endicon">Essayer</a>
+            <a href="/demo/" class="button endicon">Essayer</a>
         </div>
     </div>
 </section>
@@ -29,7 +29,7 @@
                     inspiration.
             </div>
             <div class="description_description_action">
-                <a href="" class="button endicon">Essayer</a>
+                <a href="/demo/" class="button endicon">Essayer</a>
             </div>
         </div>
 

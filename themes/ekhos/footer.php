@@ -52,7 +52,7 @@ global $page_slug;
                 <p>Découvrez notre solution à travers une démo depuis un navigateur web.</p>
             </div>
             <div class="footer_demo_try">
-                <a href="" class="button endicon">Essayer</a>
+                <a href="/demo/" class="button endicon">Essayer</a>
             </div>
         </div>
     </div>

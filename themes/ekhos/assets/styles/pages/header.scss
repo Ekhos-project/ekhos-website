@@ -186,7 +186,7 @@ nav {
           }
         }
 
-        &:hover, &.current-menu-item{
+        &:hover, &:not(.demo).current-menu-item{
           & > a{
             color: $color2;
           }
