@@ -308,6 +308,7 @@
       z-index: 1;
       display: flex;
       justify-content: center;
+      flex-direction: column;
     }
 
     &_description {
@@ -338,6 +339,162 @@
 
         p {
           @include font($text, 2.4rem, 400, $color0, $textAlign: center);
+        }
+      }
+    }
+
+    &_cards {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-top: 8rem;
+    }
+
+    &_card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: calc(33% - 3rem);
+
+      @include tablet{
+        width: calc(50% - 2rem);
+        padding-bottom: 4rem;
+      }
+
+      @include mobile{
+        width: 100%;
+      }
+
+      &_title {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2.5rem 2rem;
+        padding-bottom: 6rem;
+        box-sizing: border-box;
+
+        &::before {
+          content: '';
+          position: absolute;
+          z-index: 0;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url("/wp-content/themes/ekhos/assets/images/footer_test_background.png");
+          background-size: 100%;
+          background-repeat: repeat;
+          opacity: .4;
+          border: .1rem solid $color0;
+          border-bottom: none;
+        }
+
+        span {
+          z-index: 1;
+          @include font($text, 1.4rem, 500, $color0);
+        }
+
+        h3 {
+          z-index: 1;
+          padding-top: 2rem;
+          @include font($title, 2.4rem, 500, $color0);
+        }
+
+        i {
+          z-index: 1;
+          padding-top: 1.5rem;
+          @include font($text, 1.2rem, 500, $color0);
+          font-style: italic;
+        }
+      }
+
+      &_action {
+        z-index: 1;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: .1rem;
+        padding-bottom: 3rem;
+        background-color: $color0;
+
+        button {
+          max-width: 95%;
+          @include button(
+                  $fontColor: $color1,
+                  $hoverFontColor: $color1
+          );
+
+          &.medium {
+            @include button(
+                    $fontColor: $color1,
+                    $hoverFontColor: $color1,
+                    $backgroundColor: #B65DE5,
+                    $borderColor: #B65DE5
+            );
+          }
+
+          &.pro {
+            @include button(
+                    $fontColor: $color1,
+                    $hoverFontColor: $color1,
+                    $backgroundColor: #5DE591,
+                    $borderColor: #5DE591
+            );
+          }
+        }
+      }
+
+      &_features, &_services {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        box-sizing: border-box;
+        background-color: $color0;
+
+        h4 {
+          position: relative;
+          padding-bottom: .8rem;
+          width: 100%;
+          @include font($text, 1.4rem, 600, $color1);
+          font-style: italic;
+        }
+
+        span {
+          position: relative;
+          padding: .4rem 0;
+          padding-right: 4rem;
+          width: 100%;
+          @include font($text, 1.4rem, 500, $color1);
+
+          &::after {
+            @include icon("\e15b", 2.4rem);
+            font-weight: 600;
+            position: absolute;
+            top: 50%;
+            right: 2rem;
+            transform: translate(-100%, -50%);
+            color: grey;
+          }
+
+          &.with {
+            &::after {
+              @include icon("\e876", 2.4rem);
+              color: #007223;
+            }
+          }
+
+          &.without {
+            &::after {
+              @include icon("\e5cd", 2.4rem);
+              color: #D13636;
+            }
+          }
         }
       }
     }

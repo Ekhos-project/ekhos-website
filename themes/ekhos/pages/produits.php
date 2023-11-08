@@ -73,5 +73,76 @@
                 <p>Votre plugin à porter de main et en quelques clics. Choisissez la formule qui vous correspond le mieux.</p>
             </div>
         </div>
+
+        <div class="subscription_cards">
+            <div class="subscription_card">
+                <div class="subscription_card_title">
+                    <span>Accompagnement</span>
+                    <h3>Classique</h3>
+                    <i>Sur devis</i>
+                </div>
+                <div class="subscription_card_action">
+                    <button>Faire un devis</button>
+                </div>
+                <div class="subscription_card_features">
+                    <h4>Fonctionnalités</h4>
+                    <span class="with">1 sound par page</span>
+                    <span class="with">1 type de voix</span>
+                    <span class="without">1 sound par section</span>
+                </div>
+                <div class="subscription_card_services">
+                    <h4>Services inclus</h4>
+                    <span class="with">Scénarisation</span>
+                    <span class="without">Voix professionnelle</span>
+                    <span class="without">Expert UX</span>
+                </div>
+            </div>
+
+            <div class="subscription_card">
+                <div class="subscription_card_title">
+                    <span>Accompagnement</span>
+                    <h3>Medium</h3>
+                    <i>Sur devis</i>
+                </div>
+                <div class="subscription_card_action">
+                    <button class="medium">Faire un devis</button>
+                </div>
+                <div class="subscription_card_features">
+                    <h4>Fonctionnalités</h4>
+                    <span class="with">3 sounds par page</span>
+                    <span class="with">3 sounds par section</span>
+                    <span class="with">3 types de voix</span>
+                </div>
+                <div class="subscription_card_services">
+                    <h4>Services inclus</h4>
+                    <span class="with">Scénarisation</span>
+                    <span class="with">Voix professionnelle</span>
+                    <span class="without">Expert UX</span>
+                </div>
+            </div>
+
+            <div class="subscription_card">
+                <div class="subscription_card_title">
+                    <span>Accompagnement</span>
+                    <h3>Pro</h3>
+                    <i>Sur devis</i>
+                </div>
+                <div class="subscription_card_action">
+                    <button class="pro">Faire un devis</button>
+                </div>
+                <div class="subscription_card_features">
+                    <h4>Fonctionnalités</h4>
+                    <span class="with">Sounds par page illimités</span>
+                    <span class="with">Sounds par section illimités</span>
+                    <span class="with">Types de voix illimités</span>
+                </div>
+                <div class="subscription_card_services">
+                    <h4>Services inclus</h4>
+                    <span class="with">Scénarisation</span>
+                    <span class="with">Voix professionnelle</span>
+                    <span class="with">Expert UX</span>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
