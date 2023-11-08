@@ -500,3 +500,128 @@
     }
   }
 }
+
+.section-produits#features {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 8rem 0;
+  overflow: hidden;
+  background-color: $color0;
+
+  .features {
+    &_container {
+      @include container();
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    &_description {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      &_title {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        h2 {
+          @include font($title, 3.2rem, 500, $color1, $textAlign: center);
+
+          b {
+            color: $color2;
+          }
+        }
+      }
+
+      &_text {
+        padding-top: 3.4rem;
+        display: flex;
+        justify-content: center;
+        gap: 2.4rem;
+
+        p {
+          @include font($text, 2.4rem, 400, $color1, $textAlign: center);
+        }
+      }
+    }
+    
+    &_table {
+      position: relative;
+      padding-top: 6rem;
+      width: 100%;
+
+      table {
+        width: 100%;
+
+        tr {
+          border-bottom: 0.2rem dashed rgba(0,0,0,0.3);
+
+          &:last-of-type, &:first-of-type{
+            border-bottom: none;
+          }
+
+          th {
+            @include font($text, 2.2rem, 500, $color1, $textAlign: center);
+            padding-bottom: 2.5rem;
+
+            @include mobile{
+              font-size: 1.4rem;
+            }
+
+            &:first-of-type{
+              text-align: left;
+            }
+          }
+
+          td {
+            padding: 2rem 0;
+
+            &::before{
+              @include mobile{
+                font-size: 2.4rem!important;
+              }
+            }
+          }
+
+          &.classique {
+            &>td:nth-child(2){
+              text-align: center;
+              &::before{
+                @include icon("\e876", 4rem);
+                font-weight: 800;
+                color: #007223;
+              }
+            }
+          }
+
+          &.medium {
+            &>td:nth-child(3){
+              text-align: center;
+              &::before{
+                @include icon("\e876", 4rem);
+                font-weight: 800;
+                color: #007223;
+              }
+            }
+          }
+
+          &.pro {
+            &>td:nth-child(4){
+              text-align: center;
+              &::before{
+                @include icon("\e876", 4rem);
+                font-weight: 800;
+                color: #007223;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

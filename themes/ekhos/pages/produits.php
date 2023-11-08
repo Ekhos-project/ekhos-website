@@ -43,7 +43,8 @@
 <section class="section section-produits" id="details">
     <div class="details_container">
         <div class="details_visual">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/produits_details_image.png" alt="details">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/produits_details_image.png"
+                 alt="details">
         </div>
         <div class="details_description">
             <div class="details_description_title">
@@ -70,7 +71,8 @@
                 <h2>Choisissez votre <b>abonnement</b> !</h2>
             </div>
             <div class="subscription_description_text">
-                <p>Votre plugin à porter de main et en quelques clics. Choisissez la formule qui vous correspond le mieux.</p>
+                <p>Votre plugin à porter de main et en quelques clics. Choisissez la formule qui vous correspond le
+                    mieux.</p>
             </div>
         </div>
 
@@ -143,6 +145,61 @@
                     <span class="with">Expert UX</span>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-produits" id="features">
+    <div class="features_container">
+        <div class="features_description">
+            <div class="features_description_title">
+                <h2>Avec ou sans accompagnement ?</h2>
+            </div>
+            <div class="features_description_text">
+                <p>Comparez notre service avec ou sans accompagnement pour choisir la meilleure solution adaptée à vos
+                    envies.</p>
+            </div>
+        </div>
+
+        <div class="features_table">
+            <table>
+                <tr>
+                    <th>Fonctionnalités</th>
+                    <th>Classiques</th>
+                    <th>Medium</th>
+                    <th>Pro</th>
+                </tr>
+                <tr class="classique medium pro">
+                    <td>Sound par page</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="classique medium pro">
+                    <td>Type de voix</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="classique medium pro">
+                    <td>Scénarisation</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="medium pro">
+                    <td>Voix professionnelle</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="pro">
+                    <td>Expert UX</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
     </div>
 </section>
