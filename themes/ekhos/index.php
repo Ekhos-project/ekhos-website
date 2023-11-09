@@ -11,7 +11,7 @@ if (is_front_page()) {
     if (file_exists($path)) {
         include_once $path;
     } else {
-//        include_once get_template_directory() . "/pages/404.php";
+        include_once get_template_directory() . "/404.php";
     }
 }
 
