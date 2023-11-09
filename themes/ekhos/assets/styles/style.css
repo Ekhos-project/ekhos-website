@@ -5752,10 +5752,6 @@ footer .footer_questions_item.open .footer_questions_item_response {
     width: 100%;
   }
 }
-.section-single#more .more_card:last-of-type {
-  padding-bottom: 0;
-  border-bottom: none;
-}
 .section-single#more .more_card_image {
   position: relative;
   width: 100%;
