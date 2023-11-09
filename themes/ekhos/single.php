@@ -22,7 +22,7 @@ get_header();
 
 <section class="section section-single" id="article">
     <div class="article_container">
-        <main>
+        <main class="article_main">
             <?php the_content(); ?>
         </main>
     </div>

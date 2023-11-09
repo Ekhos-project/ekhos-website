@@ -1,5 +1,13 @@
 @import "./../functions.scss";
 
+body.single {
+  footer {
+    .footer_demo, .footer_questions {
+      display: none;
+    }
+  }
+}
+
 footer {
   position: relative;
   width: 100%;
@@ -358,7 +366,7 @@ footer {
       padding: 8rem 0;
       background-color: #F4F4F4;
 
-      &[data-page="faq"], &[data-page="accueil"], &[data-page="blog"]{
+      &[data-page="faq"], &[data-page="accueil"], &[data-page="blog"] {
         display: none;
       }
 
