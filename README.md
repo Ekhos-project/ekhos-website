@@ -8,7 +8,7 @@ Ces instructions vous permettront d'obtenir une copie du projet opérationnelle 
 
 ### Prérequis
 
-- Docker
+- Docker  
 - Docker Compose
 
 ### Installation
