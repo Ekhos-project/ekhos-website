@@ -1,0 +1,462 @@
+@import "./../functions.scss";
+
+body.single {
+  footer {
+    .footer_demo, .footer_questions {
+      display: none;
+    }
+  }
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .footer {
+    &_demo {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding: 8rem 0;
+      background: $color1;
+      background: linear-gradient(171deg, $color2 0%, #4D95C3 100%);
+
+      &[data-page="contact"], &[data-page="blog"], &[data-page="faq"] {
+        display: none;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        user-select: none;
+        background-image: url("/wp-content/themes/ekhos/assets/images/footer_test_background.png");
+        background-size: cover;
+      }
+
+      &_container {
+        @include container();
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+
+        @include mobile {
+          flex-direction: column;
+        }
+      }
+
+      &_text {
+        position: relative;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+          width: 68%;
+        }
+
+        @include mobile {
+          width: 100%;
+          align-items: center;
+        }
+
+        h3 {
+          @include font($title, 3.2rem, 500, $color0);
+
+          @include mobile {
+            text-align: center;
+          }
+        }
+
+        p {
+          padding-top: 3rem;
+          @include font($text, 2.4rem, 400, $color0);
+
+          @include mobile {
+            text-align: center;
+          }
+        }
+      }
+
+      &_try {
+        a.button {
+          @include button(
+                  $endIcon: "\e5c8",
+                  $fontColor: $color1,
+                  $hoverFontColor: $color1,
+                  $borderColor: $color0,
+                  $backgroundColor: $color0
+          );
+        }
+
+        @include mobile {
+          padding-top: 4rem;
+        }
+      }
+    }
+
+    &_newsletter {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding-top: 15rem;
+      padding-bottom: 7rem;
+      background-color: $color1;
+
+      &_container {
+        @include container();
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include laptop {
+          gap: 4rem;
+          flex-direction: column;
+        }
+      }
+
+      &_text {
+        position: relative;
+        width: calc(50% - 2rem);
+
+        @include laptop {
+          width: 100%;
+        }
+
+        p {
+          @include font($text, 2.4rem, 500, $color0);
+        }
+      }
+
+      &_action {
+        position: relative;
+        width: 50%;
+
+        @include laptop {
+          width: 100%;
+        }
+
+        .wpcf7 {
+          width: 100%;
+        }
+
+        form.wpcf7-form {
+          position: relative;
+          display: flex;
+          justify-content: flex-end;
+          width: 100%;
+          box-sizing: border-box;
+        }
+
+        button[type="submit"].button {
+          @include button(
+                  $startIcon: "\e158",
+                  $fontColor: $color1,
+                  $hoverFontColor: $color1,
+                  $borderColor: $color0,
+                  $backgroundColor: $color0
+          );
+          font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+
+        input#email {
+          height: 100%;
+          padding: 2rem 4rem;
+          padding-right: 8rem;
+          box-sizing: border-box;
+          border-radius: 8rem 0 0 8rem;
+          border: .2rem solid $color0;
+          border-right: none;
+          background-color: transparent;
+          outline: none;
+          width: calc(100% + 5rem);
+          @include font($text, 2rem, 500, $color0);
+
+          &::placeholder {
+            @include font($text, 2rem, 500, #A7A7A7);
+            font-style: italic;
+          }
+        }
+
+        .wpcf7-form-control-wrap {
+          width: 100%;
+        }
+
+        .wpcf7-not-valid-tip {
+          position: absolute;
+          top: -.5rem;
+          left: 0;
+          transform: translateY(-100%);
+        }
+
+        .wpcf7-spinner {
+          position: absolute;
+        }
+
+        .wpcf7-response-output {
+          position: absolute;
+          bottom: -1rem;
+          left: 0;
+          transform: translateY(100%);
+          margin: 0;
+          padding: 0;
+          border: none;
+          @include font($text, 2rem, 500, $color0);
+        }
+      }
+    }
+
+    &_navigation {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      background-color: $color1;
+
+      &_container {
+        @include container();
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mobile {
+          flex-direction: column;
+          gap: 2rem;
+        }
+      }
+
+      &_logo {
+        width: 6rem;
+        height: 6rem;
+        text-decoration: none;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      &_menu {
+        display: flex;
+        flex-grow: 1;
+        padding-left: 10rem;
+        max-width: 70rem;
+        box-sizing: border-box;
+
+        @include mobile {
+          width: 100%;
+          padding-left: unset;
+        }
+
+        ul {
+          position: relative;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+
+          @include mobile {
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+          }
+        }
+
+        li a {
+          @include font($title, 2rem, 500, $color0);
+          transition: color .3s ease;
+
+          &:hover {
+            color: darken($color0, 25%);
+          }
+        }
+      }
+    }
+
+    &_social {
+      position: relative;
+      padding-top: 10rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $color1;
+      width: 100%;
+
+      &_title {
+        position: relative;
+        width: 90%;
+        @include font($text, 2rem, 400, $color0, $textAlign: center);
+        font-style: italic;
+      }
+
+      &_links {
+        position: relative;
+        width: 90%;
+        max-width: 25rem;
+        padding-top: 3rem;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &_link {
+        position: relative;
+        width: 4rem;
+        height: 4rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    &_legals {
+      position: relative;
+      padding: 6rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $color1;
+      width: 100%;
+
+      ul {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      li {
+        position: relative;
+
+        &:before {
+          content: "•";
+          position: absolute;
+          top: 50%;
+          left: -.8rem;
+          transform: translate(-50%, -50%);
+          @include font($text, 2.4rem, 400, $color0);
+        }
+
+        &:first-child {
+          &:before {
+            content: unset;
+          }
+        }
+
+        a {
+          @include font($text, 1.2rem, 400, $color0);
+          font-style: italic;
+        }
+      }
+    }
+
+    &_questions {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding: 8rem 0;
+      background-color: #F4F4F4;
+
+      &[data-page="faq"], &[data-page="accueil"], &[data-page="blog"] {
+        display: none;
+      }
+
+      &_container {
+        @include container();
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+
+        @include mobile {
+          flex-direction: column;
+        }
+      }
+
+      &_title {
+        h2 {
+          @include font($title, 3.2rem, 500, $color1);
+        }
+      }
+
+      &_content {
+        padding-top: 6rem;
+        width: 100%;
+      }
+
+      &_items {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+      }
+
+      &_item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-bottom: 2rem;
+        padding-right: 8rem;
+        border-bottom: .2rem solid rgba(0, 0, 0, 0.3);
+        width: 100%;
+        box-sizing: border-box;
+
+        &:last-of-type {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+
+        .questions_item_expand {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          top: 0;
+          right: 2rem;
+          width: 4rem;
+          height: 4rem;
+          cursor: pointer;
+
+          &:after {
+            @include icon("\e145");
+            font-size: 4rem;
+            font-weight: 800;
+            color: rgba(0, 0, 0, 0.7);
+          }
+
+          &.open {
+            &:after {
+              content: "\e15b";
+            }
+          }
+        }
+
+        &_title {
+          @include font($text, 2.4rem, 500, $color1);
+          min-height: 4rem;
+        }
+
+        &_response {
+          @include font($text, 1.8rem, 400, $color1);
+          display: none;
+        }
+
+        &.open {
+          .footer_questions_item_response {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

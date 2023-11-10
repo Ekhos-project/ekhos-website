@@ -1,0 +1,7 @@
+@import "./../functions.scss";
+
+body.demo {
+  header, footer{
+    display: none;
+  }
+}

@@ -1,0 +1,175 @@
+@import "./../functions.scss";
+
+.section-faq#title {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 35rem;
+  padding-bottom: 20rem;
+  background: $color1;
+  background: linear-gradient(180deg, $color1 50%, rgb(47, 127, 83) 100%);
+
+  .faq {
+    &_container {
+      @include container();
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &_title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      img {
+        width: 12rem;
+      }
+
+      h1 {
+        padding-top: 4rem;
+        @include font($title, 4.5rem, 600, $color0, $textAlign: center);
+
+        b {
+          color: $color2;
+          white-space: nowrap;
+        }
+      }
+
+      p {
+        padding-top: 6rem;
+        @include font($text, 2.4rem, 500, $color0, $textAlign: center);
+        max-width: 70rem;
+      }
+
+      &_search {
+        padding-top: 6rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding-left: 2.5rem;
+        width: calc(100% + 5rem);
+        max-width: 70rem;
+
+        input {
+          position: relative;
+          padding: 2rem 4rem;
+          padding-right: 8rem;
+          box-sizing: border-box;
+          border-radius: 8rem 0 0 8rem;
+          border: .2rem solid $color0;
+          border-right: none;
+          background-color: $color0;
+          outline: none;
+          flex-grow: 1;
+          @include font($text, 2rem, 500, $color1);
+
+          &::placeholder {
+            @include font($text, 2rem, 500, #A7A7A7);
+            font-style: italic;
+          }
+        }
+        button {
+          transform: translateX(-4rem);
+          @include button(
+                  $fontColor: $color0,
+                  $hoverFontColor: $color0,
+                  $borderColor: $color1,
+                  $backgroundColor: $color1
+          );
+        }
+      }
+    }
+  }
+}
+
+.section-faq#questions {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+
+  .questions {
+    &_container {
+      @include container();
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &_content{
+      padding: 4rem;
+      box-shadow: .3rem .3rem 1rem rgba(173, 173, 173, 0.5);
+      transform: translateY(-8rem);
+      background-color: $color0;
+      width: 100%;
+    }
+
+    &_items {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%;
+    }
+
+    &_item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding-bottom: 2rem;
+      padding-right: 8rem;
+      border-bottom: .2rem solid rgba(0, 0, 0, 0.3);
+      width: 100%;
+      box-sizing: border-box;
+
+      &:last-of-type{
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      &_expand {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        right: 2rem;
+        width: 4rem;
+        height: 4rem;
+        cursor: pointer;
+
+        &:after{
+          @include icon("\e145");
+          font-size: 4rem;
+          font-weight: 800;
+          color: rgba(0, 0, 0, 0.7);
+        }
+
+        &.open {
+          &:after{
+           content: "\e15b";
+          }
+        }
+      }
+
+      &_title {
+        @include font($text, 1.8rem, 500, $color1);
+        min-height: 4rem;
+      }
+
+      &_response {
+        @include font($text, 1.6rem, 400, $color1);
+        display: none;
+      }
+
+      &.open {
+        .questions_item_response {
+          display: block;
+        }
+      }
+    }
+  }
+}

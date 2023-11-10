@@ -1,0 +1,641 @@
+@import "./../functions.scss";
+
+.section-home#hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 35rem;
+  padding-bottom: 30rem;
+  background-color: $color1;
+
+  h1 {
+    @include font($title, 4.5rem, 600, $color0, $textAlign: center);
+
+    b {
+      color: $color2;
+      white-space: nowrap;
+    }
+  }
+
+  p {
+    padding-top: 6rem;
+    @include font($text, 2.4rem, 500, $color0, $textAlign: center);
+  }
+
+  a.button {
+    margin-top: 8rem;
+    @include button(
+            $endIcon: "\e5c8",
+            $borderColor: $color0,
+            $hoverBorderColor: $color0,
+            $backgroundColor: transparent,
+            $hoverBackgroundColor: transparentize($color0, 0.8)
+    );
+  }
+
+  .hero {
+    &_container {
+      @include container();
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
+
+.section-home#video {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: $color2;
+  padding-bottom: 8rem;
+
+  .video {
+    &_container {
+      @include container();
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &_visual {
+      position: relative;
+
+      @include mobile {
+        display: none;
+      }
+
+      img {
+        width: auto;
+        height: 55rem;
+
+        @include laptop{
+          height: 45rem;
+        }
+
+        @include tablet{
+          height: 35rem;
+        }
+      }
+    }
+  }
+
+  video {
+    position: relative;
+    z-index: 0;
+    top: -18rem;
+    margin-bottom: -18rem;
+    width: 90%;
+    max-width: 108rem;
+  }
+}
+
+.section-home#identity {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 10rem;
+  padding-bottom: 16rem;
+
+  .identity {
+    &_container {
+      @include container();
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &_title {
+      @include font($title, 3.2rem, 500, $color1, $textAlign: center);
+    }
+
+    &_description {
+      padding-top: 3.2rem;
+      @include font($text, 2.4rem, 500, $color1, $textAlign: center);
+    }
+
+    &_cards {
+      position: relative;
+      padding-top: 8rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4rem;
+
+      @include mobile {
+        gap: 2.4rem;
+      }
+    }
+
+    &_card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      border-radius: 1rem;
+      width: calc(33.2% - 2.6rem);
+      box-sizing: border-box;
+      box-shadow: .3rem .3rem 1rem #ADABAB85;
+
+      @include tablet {
+        width: calc(50% - 2.6rem);
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+
+      &_icon {
+        padding-top: 5.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: auto;
+          height: 8rem;
+        }
+      }
+
+      &_title {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 2.4rem;
+
+        h3 {
+          @include font($text, 1.8rem, 600, $color1, $textAlign: center);
+          max-width: 27rem;
+        }
+      }
+
+      &_description {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 2.4rem;
+
+        p {
+          @include font($text, 1.6rem, 500, $color1, $textAlign: center);
+          max-width: 40rem;
+        }
+      }
+    }
+  }
+}
+
+.section-home#stories {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 10rem 0;
+  overflow: hidden;
+  background: $color1;
+  background: linear-gradient(0deg, rgba(141, 68, 180, 1) 0%, $color1 100%);
+
+  .stories {
+    &_container {
+      @include container();
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include tablet {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+      }
+    }
+
+    &_description {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      @include tablet {
+        width: 100%;
+      }
+
+      &_title {
+        width: 100%;
+
+        h2 {
+          @include font($title, 3.2rem, 500, $color0);
+
+          @include tablet {
+            text-align: center;
+          }
+        }
+      }
+
+      &_text {
+        padding-top: 3.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        p {
+          @include font($text, 2.4rem, 400, $color0);
+
+          @include tablet {
+            text-align: center;
+          }
+        }
+      }
+
+      &_action {
+        padding-top: 4rem;
+        display: flex;
+        justify-content: center;
+
+        a.button {
+          @include button(
+                  $endIcon: "\e5c8",
+                  $borderColor: $color0,
+                  $hoverBorderColor: $color0,
+                  $backgroundColor: transparent,
+                  $hoverBackgroundColor: transparentize($color0, 0.8),
+          );
+        }
+      }
+    }
+
+    &_visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 50%;
+
+      @include tablet {
+        width: 100%;
+      }
+
+      img {
+        width: 90%;
+        max-width: 86rem;
+        height: auto;
+      }
+    }
+
+    &_background {
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+      right: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      &_visual {
+        width: 100%;
+        height: 85%;
+      }
+
+      img {
+        position: relative;
+        height: 90%;
+        width: auto;
+        z-index: 1;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        user-select: none;
+        background-image: url("/wp-content/themes/ekhos/assets/images/footer_test_background.png");
+        background-size: cover;
+        opacity: .6;
+      }
+    }
+  }
+}
+
+.section-home#build {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 12rem 0;
+  overflow-x: hidden;
+
+  h2 {
+    @include font($title, 3.2rem, 600, $color1, $textAlign: center);
+  }
+
+  a.button {
+    margin-top: 13rem;
+    @include button(
+            $endIcon: "\e5c8",
+    );
+
+    @include tablet {
+      margin-top: 8rem;
+    }
+  }
+
+  .build {
+    &_container {
+      @include container();
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &_contents {
+      position: relative;
+      padding-top: 12rem;
+      display: flex;
+      flex-direction: column;
+      gap: 18rem;
+
+      @include tablet {
+        padding-top: 8rem;
+        gap: 8rem;
+      }
+    }
+
+    &_content {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      @include tablet {
+        flex-direction: column-reverse;
+      }
+
+      &-reverse {
+        flex-direction: row-reverse;
+
+        @include tablet {
+          flex-direction: column-reverse;
+        }
+      }
+
+      &_image {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 50%;
+
+        @include tablet {
+          width: 100%;
+          padding-top: 4rem;
+        }
+
+        img {
+          position: relative;
+          width: 90%;
+          height: auto;
+          z-index: 1;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          z-index: 0;
+          user-select: none;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+          width: 50vw;
+          height: 28rem;
+          background-color: #F4F4F4;
+
+          @include tablet {
+            display: none;
+          }
+        }
+
+        &-reverse {
+          &:before {
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+
+      &_description {
+        display: flex;
+        flex-direction: column;
+        width: calc(50% - 9rem);
+
+        @include tablet {
+          width: 100%;
+        }
+
+        &_title {
+          position: relative;
+          width: fit-content;
+
+          @include tablet {
+            width: 100%;
+          }
+
+          h3 {
+            @include font($text, 2.4rem, 600, $color1);
+            width: fit-content;
+
+            @include tablet {
+              text-align: center;
+              width: 100%;
+            }
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            z-index: 0;
+            user-select: none;
+            top: 50%;
+            transform: translate(100%, -50%);
+            right: -4rem;
+            width: 50vw;
+            height: .4rem;
+            background-color: $color1;
+
+            @include tablet {
+              display: none;
+            }
+          }
+
+          &-reverse {
+            &:before {
+              left: -4rem;
+              right: unset;
+              transform: translate(-100%, -50%);
+            }
+          }
+        }
+
+        p {
+          padding-top: 4rem;
+          @include font($text, 1.8rem, 400, $color1);
+
+          @include tablet {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-home#blog {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8rem;
+
+  h2 {
+    @include font($title, 3.2rem, 600, $color1, $textAlign: center);
+  }
+
+  .blog {
+    &_container {
+      @include container();
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &_cards {
+      position: relative;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding-top: 12rem;
+
+      @include tablet {
+        flex-wrap: wrap;
+        gap: 4rem;
+      }
+    }
+
+    &_card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: calc(33.33% - 2.6rem);
+      box-shadow: .3rem .3rem 1rem #ADABAB85;
+      text-decoration: none;
+      background-color: $color0;
+
+      @include tablet {
+        width: calc(50% - 2rem);
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+
+      &:nth-child(3n + 2) {
+        transform: translateY(4rem);
+
+        @include tablet {
+          transform: translateY(50%);
+        }
+
+        @include mobile {
+          transform: translateY(0);
+        }
+      }
+
+      &_image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &_content {
+        position: relative;
+        padding: 3rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+
+        @include mobile {
+          padding: 2rem;
+        }
+
+        h3 {
+          @include font($text, 2.4rem, 600, $color1);
+
+          @include laptop {
+            max-width: 38rem;
+          }
+        }
+
+        p {
+          padding-top: 2rem;
+          @include font($text, 1.8rem, 400, $color1);
+
+          @include laptop {
+            max-width: 38rem;
+          }
+        }
+      }
+      
+      &_date {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 3rem;
+
+        &-month{
+          @include font($text, 1.8rem, 600, $color0, $textTransform:uppercase);
+        }
+        &-year{
+          padding-top: .5rem;
+          @include font($text, 1.8rem, 600, $color0, $textTransform:uppercase);
+        }
+      }
+    }
+
+    &_action {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      padding-top: 8rem;
+
+      a.button {
+        @include button(
+                $fontColor: #1C2AD9,
+                $hoverFontColor: $color1,
+                $endIcon: "\e5c8",
+                $padding: 0,
+                $hoverPadding: 0,
+                $borderRadius: 0,
+                $borderColor: transparent,
+                $hoverBorderColor: transparent,
+                $backgroundColor: transparent,
+                $hoverBackgroundColor: transparent
+        );
+      }
+    }
+  }
+}

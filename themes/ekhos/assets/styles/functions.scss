@@ -1,0 +1,154 @@
+$text: 'Montserrat', sans-serif;
+$title: 'OwnersWide';
+
+$color0: #FFFFFF;
+$color1: #1E1E1E;
+$color2: #5DC4E5;
+
+$desktop: 1500px;
+$laptop: 1024px;
+$tablet: 767px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop + 1px}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin font(
+  $fontFamily: $text,
+  $fontSize: 1.6rem,
+  $fontWeight: 500,
+  $fontColor: $color1,
+  $lineHeight: 1.1em,
+  $textTransform: unset,
+  $textAlign: left,
+  $textDecoration: none,
+) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  color: $fontColor;
+  line-height: $lineHeight;
+  text-transform: $textTransform;
+  text-align: $textAlign;
+  text-decoration: $textDecoration;
+
+  @include tablet {
+    font-size: calc($fontSize * .9);
+  }
+
+  @include mobile {
+    font-size: calc($fontSize * .85);
+  }
+}
+
+@mixin container(
+  $maxWidth: 140rem,
+) {
+  position: relative;
+  box-sizing: border-box;
+  width: calc(100% - 204px);
+  max-width: $maxWidth;
+
+  @include tablet {
+    width: calc(100% - 80px);
+  }
+
+  @include mobile {
+    width: calc(100% - 40px);
+  }
+}
+
+@mixin icon($code: "\e88a", $fontSize: 2.4rem) {
+  content: $code;
+  font-family: "Material Symbols Rounded";
+  font-weight: normal;
+  font-style: normal;
+  font-size: $fontSize;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin button(
+  $font: $text,
+  $fontSize: 2rem,
+  $fontWeight: 500,
+  $fontColor: $color0,
+  $startIcon: "\e88a",
+  $endIcon: "\e88a",
+  $hoverFontColor: $color0,
+  $borderColor: $color2,
+  $borderRadius: calc($fontSize * 2),
+  $hoverBorderColor: darken($borderColor, 25%),
+  $backgroundColor: $color2,
+  $hoverBackgroundColor: darken($backgroundColor, 25%),
+  $padding: 1.5rem 3rem,
+  $hoverPadding: 1.5rem 3rem,
+) {
+  position: relative;
+  padding: $padding;
+  border-radius: $borderRadius;
+  border: 0.3rem solid $borderColor;
+  box-sizing: border-box;
+  background-color: $backgroundColor;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  cursor: pointer;
+  @include font($fontFamily: $text, $fontSize: $fontSize, $fontWeight: $fontWeight, $fontColor: $fontColor);
+  transition-property: background-color, border-color, color, padding;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  outline: none;
+
+  &:focus-visible {
+    outline: 0.2rem solid $color0;
+  }
+
+  &:hover {
+    padding: $hoverPadding;
+    color: $hoverFontColor;
+    border-color: $hoverBorderColor;
+    background-color: $hoverBackgroundColor;
+  }
+
+  &.starticon {
+    &::before {
+      @include icon($code: $startIcon, $fontSize: 3rem);
+      padding-right: 1rem;
+    }
+  }
+
+  &.endicon {
+    &::after {
+      @include icon($code: $endIcon, $fontSize: 3rem);
+      padding-left: 1rem;
+    }
+  }
+}

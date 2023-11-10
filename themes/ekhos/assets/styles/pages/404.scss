@@ -1,0 +1,42 @@
+@import "./../functions.scss";
+
+.section-404#title {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  padding: 30rem;
+
+  .title {
+    &_container {
+      @include container();
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  h1 {
+    padding-top: 4rem;
+    @include font($title, 4.5rem, 600, $color1, $textAlign: center);
+
+    b {
+      color: $color2;
+      white-space: nowrap;
+    }
+  }
+
+  p {
+    padding-top: 3rem;
+    @include font($text, 2.4rem, 500, $color1, $textAlign: center);
+    max-width: 70rem;
+  }
+  a {
+    margin-top: 3rem;
+    @include button(
+            $endIcon: "\e5c8",
+            $fontColor: $color1,
+            $hoverFontColor: $color1
+    );
+  }
+}

@@ -1,0 +1,627 @@
+@import "./../functions.scss";
+
+.section-produits#title {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 35rem;
+  padding-bottom: 20rem;
+  background: $color1;
+  background: linear-gradient(180deg, $color1 50%, #182B6C 100%);
+
+  .title {
+    &_container {
+      @include container();
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &_title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      img {
+        width: 12rem;
+      }
+
+      h1 {
+        padding-top: 4rem;
+        @include font($title, 4.5rem, 600, $color0, $textAlign: center);
+
+        b {
+          color: $color2;
+          white-space: nowrap;
+        }
+      }
+
+      p {
+        padding-top: 6rem;
+        @include font($text, 2.4rem, 500, $color0, $textAlign: center);
+        max-width: 70rem;
+
+        b {
+          color: $color2;
+        }
+      }
+    }
+
+    &_actions {
+      padding-top: 4rem;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      width: 100%;
+
+      a.button {
+        @include button(
+                $endIcon: "\e5c8",
+                $fontColor: $color1,
+                $hoverFontColor: $color1
+        );
+      }
+    }
+  }
+}
+
+.section-produits#description {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10rem;
+  overflow: hidden;
+  background-color: #182B6C;
+
+  .description {
+    &_container {
+      @include container();
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      @include tablet {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+      }
+    }
+
+    &_description {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      @include tablet {
+        width: 100%;
+      }
+
+      &_title {
+        width: 100%;
+
+        h2 {
+          @include font($title, 3.2rem, 500, $color0);
+
+          @include tablet {
+            text-align: center;
+          }
+        }
+      }
+
+      &_text {
+        padding-top: 3.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        p {
+          @include font($text, 2.4rem, 400, $color0);
+
+          @include tablet {
+            text-align: center;
+          }
+        }
+      }
+
+      &_action {
+        padding-top: 4rem;
+        display: flex;
+        justify-content: center;
+
+        a.button {
+          @include button(
+                  $endIcon: "\e5c8",
+                  $fontColor: $color1,
+                  $hoverFontColor: $color1
+          );
+        }
+      }
+    }
+
+    &_visual {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(0, -50%);
+      display: flex;
+      justify-content: center;
+      width: 50vw;
+      height: 60rem;
+
+      @include tablet {
+        display: none;
+      }
+
+      img {
+        height: 140%;
+        object-fit: cover;
+        object-position: top center;
+      }
+    }
+  }
+}
+
+.section-produits#details {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  padding: 10rem;
+  overflow-x: hidden;
+
+  .details {
+    &_container {
+      @include container();
+      display: flex;
+      justify-content: space-between;
+
+      @include tablet {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &_visual {
+      width: calc(50% - 3rem);
+
+      @include tablet {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &_description {
+      display: flex;
+      flex-direction: column;
+      width: calc(50% - 3rem);
+
+      @include tablet {
+        width: 100%;
+      }
+
+      &_title {
+        display: flex;
+        width: 100%;
+
+        @include tablet {
+          justify-content: center;
+        }
+
+        h2 {
+          position: relative;
+          width: fit-content;
+          @include font($title, 3.2rem, 800, $color1);
+
+          &::after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            right: -2rem;
+            width: 50vw;
+            border-bottom: .3rem dashed $color2;
+            transform: translate(100%, -50%);
+
+            @include tablet {
+              display: none;
+            }
+          }
+
+          @include tablet {
+            text-align: center;
+          }
+        }
+      }
+
+      &_text {
+        width: 100%;
+        padding-top: 3.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        @include tablet {
+          justify-content: center;
+        }
+
+        p {
+          @include font($text, 2.4rem, 400, $color1);
+
+          @include tablet {
+            text-align: center;
+          }
+        }
+      }
+
+      &_adventage {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 3.4rem;
+        gap: 1.8rem;
+
+        @include tablet {
+          align-items: center;
+        }
+
+        span {
+          position: relative;
+          padding-left: 5rem;
+          @include font($text, 2.8rem, 500, $color1);
+
+          &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            @include icon("\e876", 4rem);
+            font-weight: 800;
+            color: #007223;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-produits#subscription {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 8rem 0;
+  overflow: hidden;
+  background-color: $color1;
+
+  .subscription {
+    &_container {
+      @include container();
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    &_description {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      &_title {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        h2 {
+          @include font($title, 3.2rem, 500, $color0, $textAlign: center);
+
+          b {
+            color: $color2;
+          }
+        }
+      }
+
+      &_text {
+        padding-top: 3.4rem;
+        display: flex;
+        justify-content: center;
+        gap: 2.4rem;
+
+        p {
+          @include font($text, 2.4rem, 400, $color0, $textAlign: center);
+        }
+      }
+    }
+
+    &_cards {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-top: 8rem;
+    }
+
+    &_card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: calc(33% - 3rem);
+
+      @include tablet{
+        width: calc(50% - 2rem);
+        padding-bottom: 4rem;
+      }
+
+      @include mobile{
+        width: 100%;
+      }
+
+      &_title {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2.5rem 2rem;
+        padding-bottom: 6rem;
+        box-sizing: border-box;
+
+        &::before {
+          content: '';
+          position: absolute;
+          z-index: 0;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url("/wp-content/themes/ekhos/assets/images/footer_test_background.png");
+          background-size: 100%;
+          background-repeat: repeat;
+          opacity: .4;
+          border: .1rem solid $color0;
+          border-bottom: none;
+        }
+
+        span {
+          z-index: 1;
+          @include font($text, 1.4rem, 500, $color0);
+        }
+
+        h3 {
+          z-index: 1;
+          padding-top: 2rem;
+          @include font($title, 2.4rem, 500, $color0);
+        }
+
+        i {
+          z-index: 1;
+          padding-top: 1.5rem;
+          @include font($text, 1.2rem, 500, $color0);
+          font-style: italic;
+        }
+      }
+
+      &_action {
+        z-index: 1;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: .1rem;
+        padding-bottom: 3rem;
+        background-color: $color0;
+
+        button {
+          max-width: 95%;
+          @include button(
+                  $fontColor: $color1,
+                  $hoverFontColor: $color1
+          );
+
+          &.medium {
+            @include button(
+                    $fontColor: $color1,
+                    $hoverFontColor: $color1,
+                    $backgroundColor: #B65DE5,
+                    $borderColor: #B65DE5
+            );
+          }
+
+          &.pro {
+            @include button(
+                    $fontColor: $color1,
+                    $hoverFontColor: $color1,
+                    $backgroundColor: #5DE591,
+                    $borderColor: #5DE591
+            );
+          }
+        }
+      }
+
+      &_features, &_services {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        box-sizing: border-box;
+        background-color: $color0;
+
+        h4 {
+          position: relative;
+          padding-bottom: .8rem;
+          width: 100%;
+          @include font($text, 1.4rem, 600, $color1);
+          font-style: italic;
+        }
+
+        span {
+          position: relative;
+          padding: .4rem 0;
+          padding-right: 4rem;
+          width: 100%;
+          @include font($text, 1.4rem, 500, $color1);
+
+          &::after {
+            @include icon("\e15b", 2.4rem);
+            font-weight: 600;
+            position: absolute;
+            top: 50%;
+            right: 2rem;
+            transform: translate(-100%, -50%);
+            color: grey;
+          }
+
+          &.with {
+            &::after {
+              @include icon("\e876", 2.4rem);
+              color: #007223;
+            }
+          }
+
+          &.without {
+            &::after {
+              @include icon("\e5cd", 2.4rem);
+              color: #D13636;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-produits#features {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 8rem 0;
+  overflow: hidden;
+  background-color: $color0;
+
+  .features {
+    &_container {
+      @include container();
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    &_description {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      &_title {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        h2 {
+          @include font($title, 3.2rem, 500, $color1, $textAlign: center);
+
+          b {
+            color: $color2;
+          }
+        }
+      }
+
+      &_text {
+        padding-top: 3.4rem;
+        display: flex;
+        justify-content: center;
+        gap: 2.4rem;
+
+        p {
+          @include font($text, 2.4rem, 400, $color1, $textAlign: center);
+        }
+      }
+    }
+    
+    &_table {
+      position: relative;
+      padding-top: 6rem;
+      width: 100%;
+
+      table {
+        width: 100%;
+
+        tr {
+          border-bottom: 0.2rem dashed rgba(0,0,0,0.3);
+
+          &:last-of-type, &:first-of-type{
+            border-bottom: none;
+          }
+
+          th {
+            @include font($text, 2.2rem, 500, $color1, $textAlign: center);
+            padding-bottom: 2.5rem;
+
+            @include mobile{
+              font-size: 1.4rem;
+            }
+
+            &:first-of-type{
+              text-align: left;
+            }
+          }
+
+          td {
+            padding: 2rem 0;
+
+            &::before{
+              @include mobile{
+                font-size: 2.4rem!important;
+              }
+            }
+          }
+
+          &.classique {
+            &>td:nth-child(2){
+              text-align: center;
+              &::before{
+                @include icon("\e876", 4rem);
+                font-weight: 800;
+                color: #007223;
+              }
+            }
+          }
+
+          &.medium {
+            &>td:nth-child(3){
+              text-align: center;
+              &::before{
+                @include icon("\e876", 4rem);
+                font-weight: 800;
+                color: #007223;
+              }
+            }
+          }
+
+          &.pro {
+            &>td:nth-child(4){
+              text-align: center;
+              &::before{
+                @include icon("\e876", 4rem);
+                font-weight: 800;
+                color: #007223;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

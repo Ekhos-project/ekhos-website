@@ -1,0 +1,169 @@
+@import "./../functions.scss";
+@import "./../article.scss";
+
+.section-single#image {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+
+  .image {
+    &_container {
+      @include container();
+    }
+
+    &_visual {
+      position: relative;
+      padding: 4rem;
+      box-sizing: border-box;
+      box-shadow: .3rem .3rem 1rem rgba(173, 171, 171, 0.5215686275);
+      transform: translateY(-8rem);
+      background-color: $color0;
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.section-single#article {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  padding: 8rem 0;
+
+  .article {
+    &_container {
+      @include  container();
+      display: flex;
+      flex-direction: column;
+    }
+
+    &_main {
+      @include normalize_article();
+
+      p {
+        @include font();
+      }
+    }
+  }
+}
+
+.section-single#more{
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8rem;
+
+  .more {
+    &_container {
+      @include container();
+      display: flex;
+      flex-direction: column;
+    }
+
+    &_title {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+
+      h2 {
+        position: relative;
+        width: fit-content;
+        display: flex;
+        @include font($title, 2.4rem, 800, $color1);
+
+        &::after {
+          position: absolute;
+          content: "";
+          transform: translateX(100%);
+          top: 50%;
+          right: -4rem;
+          width: 100vw;
+          height: .2rem;
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+
+    &_cards {
+      position: relative;
+      padding-top: 4rem;
+      display: flex;
+      justify-content: space-between;
+
+      @include mobile{
+        flex-direction: column;
+        gap: 4rem;
+      }
+    }
+
+    &_card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: calc(50% - 3rem);
+      padding: 3rem;
+      box-sizing: border-box;
+      box-shadow: .3rem .3rem 1rem rgba(173, 171, 171, 0.52);
+
+      @include mobile{
+        width: 100%;
+      }
+
+      &_image {
+        position: relative;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 5/3;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &_content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 3rem;
+
+        &_title {
+          @include font($title, 2.4rem, 800, $color1);
+        }
+
+        &_category {
+          padding-top: 1.5rem;
+          @include font($text, 1.6rem, 400, $color2);
+        }
+
+        &_date {
+          padding-top: .8rem;
+          @include font($text, 1.6rem, 500, $color1);
+        }
+
+        &_text {
+          padding-top: 1.5rem;
+
+          p {
+            @include font($text, 2rem, 500, $color1);
+          }
+        }
+      }
+
+      &_action {
+        padding-top: 3rem;
+
+        a {
+          @include font($text, 1.8rem, 500, $color1, $textDecoration: underline);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.section-faq#title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 35rem;
+  padding-bottom: 30rem;
+  background-color: #1E1E1E;
+}
+.section-faq#title .faq_container {
+  position: relative;
+  box-sizing: border-box;
+  width: calc(100% - 204px);
+  max-width: 140rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 1024px) {
+  .section-faq#title .faq_container {
+    width: calc(100% - 80px);
+  }
+}
+@media (max-width: 767px) {
+  .section-faq#title .faq_container {
+    width: calc(100% - 40px);
+  }
+}
+
+/*# sourceMappingURL=faq.css.map */
