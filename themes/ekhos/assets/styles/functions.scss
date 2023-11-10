@@ -38,7 +38,7 @@ $tablet: 767px;
   $fontSize: 1.6rem,
   $fontWeight: 500,
   $fontColor: $color1,
-  $lineHeight: 1em,
+  $lineHeight: 1.1em,
   $textTransform: unset,
   $textAlign: left,
   $textDecoration: none,
@@ -57,7 +57,7 @@ $tablet: 767px;
   }
 
   @include mobile {
-    font-size: calc($fontSize * .8);
+    font-size: calc($fontSize * .85);
   }
 }
 
