@@ -1,0 +1,340 @@
+@import "./../functions.scss";
+
+.section-prix#hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 35rem;
+  padding-bottom: 15rem;
+  background-color: $color1;
+
+  h1 {
+    @include font($title, 4.5rem, 600, $color0, $textAlign: center);
+
+    b {
+      color: $color2;
+      white-space: nowrap;
+    }
+  }
+
+  .hero {
+    &_container {
+      @include container();
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
+
+.section-prix#price {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+  background-color: $color1;
+
+  .price {
+    &_container {
+      @include container();
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &_items {
+      position: relative;
+      width: 100%;
+      overflow-x: auto;
+      display: flex;
+      gap: 3.5rem;
+    }
+
+    &_item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2.5rem;
+      background-color: $color0;
+      width: 22rem;
+
+      &_title {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $color2;
+        width: 100%;
+        padding: 4rem 0;
+        gap: 1rem;
+
+        span {
+          @include font($text, 1.6rem, 400, $color1);
+        }
+
+        b {
+          @include font($text, 2.4rem, 600, $color1);
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 50%) rotate(45deg);
+          height: 4rem;
+          width: 4rem;
+          background-color: $color2;
+        }
+
+        &.medium {
+          $medium: #182B6C;
+          background-color: $medium;
+
+          span {
+            @include font($text, 1.6rem, 400, $color0);
+          }
+
+          b {
+            @include font($text, 2.4rem, 600, $color0);
+          }
+
+          &:after {
+            background-color: $medium;
+          }
+        }
+
+        &.pro {
+          $pro: #B65DE5;
+          background-color: $pro;
+
+          span {
+            @include font($text, 1.6rem, 400, $color0);
+          }
+
+          b {
+            @include font($text, 2.4rem, 600, $color0);
+          }
+
+          &:after {
+            background-color: $pro;
+          }
+        }
+
+        &.proplus {
+          $proplus: #5DE591;
+          background-color: $proplus;
+
+          span {
+            @include font($text, 1.6rem, 400, $color1);
+          }
+
+          b {
+            @include font($text, 2.4rem, 600, $color1);
+          }
+
+          &:after {
+            background-color: $proplus;
+          }
+        }
+
+        &.ultimate {
+          $ultimate: #FFC557;
+          background-color: $ultimate;
+
+          span {
+            @include font($text, 1.6rem, 400, $color1);
+          }
+
+          b {
+            @include font($text, 2.4rem, 600, $color1);
+          }
+
+          &:after {
+            background-color: $ultimate;
+          }
+        }
+      }
+
+      &_price {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 4rem;
+        gap: .5rem;
+
+        span {
+          @include font($text, 1.6rem, 400, $color1);
+        }
+
+        b {
+          @include font($title, 2.4rem, 600, $color1);
+        }
+
+        &:after {
+          position: absolute;
+          @include icon("\e5db", $fontSize: 4rem);
+          bottom: -4.6rem;
+          font-weight: 800;
+        }
+      }
+
+      &_features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 7rem;
+        gap: 1.5rem;
+
+        span {
+          @include font($text, 1.6rem, 500, $color1);
+          text-align: center;
+        }
+      }
+
+      &_action {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: flex-end;
+        align-items: center;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+
+        a {
+          @include button($fontColor: $color1, $hoverFontColor: $color1);
+        }
+
+        &.medium {
+          $medium: #182B6C;
+
+          a {
+            @include button($fontColor: $color0, $hoverFontColor: $color0, $borderColor: $medium, $backgroundColor: $medium);
+          }
+        }
+
+        &.pro {
+          $pro: #B65DE5;
+
+          a {
+            @include button($fontColor: $color0, $hoverFontColor: $color0, $borderColor: $pro, $backgroundColor: $pro);
+          }
+        }
+
+        &.proplus {
+          $proplus: #5DE591;
+
+          a {
+            @include button($fontColor: $color1, $hoverFontColor: $color1, $borderColor: $proplus, $backgroundColor: $proplus);
+          }
+        }
+
+        &.ultimate {
+          $ultimate: #FFC557;
+
+          a {
+            @include button($fontColor: $color1, $hoverFontColor: $color1, $borderColor: $ultimate, $backgroundColor: $ultimate);
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-prix#accompanied {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 10rem 0;
+  overflow: hidden;
+  background-color: $color1;
+
+  .accompanied {
+    &_container {
+      @include container();
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include tablet {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+      }
+    }
+
+    &_description {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      @include tablet {
+        width: 100%;
+      }
+
+      &_title {
+        width: 100%;
+
+        h2 {
+          @include font($title, 3.2rem, 500, $color0);
+
+          @include tablet {
+            text-align: center;
+          }
+        }
+      }
+
+      &_text {
+        padding-top: 3.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        p {
+          @include font($text, 2.4rem, 400, $color0);
+
+          @include tablet {
+            text-align: center;
+          }
+        }
+      }
+
+      &_action {
+        padding-top: 4rem;
+        display: flex;
+        justify-content: center;
+
+        a.button {
+          @include button(
+                  $endIcon: "\e5c8",
+                  $borderColor: $color0,
+                  $hoverBorderColor: $color0,
+                  $backgroundColor: transparent,
+                  $hoverBackgroundColor: transparentize($color0, 0.8),
+          );
+        }
+      }
+    }
+
+    &_visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 50%;
+
+      @include tablet {
+        width: 100%;
+      }
+
+      img {
+        width: 90%;
+        max-width: 86rem;
+        height: auto;
+      }
+    }
+  }
+}
