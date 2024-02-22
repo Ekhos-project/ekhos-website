@@ -1,3 +1,4 @@
+@import "./../article.scss";
 @import "./../functions.scss";
 
 .section-faq#title {
@@ -163,6 +164,7 @@
       &_response {
         @include font($text, 1.6rem, 400, $color1);
         display: none;
+        @include normalize_article();
       }
 
       &.open {

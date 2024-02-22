@@ -60,7 +60,7 @@ global $page_slug;
     <div class="footer_newsletter">
         <div class="footer_newsletter_container">
             <div class="footer_newsletter_text">
-                <p>Restez connecté avec nous. Inscrivez-vous à la newsletter EKHOS !</p>
+                <p>Restez connecté avec nous. <br>Inscrivez-vous à la newsletter IDS !</p>
             </div>
 
             <div class="footer_newsletter_action">

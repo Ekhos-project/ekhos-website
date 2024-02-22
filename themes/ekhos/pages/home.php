@@ -25,7 +25,7 @@
     <div class="identity_container">
 
         <h2 class="identity_title">Votre identité à vous</h2>
-        <p class="identity_description">EKHOS vous accompagne pour créer votre propre identité sonore et vocale</p>
+        <p class="identity_description">IDS vous accompagne pour créer votre propre identité sonore et vocale</p>
 
         <div class="identity_cards">
             <div class="identity_card">
@@ -193,7 +193,7 @@
                     <div class="build_content_description_title build_content_description_title-reverse">
                         <h3>Disponible depuis vos plateformes préférées</h3>
                     </div>
-                    <p>Retrouvez le plug-in «IdSound» d’EKHOS depuis la bibliothèque de plugins de WordPress,
+                    <p>Retrouvez le plug-in «IdSound» d’IDS depuis la bibliothèque de plugins de WordPress,
                         Woocommerce
                         et Shopify.</p>
                 </div>
