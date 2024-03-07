@@ -2,6 +2,7 @@
 @import "functions.scss";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
 
 /* PAGES */
 @import "./pages/404.scss";
@@ -9,15 +10,11 @@
 @import "./pages/produits.scss";
 @import "./pages/blog.scss";
 @import "./pages/faq.scss";
+@import "./pages/prix.scss";
 @import "./pages/contact.scss";
 @import "./pages/header.scss";
 @import "./pages/footer.scss";
 @import "./pages/single.scss";
-
-@font-face {
-  font-family: 'OwnersWide';
-  src: url('/wp-content/themes/ekhos/assets/fonts/owners-wide.ttf') format('truetype');
-}
 
 html {
   font-size: 10px;

@@ -76,76 +76,103 @@
             </div>
         </div>
 
-        <div class="subscription_cards">
-            <div class="subscription_card">
-                <div class="subscription_card_title">
-                    <span>Accompagnement</span>
-                    <h3>Classique</h3>
-                    <i>Sur devis</i>
-                </div>
-                <div class="subscription_card_action">
-                    <button>Faire un devis</button>
-                </div>
-                <div class="subscription_card_features">
-                    <h4>Fonctionnalités</h4>
-                    <span class="with">1 sound par page</span>
-                    <span class="with">1 type de voix</span>
-                    <span class="without">1 sound par section</span>
-                </div>
-                <div class="subscription_card_services">
-                    <h4>Services inclus</h4>
-                    <span class="with">Scénarisation</span>
-                    <span class="without">Voix professionnelle</span>
-                    <span class="without">Expert UX</span>
-                </div>
-            </div>
+        <div class="subscription_price">
+            <div class="subscription_price_container">
+                <div class="subscription_price_items">
+                    <div class="subscription_price_item">
+                        <div class="subscription_price_item_title">
+                            <span>Abonnement</span>
+                            <b>FREEMIUM</b>
+                        </div>
+                        <div class="subscription_price_item_price">
+                            <span>Prix :</span>
+                            <b>Gratuit</b>
+                        </div>
+                        <div class="subscription_price_item_features">
+                            <span>1 sound par page (3 sons max)</span>
+                            <span>Un personnage</span>
+                        </div>
+                        <div class="subscription_price_item_action">
+                            <a href="">S’abonner</a>
+                        </div>
+                    </div>
 
-            <div class="subscription_card">
-                <div class="subscription_card_title">
-                    <span>Accompagnement</span>
-                    <h3>Medium</h3>
-                    <i>Sur devis</i>
-                </div>
-                <div class="subscription_card_action">
-                    <button class="medium">Faire un devis</button>
-                </div>
-                <div class="subscription_card_features">
-                    <h4>Fonctionnalités</h4>
-                    <span class="with">3 sounds par page</span>
-                    <span class="with">3 sounds par section</span>
-                    <span class="with">3 types de voix</span>
-                </div>
-                <div class="subscription_card_services">
-                    <h4>Services inclus</h4>
-                    <span class="with">Scénarisation</span>
-                    <span class="with">Voix professionnelle</span>
-                    <span class="without">Expert UX</span>
-                </div>
-            </div>
+                    <div class="subscription_price_item">
+                        <div class="subscription_price_item_title medium">
+                            <span>Abonnement</span>
+                            <b>MÉDIUM</b>
+                        </div>
+                        <div class="subscription_price_item_price">
+                            <span>Prix :</span>
+                            <b>500€</b>
+                        </div>
+                        <div class="subscription_price_item_features">
+                            <span>1 sound par section</span>
+                            <span>Deux personnages</span>
+                        </div>
+                        <div class="subscription_price_item_action medium">
+                            <a href="">S’abonner</a>
+                        </div>
+                    </div>
 
-            <div class="subscription_card">
-                <div class="subscription_card_title">
-                    <span>Accompagnement</span>
-                    <h3>Pro</h3>
-                    <i>Sur devis</i>
-                </div>
-                <div class="subscription_card_action">
-                    <button class="pro">Faire un devis</button>
-                </div>
-                <div class="subscription_card_features">
-                    <h4>Fonctionnalités</h4>
-                    <span class="with">Sounds par page illimités</span>
-                    <span class="with">Sounds par section illimités</span>
-                    <span class="with">Types de voix illimités</span>
-                </div>
-                <div class="subscription_card_services">
-                    <h4>Services inclus</h4>
-                    <span class="with">Scénarisation</span>
-                    <span class="with">Voix professionnelle</span>
-                    <span class="with">Expert UX</span>
+                    <div class="subscription_price_item">
+                        <div class="subscription_price_item_title pro">
+                            <span>Abonnement</span>
+                            <b>PRO</b>
+                        </div>
+                        <div class="subscription_price_item_price">
+                            <span>Prix :</span>
+                            <b>1.000€</b>
+                        </div>
+                        <div class="subscription_price_item_features">
+                            <span>Plusieurs sounds par section</span>
+                            <span>Trois personnages</span>
+                        </div>
+                        <div class="subscription_price_item_action pro">
+                            <a href="">S’abonner</a>
+                        </div>
+                    </div>
+
+                    <div class="subscription_price_item">
+                        <div class="subscription_price_item_title proplus">
+                            <span>Abonnement</span>
+                            <b>PRO+</b>
+                        </div>
+                        <div class="subscription_price_item_price">
+                            <span>Prix :</span>
+                            <b>2.000€</b>
+                        </div>
+                        <div class="subscription_price_item_features">
+                            <span>Plusieurs sounds par section (+full option)</span>
+                            <span>Personnages illimités</span>
+                        </div>
+                        <div class="subscription_price_item_action proplus">
+                            <a href="">S’abonner</a>
+                        </div>
+                    </div>
+
+                    <div class="subscription_price_item">
+                        <div class="subscription_price_item_title ultimate">
+                            <span>Abonnement</span>
+                            <b>ULTIMATE</b>
+                        </div>
+                        <div class="subscription_price_item_price">
+                            <span>Prix :</span>
+                            <b>5.000€</b>
+                        </div>
+                        <div class="subscription_price_item_features">
+                            <span>Plusieurs sounds par section (+full option)</span>
+                            <span>Personnages illimités</span>
+                            <span>Sites illimités</span>
+                        </div>
+                        <div class="subscription_price_item_action ultimate">
+                            <a href="">S’abonner</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 </section>
 

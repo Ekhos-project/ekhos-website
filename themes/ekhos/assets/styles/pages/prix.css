@@ -1,0 +1,53 @@
+.section-prix#hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 35rem;
+  padding-bottom: 30rem;
+  background-color: #1E1E1E;
+}
+.section-prix#hero h1 {
+  font-family: "OwnersWide";
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 1.1em;
+  text-transform: unset;
+  text-align: center;
+  text-decoration: none;
+}
+@media (max-width: 1024px) {
+  .section-prix#hero h1 {
+    font-size: 4.05rem;
+  }
+}
+@media (max-width: 767px) {
+  .section-prix#hero h1 {
+    font-size: 3.825rem;
+  }
+}
+.section-prix#hero h1 b {
+  color: #5DC4E5;
+  white-space: nowrap;
+}
+.section-prix#hero .hero_container {
+  position: relative;
+  box-sizing: border-box;
+  width: calc(100% - 204px);
+  max-width: 140rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 1024px) {
+  .section-prix#hero .hero_container {
+    width: calc(100% - 80px);
+  }
+}
+@media (max-width: 767px) {
+  .section-prix#hero .hero_container {
+    width: calc(100% - 40px);
+  }
+}
+
+/*# sourceMappingURL=prix.css.map */
