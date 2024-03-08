@@ -86,11 +86,19 @@ $table_prefix = 'wp_';
  */
 define('WP_DEBUG', getenv('WP_DEBUG') === 'true' ? true : false);
 
+
 /* C’est tout, ne touchez pas à ce qui suit ! Bonne publication. */
 
 /** Chemin absolu vers le dossier de WordPress. */
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 
+define('WP_DEFAULT_THEME', 'idsound');
+
+define( 'WP_MEMORY_LIMIT', '512M' );
+
+define('WP_DEBUG', true);
+define('WP_DEBUG_LOG', true);
+define('WP_DEBUG_DISPLAY', false);
 /** Réglage des variables de WordPress et de ses fichiers inclus. */
 require_once(ABSPATH . 'wp-settings.php');

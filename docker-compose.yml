@@ -20,9 +20,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    command: /bin/bash -c "php /usr/local/bin/wp-install.php && docker-php-entrypoint php-fpm"
+    ports:
+      - "9000:9000"
     env_file: .env
     volumes:
       - ./wordpress:/var/www/html
+      - ./php.ini:/usr/local/etc/php/php.ini
     networks:
       - wordpress-network
 
@@ -30,11 +34,25 @@ services:
     image: nginx:latest
     ports:
       - "8000:80"
+    env_file: .env
     volumes:
       - ./nginx:/etc/nginx/conf.d
       - ./wordpress:/var/www/html
     depends_on:
       - php
+    networks:
+      - wordpress-network
+
+  phpmyadmin:
+    depends_on:
+      - db
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     networks:
       - wordpress-network
 
