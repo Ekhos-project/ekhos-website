@@ -1,12 +1,12 @@
 <?php
 
-/*add_action('init', 'set_permalink');
+add_action('init', 'set_permalink');
 
 function set_permalink(){
     global $wp_rewrite;
     $wp_rewrite->set_permalink_structure('/%postname%/');
     $wp_rewrite->flush_rules();
-}*/
+}
 
 function register_my_menus() {
     register_nav_menus(
