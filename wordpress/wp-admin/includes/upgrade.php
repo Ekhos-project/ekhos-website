@@ -212,26 +212,25 @@ if ( ! function_exists( 'wp_install_defaults' ) ) :
 			"</p>\n<!-- /wp:paragraph -->";
 		}
 
-		$wpdb->insert(
-			$wpdb->posts,
-			array(
-				'post_author'           => $user_id,
-				'post_date'             => $now,
-				'post_date_gmt'         => $now_gmt,
-				'post_content'          => $first_post,
-				'post_excerpt'          => '',
-				'post_title'            => __( 'Hello world!' ),
-				/* translators: Default post slug. */
-				'post_name'             => sanitize_title( _x( 'hello-world', 'Default post slug' ) ),
-				'post_modified'         => $now,
-				'post_modified_gmt'     => $now_gmt,
-				'guid'                  => $first_post_guid,
-				'comment_count'         => 1,
-				'to_ping'               => '',
-				'pinged'                => '',
-				'post_content_filtered' => '',
-			)
-		);
+//		$wpdb->insert(
+//			$wpdb->posts,
+//			array(
+//				'post_author'           => $user_id,
+//				'post_date'             => $now,
+//				'post_date_gmt'         => $now_gmt,
+//				'post_content'          => $first_post,
+//				'post_excerpt'          => '',
+//				'post_title'            => __( 'Hello world!' ),
+//				'post_name'             => sanitize_title( _x( 'hello-world', 'Default post slug' ) ),
+//				'post_modified'         => $now,
+//				'post_modified_gmt'     => $now_gmt,
+//				'guid'                  => $first_post_guid,
+//				'comment_count'         => 1,
+//				'to_ping'               => '',
+//				'pinged'                => '',
+//				'post_content_filtered' => '',
+//			)
+//		);
 
 		if ( is_multisite() ) {
 			update_posts_count();
@@ -265,19 +264,19 @@ Commenter avatars come from <a href="%s">Gravatar</a>.'
 			),
 			esc_url( __( 'https://en.gravatar.com/' ) )
 		);
-		$wpdb->insert(
-			$wpdb->comments,
-			array(
-				'comment_post_ID'      => 1,
-				'comment_author'       => $first_comment_author,
-				'comment_author_email' => $first_comment_email,
-				'comment_author_url'   => $first_comment_url,
-				'comment_date'         => $now,
-				'comment_date_gmt'     => $now_gmt,
-				'comment_content'      => $first_comment,
-				'comment_type'         => 'comment',
-			)
-		);
+//		$wpdb->insert(
+//			$wpdb->comments,
+//			array(
+//				'comment_post_ID'      => 1,
+//				'comment_author'       => $first_comment_author,
+//				'comment_author_email' => $first_comment_email,
+//				'comment_author_url'   => $first_comment_url,
+//				'comment_date'         => $now,
+//				'comment_date_gmt'     => $now_gmt,
+//				'comment_content'      => $first_comment,
+//				'comment_type'         => 'comment',
+//			)
+//		);
 
 		// First page.
 		if ( is_multisite() ) {
@@ -315,81 +314,81 @@ Commenter avatars come from <a href="%s">Gravatar</a>.'
 		}
 
 		$first_post_guid = get_option( 'home' ) . '/?page_id=2';
-		$wpdb->insert(
-			$wpdb->posts,
-			array(
-				'post_author'           => $user_id,
-				'post_date'             => $now,
-				'post_date_gmt'         => $now_gmt,
-				'post_content'          => $first_page,
-				'post_excerpt'          => '',
-				'comment_status'        => 'closed',
-				'post_title'            => __( 'Sample Page' ),
-				/* translators: Default page slug. */
-				'post_name'             => __( 'sample-page' ),
-				'post_modified'         => $now,
-				'post_modified_gmt'     => $now_gmt,
-				'guid'                  => $first_post_guid,
-				'post_type'             => 'page',
-				'to_ping'               => '',
-				'pinged'                => '',
-				'post_content_filtered' => '',
-			)
-		);
-		$wpdb->insert(
-			$wpdb->postmeta,
-			array(
-				'post_id'    => 2,
-				'meta_key'   => '_wp_page_template',
-				'meta_value' => 'default',
-			)
-		);
+//		$wpdb->insert(
+//			$wpdb->posts,
+//			array(
+//				'post_author'           => $user_id,
+//				'post_date'             => $now,
+//				'post_date_gmt'         => $now_gmt,
+//				'post_content'          => $first_page,
+//				'post_excerpt'          => '',
+//				'comment_status'        => 'closed',
+//				'post_title'            => __( 'Sample Page' ),
+//				/* translators: Default page slug. */
+//				'post_name'             => __( 'sample-page' ),
+//				'post_modified'         => $now,
+//				'post_modified_gmt'     => $now_gmt,
+//				'guid'                  => $first_post_guid,
+//				'post_type'             => 'page',
+//				'to_ping'               => '',
+//				'pinged'                => '',
+//				'post_content_filtered' => '',
+//			)
+//		);
+//		$wpdb->insert(
+//			$wpdb->postmeta,
+//			array(
+//				'post_id'    => 2,
+//				'meta_key'   => '_wp_page_template',
+//				'meta_value' => 'default',
+//			)
+//		);
 
 		// Privacy Policy page.
 		if ( is_multisite() ) {
 			// Disable by default unless the suggested content is provided.
-			$privacy_policy_content = get_site_option( 'default_privacy_policy_content' );
+//			$privacy_policy_content = get_site_option( 'default_privacy_policy_content' );
 		} else {
-			if ( ! class_exists( 'WP_Privacy_Policy_Content' ) ) {
-				require_once ABSPATH . 'wp-admin/includes/class-wp-privacy-policy-content.php';
-			}
-
-			$privacy_policy_content = WP_Privacy_Policy_Content::get_default_content();
+//			if ( ! class_exists( 'WP_Privacy_Policy_Content' ) ) {
+//				require_once ABSPATH . 'wp-admin/includes/class-wp-privacy-policy-content.php';
+//			}
+//
+//			$privacy_policy_content = WP_Privacy_Policy_Content::get_default_content();
 		}
 
 		if ( ! empty( $privacy_policy_content ) ) {
 			$privacy_policy_guid = get_option( 'home' ) . '/?page_id=3';
 
-			$wpdb->insert(
-				$wpdb->posts,
-				array(
-					'post_author'           => $user_id,
-					'post_date'             => $now,
-					'post_date_gmt'         => $now_gmt,
-					'post_content'          => $privacy_policy_content,
-					'post_excerpt'          => '',
-					'comment_status'        => 'closed',
-					'post_title'            => __( 'Privacy Policy' ),
-					/* translators: Privacy Policy page slug. */
-					'post_name'             => __( 'privacy-policy' ),
-					'post_modified'         => $now,
-					'post_modified_gmt'     => $now_gmt,
-					'guid'                  => $privacy_policy_guid,
-					'post_type'             => 'page',
-					'post_status'           => 'draft',
-					'to_ping'               => '',
-					'pinged'                => '',
-					'post_content_filtered' => '',
-				)
-			);
-			$wpdb->insert(
-				$wpdb->postmeta,
-				array(
-					'post_id'    => 3,
-					'meta_key'   => '_wp_page_template',
-					'meta_value' => 'default',
-				)
-			);
+//			$wpdb->insert(
+//				$wpdb->posts,
+//				array(
+//					'post_author'           => $user_id,
+//					'post_date'             => $now,
+//					'post_date_gmt'         => $now_gmt,
+//					'post_content'          => $privacy_policy_content,
+//					'post_excerpt'          => '',
+//					'comment_status'        => 'closed',
+//					'post_title'            => __( 'Privacy Policy' ),
+//					/* translators: Privacy Policy page slug. */
+//					'post_name'             => __( 'privacy-policy' ),
+//					'post_modified'         => $now,
+//					'post_modified_gmt'     => $now_gmt,
+//					'guid'                  => $privacy_policy_guid,
+//					'post_type'             => 'page',
+//					'post_status'           => 'draft',
+//					'to_ping'               => '',
+//					'pinged'                => '',
+//					'post_content_filtered' => '',
+//				)
+//			);
+//			$wpdb->insert(
+//				$wpdb->postmeta,
+//				array(
+//					'post_id'    => 3,
+//					'meta_key'   => '_wp_page_template',
+//					'meta_value' => 'default',
+//				)
+//			);
 			update_option( 'wp_page_for_privacy_policy', 3 );
 		}
 
