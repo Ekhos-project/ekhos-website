@@ -65,34 +65,27 @@ create_and_assign_menu('Menu Legals', 'legals-menu');
 
 
 function add_page_to_menu($menu_name, $page_slug, $page_title = null, $classes_array = array(), $parent_id = 0){
-    // Tenter de récupérer le menu par son slug
     $menu_obj = wp_get_nav_menu_object($menu_name);
 
-    // Si le menu n'existe pas, le créer
     if (!$menu_obj) {
         return;
     }
 
     $menu_id = $menu_obj->term_id;
 
-    // Trouver la page par son slug
     $page = get_page_by_path($page_slug);
     if (!$page) {
-        echo "Page '$page_slug' non trouvée.";
         return;
     }
     $page_id = $page->ID;
 
-    // Vérifier si la page est déjà dans le menu
     $menu_items = wp_get_nav_menu_items($menu_id);
     foreach ($menu_items as $menu_item) {
         if ($menu_item->object_id == $page_id) {
-            echo "Page déjà présente dans le menu.";
             return;
         }
     }
 
-    // Ajouter la page au menu
     $result = wp_update_nav_menu_item($menu_id, 0, array(
         'menu-item-title' => $page_title ? $page_title : $page->post_title,
         'menu-item-object-id' => $page_id,
@@ -102,12 +95,6 @@ function add_page_to_menu($menu_name, $page_slug, $page_title = null, $classes_a
         'menu-item-classes' => implode(' ', $classes_array),
         'menu-item-parent-id' => $parent_id,
     ));
-
-    if (is_wp_error($result)) {
-        echo "Erreur lors de l'ajout de la page au menu.";
-    } else {
-        echo "Page '$page_slug' ajoutée avec succès au menu '$menu_slug'.";
-    }
 
     return $result;
 }
@@ -165,3 +152,23 @@ add_page_to_menu('Menu header', 'faq', null, array(), $ressources);
 add_page_to_menu('Menu header', 'prix');
 add_page_to_menu('Menu header', 'contact');
 add_page_to_menu('Menu header', 'demo', 'Essayer', array('demo'));
+
+
+function activate_all_plugins() {
+    include_once(ABSPATH . 'wp-admin/includes/plugin.php');
+
+    $all_plugins = get_plugins();
+    $inactive_plugins = array();
+
+    foreach ($all_plugins as $plugin_path => $plugin) {
+        if (!is_plugin_active($plugin_path)) {
+            $inactive_plugins[] = $plugin_path;
+        }
+    }
+
+    if (!empty($inactive_plugins)) {
+        activate_plugins($inactive_plugins);
+    }
+}
+
+activate_all_plugins();
