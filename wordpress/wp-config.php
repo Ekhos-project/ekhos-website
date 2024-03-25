@@ -100,5 +100,14 @@ define( 'WP_MEMORY_LIMIT', '512M' );
 define('WP_DEBUG', true);
 define('WP_DEBUG_LOG', true);
 define('WP_DEBUG_DISPLAY', false);
+
+if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https'){
+    $_SERVER['HTTPS']='on';
+}
+
+if (isset($_SERVER['HTTP_X_FORWARDED_HOST'])) {
+    $_SERVER['HTTP_HOST'] = $_SERVER['HTTP_X_FORWARDED_HOST'];
+}
+
 /** Réglage des variables de WordPress et de ses fichiers inclus. */
 require_once(ABSPATH . 'wp-settings.php');
