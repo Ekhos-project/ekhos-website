@@ -61,7 +61,7 @@ function create_and_assign_menu($menu_name, $menu_location) {
 
 create_and_assign_menu('Menu header', 'header-menu');
 create_and_assign_menu('Menu footer', 'footer-menu');
-create_and_assign_menu('Menu Legals', 'legals-menu');
+create_and_assign_menu('Menu legals', 'legals-menu');
 
 
 function add_page_to_menu($menu_name, $page_slug, $page_title = null, $classes_array = array(), $parent_id = 0){
@@ -133,27 +133,6 @@ function set_homepage_by_slug($page_slug) {
     }
 }
 
-create_page_if_not_exists('accueil', 'Accueil');
-create_page_if_not_exists('blog', 'Blog');
-create_page_if_not_exists('contact', 'Contact');
-create_page_if_not_exists('cookies', 'Cookies');
-create_page_if_not_exists('demo', 'Demo');
-create_page_if_not_exists('faq', 'FAQ');
-create_page_if_not_exists('plan-du-site', 'Plan du site');
-create_page_if_not_exists('politique-de-confidentialite', 'Politique de confidentialité');
-create_page_if_not_exists('prix', 'Prix');
-create_page_if_not_exists('produits', 'Produits');
-create_page_if_not_exists('v1', 'V1');
-set_homepage_by_slug('accueil');
-add_page_to_menu('Menu header', 'produits');
-$ressources = create_menu_item('Menu header', 'Ressources', '#ressources');
-add_page_to_menu('Menu header', 'blog', null, array(), $ressources);
-add_page_to_menu('Menu header', 'faq', null, array(), $ressources);
-add_page_to_menu('Menu header', 'prix');
-add_page_to_menu('Menu header', 'contact');
-add_page_to_menu('Menu header', 'demo', 'Essayer', array('demo'));
-
-
 function activate_all_plugins() {
     include_once(ABSPATH . 'wp-admin/includes/plugin.php');
 
@@ -171,4 +150,41 @@ function activate_all_plugins() {
     }
 }
 
-activate_all_plugins();
+function add_pages() {
+    create_page_if_not_exists('accueil', 'Accueil');
+    create_page_if_not_exists('blog', 'Blog');
+    create_page_if_not_exists('contact', 'Contact');
+    create_page_if_not_exists('cookies', 'Cookies');
+    create_page_if_not_exists('demo', 'Demo');
+    create_page_if_not_exists('faq', 'FAQ');
+    create_page_if_not_exists('plan-du-site', 'Plan du site');
+    create_page_if_not_exists('politique-de-confidentialite', 'Politique de confidentialité');
+    create_page_if_not_exists('prix', 'Prix');
+    create_page_if_not_exists('produits', 'Produits');
+    create_page_if_not_exists('v1', 'V1');
+    set_homepage_by_slug('accueil');
+    add_page_to_menu('Menu header', 'produits');
+    $ressources = create_menu_item('Menu header', 'Ressources', '#ressources');
+    add_page_to_menu('Menu header', 'blog', null, array(), $ressources);
+    add_page_to_menu('Menu header', 'faq', null, array(), $ressources);
+    add_page_to_menu('Menu header', 'prix');
+    add_page_to_menu('Menu header', 'contact');
+    add_page_to_menu('Menu header', 'demo', 'Essayer', array('demo'));
+    add_page_to_menu('Menu footer', 'produits');
+    add_page_to_menu('Menu footer', 'faq');
+    add_page_to_menu('Menu footer', 'blog');
+    add_page_to_menu('Menu footer', 'contact');
+    add_page_to_menu('Menu legals', 'politique-de-confidentialite');
+    add_page_to_menu('Menu legals', 'cookies');
+    add_page_to_menu('Menu legals', 'v1');
+    add_page_to_menu('Menu legals', 'plan-du-site');
+}
+
+function theme_activation() {
+    if (get_option('theme_activation_exec', false) == false) {
+        add_pages();
+        activate_all_plugins();
+        update_option('theme_activation_exec', true);
+    }
+}
+theme_activation();

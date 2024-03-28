@@ -1,4 +1,10 @@
 <?php
+
+//Begin Really Simple SSL session cookie settings
+@ini_set('session.cookie_httponly', true);
+@ini_set('session.cookie_secure', true);
+@ini_set('session.use_only_cookies', true);
+//END Really Simple SSL cookie settings
 /**
  * La configuration de base de votre installation WordPress.
  *
@@ -18,28 +24,21 @@
  *
  * @package WordPress
  */
-
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
 define('DB_NAME', getenv('MYSQL_DATABASE'));
-
 /** Utilisateur de la base de données MySQL. */
 define('DB_USER', getenv('MYSQL_USER'));
-
 /** Mot de passe de la base de données MySQL. */
 define('DB_PASSWORD', getenv('MYSQL_PASSWORD'));
-
 /** Adresse de l’hébergement MySQL. */
 define('DB_HOST', 'db:3306');
-
 /** Jeu de caractères à utiliser par la base de données lors de la création des tables. */
 define('DB_CHARSET', 'utf8');
-
 /** Type de collation de la base de données.
   * N’y touchez que si vous savez ce que vous faites.
   */
 define('DB_COLLATE', '');
-
 /**#@+
  * Clés uniques d’authentification et salage.
  *
@@ -60,7 +59,6 @@ define('SECURE_AUTH_SALT', getenv('WORDPRESS_PHRASE'));
 define('LOGGED_IN_SALT',   getenv('WORDPRESS_PHRASE'));
 define('NONCE_SALT',       getenv('WORDPRESS_PHRASE'));
 /**#@-*/
-
 /**
  * Préfixe de base de données pour les tables de WordPress.
  *
@@ -69,7 +67,6 @@ define('NONCE_SALT',       getenv('WORDPRESS_PHRASE'));
  * N’utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés !
  */
 $table_prefix = 'wp_';
-
 /**
  * Pour les développeurs et développeuses : le mode déboguage de WordPress.
  *
@@ -85,29 +82,22 @@ $table_prefix = 'wp_';
  * @link https://fr.wordpress.org/support/article/debugging-in-wordpress/
  */
 define('WP_DEBUG', getenv('WP_DEBUG') === 'true' ? true : false);
-
-
 /* C’est tout, ne touchez pas à ce qui suit ! Bonne publication. */
-
 /** Chemin absolu vers le dossier de WordPress. */
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 
-define('WP_DEFAULT_THEME', 'idsound');
-
 define( 'WP_MEMORY_LIMIT', '512M' );
-
-define('WP_DEBUG', true);
 define('WP_DEBUG_LOG', true);
 define('WP_DEBUG_DISPLAY', false);
+define('WP_DEFAULT_THEME', 'idsound');
 
 if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https'){
     $_SERVER['HTTPS']='on';
 }
-
 if (isset($_SERVER['HTTP_X_FORWARDED_HOST'])) {
     $_SERVER['HTTP_HOST'] = $_SERVER['HTTP_X_FORWARDED_HOST'];
 }
-
 /** Réglage des variables de WordPress et de ses fichiers inclus. */
 require_once(ABSPATH . 'wp-settings.php');
+

@@ -9,3 +9,4 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
 COPY wp-install.php /usr/local/bin/wp-install.php
 
 RUN chmod +x /usr/local/bin/wp-install.php
+RUN chmod -R 777 /var/www/html
