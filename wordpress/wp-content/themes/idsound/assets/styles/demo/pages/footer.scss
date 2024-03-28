@@ -1,0 +1,50 @@
+@import "./../functions.scss";
+
+footer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 6rem 0;
+  background-color: #4953DF;
+
+  .footer {
+    &_container {
+      @include container();
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &_title {
+      h2 {
+        @include font($title, 2.4rem, 500, $color0, $textAlign: center);
+      }
+    }
+
+    &_action {
+      padding-top: 4rem;
+
+      a.button {
+        @include button(
+                $endIcon: "\e5c8",
+                $borderColor: $color0,
+                $hoverBorderColor: $color0,
+                $backgroundColor: transparent,
+                $hoverBackgroundColor: transparentize($color0, 0.8)
+        );
+      }
+    }
+
+    &_logo {
+      padding-top: 4rem;
+      display: flex;
+      justify-content: center;
+
+      img {
+        height: 5rem;
+        width: auto;
+      }
+    }
+  }
+}
