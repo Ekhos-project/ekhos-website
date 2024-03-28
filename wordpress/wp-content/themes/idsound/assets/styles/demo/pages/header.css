@@ -1,0 +1,37 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+header .header_content {
+  position: relative;
+  width: calc(100% - 8rem);
+  max-width: 170rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header_logo {
+  position: relative;
+  height: 100%;
+}
+header .header_logo img {
+  height: 100%;
+  width: auto;
+}
+header .header_burger {
+  position: relative;
+  height: 50%;
+}
+header .header_burger img {
+  height: 100%;
+  width: auto;
+}
+
+/*# sourceMappingURL=header.css.map */
