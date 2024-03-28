@@ -1,8 +1,9 @@
-version: '3'
+version: '3.1'
 
 services:
   db:
     image: mysql:5.7
+    platform: linux/amd64
     volumes:
       - db_data:/var/lib/mysql
     environment:
@@ -10,20 +11,37 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    networks:
+      - wordpress-network
 
-  wordpress:
+  php:
     depends_on:
       - db
-    image: wordpress:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: /bin/bash -c "php /usr/local/bin/wp-install.php && docker-php-entrypoint php-fpm"
+    ports:
+      - "9000:9000"
+    env_file: .env
+    volumes:
+      - ./wordpress:/var/www/html
+      - ./php.ini:/usr/local/etc/php/php.ini
+    networks:
+      - wordpress-network
+
+  nginx:
+    image: nginx:latest
     ports:
       - "8000:80"
-    environment:
-      WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST}
-      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
-      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
-      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
+    env_file: .env
     volumes:
-      - .:/var/www/html/wp-content
+      - ./nginx:/etc/nginx/conf.d
+      - ./wordpress:/var/www/html
+    depends_on:
+      - php
+    networks:
+      - wordpress-network
 
   phpmyadmin:
     depends_on:
@@ -33,7 +51,14 @@ services:
       - "8080:80"
     environment:
       PMA_HOST: db
+      PMA_PORT: 3306
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    networks:
+      - wordpress-network
 
 volumes:
   db_data:
+
+networks:
+  wordpress-network:
+    driver: bridge
