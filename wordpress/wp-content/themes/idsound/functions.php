@@ -160,6 +160,7 @@ function add_pages() {
     create_page_if_not_exists('plan-du-site', 'Plan du site');
     create_page_if_not_exists('politique-de-confidentialite', 'Politique de confidentialité');
     create_page_if_not_exists('prix', 'Prix');
+    create_page_if_not_exists('merci', 'Merci');
     create_page_if_not_exists('produits', 'Produits');
     create_page_if_not_exists('v1', 'V1');
     set_homepage_by_slug('accueil');
