@@ -23,7 +23,7 @@
                     <span>Un personnage</span>
                 </div>
                 <div class="price_item_action">
-                    <a href="">S’abonner</a>
+                    <a href="https://buy.stripe.com/test_4gw29H2i06egeEE9AB?prefilled_promo_code=IDSOUNDFREEMIUM">S’abonner</a>
                 </div>
             </div>
 
@@ -41,7 +41,7 @@
                     <span>Deux personnages</span>
                 </div>
                 <div class="price_item_action medium">
-                    <a href="">S’abonner</a>
+                    <a href="https://buy.stripe.com/test_4gw29H2i06egeEE9AB">S’abonner</a>
                 </div>
             </div>
 
@@ -59,7 +59,7 @@
                     <span>Trois personnages</span>
                 </div>
                 <div class="price_item_action pro">
-                    <a href="">S’abonner</a>
+                    <a href="https://buy.stripe.com/test_aEU5lT3m46egaoofZ0">S’abonner</a>
                 </div>
             </div>
 
@@ -77,7 +77,7 @@
                     <span>Personnages illimités</span>
                 </div>
                 <div class="price_item_action proplus">
-                    <a href="">S’abonner</a>
+                    <a href="https://buy.stripe.com/test_eVa5lT7Ck8mo0NO8wA">S’abonner</a>
                 </div>
             </div>
 
@@ -96,7 +96,7 @@
                     <span>Sites illimités</span>
                 </div>
                 <div class="price_item_action ultimate">
-                    <a href="">S’abonner</a>
+                    <a href="https://buy.stripe.com/test_6oE01zbSA468gMMbIL">S’abonner</a>
                 </div>
             </div>
         </div>
