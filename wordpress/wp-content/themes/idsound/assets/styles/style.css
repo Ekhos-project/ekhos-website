@@ -6191,7 +6191,7 @@
 .section-contact#contact .contact_form_input-label b {
   color: red;
 }
-.section-contact#contact .contact_form_input input, .section-contact#contact .contact_form_input textarea {
+.section-contact#contact .contact_form_input input, .section-contact#contact .contact_form_input textarea, .section-contact#contact .contact_form_input select {
   width: 100%;
   padding: 1.8rem 2.4rem;
   box-sizing: border-box;
@@ -6208,16 +6208,16 @@
   text-decoration: none;
 }
 @media (max-width: 1024px) {
-  .section-contact#contact .contact_form_input input, .section-contact#contact .contact_form_input textarea {
+  .section-contact#contact .contact_form_input input, .section-contact#contact .contact_form_input textarea, .section-contact#contact .contact_form_input select {
     font-size: 1.8rem;
   }
 }
 @media (max-width: 767px) {
-  .section-contact#contact .contact_form_input input, .section-contact#contact .contact_form_input textarea {
+  .section-contact#contact .contact_form_input input, .section-contact#contact .contact_form_input textarea, .section-contact#contact .contact_form_input select {
     font-size: 1.7rem;
   }
 }
-.section-contact#contact .contact_form_input input::placeholder, .section-contact#contact .contact_form_input textarea::placeholder {
+.section-contact#contact .contact_form_input input::placeholder, .section-contact#contact .contact_form_input textarea::placeholder, .section-contact#contact .contact_form_input select::placeholder {
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   font-weight: 500;
@@ -6229,12 +6229,12 @@
   font-style: italic;
 }
 @media (max-width: 1024px) {
-  .section-contact#contact .contact_form_input input::placeholder, .section-contact#contact .contact_form_input textarea::placeholder {
+  .section-contact#contact .contact_form_input input::placeholder, .section-contact#contact .contact_form_input textarea::placeholder, .section-contact#contact .contact_form_input select::placeholder {
     font-size: 1.8rem;
   }
 }
 @media (max-width: 767px) {
-  .section-contact#contact .contact_form_input input::placeholder, .section-contact#contact .contact_form_input textarea::placeholder {
+  .section-contact#contact .contact_form_input input::placeholder, .section-contact#contact .contact_form_input textarea::placeholder, .section-contact#contact .contact_form_input select::placeholder {
     font-size: 1.7rem;
   }
 }
