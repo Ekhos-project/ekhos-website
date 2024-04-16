@@ -1,0 +1,51 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+.tools_page_ekhos-ids #idsbody {
+  /* HTML5 display-role reset for older browsers */
+}
+.tools_page_ekhos-ids #idsbody div, .tools_page_ekhos-ids #idsbody span, .tools_page_ekhos-ids #idsbody applet, .tools_page_ekhos-ids #idsbody object, .tools_page_ekhos-ids #idsbody iframe,
+.tools_page_ekhos-ids #idsbody h1, .tools_page_ekhos-ids #idsbody h2, .tools_page_ekhos-ids #idsbody h3, .tools_page_ekhos-ids #idsbody h4, .tools_page_ekhos-ids #idsbody h5, .tools_page_ekhos-ids #idsbody h6, .tools_page_ekhos-ids #idsbody p, .tools_page_ekhos-ids #idsbody blockquote, .tools_page_ekhos-ids #idsbody pre,
+.tools_page_ekhos-ids #idsbody a, .tools_page_ekhos-ids #idsbody abbr, .tools_page_ekhos-ids #idsbody acronym, .tools_page_ekhos-ids #idsbody address, .tools_page_ekhos-ids #idsbody big, .tools_page_ekhos-ids #idsbody cite, .tools_page_ekhos-ids #idsbody code,
+.tools_page_ekhos-ids #idsbody del, .tools_page_ekhos-ids #idsbody dfn, .tools_page_ekhos-ids #idsbody em, .tools_page_ekhos-ids #idsbody img, .tools_page_ekhos-ids #idsbody ins, .tools_page_ekhos-ids #idsbody kbd, .tools_page_ekhos-ids #idsbody q, .tools_page_ekhos-ids #idsbody s, .tools_page_ekhos-ids #idsbody samp,
+.tools_page_ekhos-ids #idsbody small, .tools_page_ekhos-ids #idsbody strike, .tools_page_ekhos-ids #idsbody strong, .tools_page_ekhos-ids #idsbody sub, .tools_page_ekhos-ids #idsbody sup, .tools_page_ekhos-ids #idsbody tt, .tools_page_ekhos-ids #idsbody var,
+.tools_page_ekhos-ids #idsbody b, .tools_page_ekhos-ids #idsbody u, .tools_page_ekhos-ids #idsbody i, .tools_page_ekhos-ids #idsbody center,
+.tools_page_ekhos-ids #idsbody dl, .tools_page_ekhos-ids #idsbody dt, .tools_page_ekhos-ids #idsbody dd, .tools_page_ekhos-ids #idsbody ol, .tools_page_ekhos-ids #idsbody ul, .tools_page_ekhos-ids #idsbody li,
+.tools_page_ekhos-ids #idsbody fieldset, .tools_page_ekhos-ids #idsbody form, .tools_page_ekhos-ids #idsbody label, .tools_page_ekhos-ids #idsbody legend,
+.tools_page_ekhos-ids #idsbody table, .tools_page_ekhos-ids #idsbody caption, .tools_page_ekhos-ids #idsbody tbody, .tools_page_ekhos-ids #idsbody tfoot, .tools_page_ekhos-ids #idsbody thead, .tools_page_ekhos-ids #idsbody tr, .tools_page_ekhos-ids #idsbody th, .tools_page_ekhos-ids #idsbody td,
+.tools_page_ekhos-ids #idsbody article, .tools_page_ekhos-ids #idsbody aside, .tools_page_ekhos-ids #idsbody canvas, .tools_page_ekhos-ids #idsbody details, .tools_page_ekhos-ids #idsbody embed,
+.tools_page_ekhos-ids #idsbody figure, .tools_page_ekhos-ids #idsbody figcaption, .tools_page_ekhos-ids #idsbody footer, .tools_page_ekhos-ids #idsbody header, .tools_page_ekhos-ids #idsbody hgroup,
+.tools_page_ekhos-ids #idsbody menu, .tools_page_ekhos-ids #idsbody nav, .tools_page_ekhos-ids #idsbody output, .tools_page_ekhos-ids #idsbody ruby, .tools_page_ekhos-ids #idsbody section, .tools_page_ekhos-ids #idsbody summary,
+.tools_page_ekhos-ids #idsbody time, .tools_page_ekhos-ids #idsbody mark, .tools_page_ekhos-ids #idsbody audio, .tools_page_ekhos-ids #idsbody video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.tools_page_ekhos-ids #idsbody article, .tools_page_ekhos-ids #idsbody aside, .tools_page_ekhos-ids #idsbody details, .tools_page_ekhos-ids #idsbody figcaption, .tools_page_ekhos-ids #idsbody figure,
+.tools_page_ekhos-ids #idsbody footer, .tools_page_ekhos-ids #idsbody header, .tools_page_ekhos-ids #idsbody hgroup, .tools_page_ekhos-ids #idsbody menu, .tools_page_ekhos-ids #idsbody nav, .tools_page_ekhos-ids #idsbody section {
+  display: block;
+}
+.tools_page_ekhos-ids #idsbody body {
+  line-height: 1;
+}
+.tools_page_ekhos-ids #idsbody ol, .tools_page_ekhos-ids #idsbody ul {
+  list-style: none;
+}
+.tools_page_ekhos-ids #idsbody blockquote, .tools_page_ekhos-ids #idsbody q {
+  quotes: none;
+}
+.tools_page_ekhos-ids #idsbody blockquote:before, .tools_page_ekhos-ids #idsbody blockquote:after,
+.tools_page_ekhos-ids #idsbody q:before, .tools_page_ekhos-ids #idsbody q:after {
+  content: "";
+  content: none;
+}
+.tools_page_ekhos-ids #idsbody table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*# sourceMappingURL=reset.css.map */

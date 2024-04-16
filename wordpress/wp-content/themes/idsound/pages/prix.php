@@ -114,7 +114,7 @@
                 <p>Optez pour plus qu’un produit, choisissez un accompagnement client qui reflète notre engagement envers votre satisfaction.</p>
             </div>
             <div class="accompanied_description_action">
-                <a href="" class="button endicon">Contactez-nous</a>
+                <a href="/contact/" class="button endicon">Contactez-nous</a>
             </div>
         </div>
 
