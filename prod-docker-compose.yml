@@ -20,7 +20,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: /bin/bash -c "php /usr/local/bin/wp-install.php && docker-php-entrypoint php-fpm"
+    #command: /bin/bash -c "php /usr/local/bin/wp-install.php && docker-php-entrypoint php-fpm"
     env_file: .env
     volumes:
       - ./wordpress:/var/www/html
