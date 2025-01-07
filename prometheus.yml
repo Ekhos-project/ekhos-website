@@ -1,0 +1,34 @@
+global:
+  scrape_interval:     15s
+  evaluation_interval: 15s
+  external_labels:
+      monitor: 'my-project'
+
+rule_files:
+  - 'alert.rules'
+
+scrape_configs:
+  - job_name: traefik
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['traefik:8082']
+
+  - job_name: 'prometheus'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['prometheus:9090']
+
+  - job_name: 'nginx-exporter'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['nginx-exporter:9113']
+
+  - job_name: 'phpmyadmin'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['phpmyadmin:3306']
+
+  - job_name: 'php'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['php:9000']

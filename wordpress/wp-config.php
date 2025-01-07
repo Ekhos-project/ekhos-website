@@ -58,6 +58,7 @@ define('AUTH_SALT',        getenv('WORDPRESS_PHRASE'));
 define('SECURE_AUTH_SALT', getenv('WORDPRESS_PHRASE'));
 define('LOGGED_IN_SALT',   getenv('WORDPRESS_PHRASE'));
 define('NONCE_SALT',       getenv('WORDPRESS_PHRASE'));
+define('FS_METHOD', 'direct');
 /**#@-*/
 /**
  * Préfixe de base de données pour les tables de WordPress.

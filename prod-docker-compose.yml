@@ -20,7 +20,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: /bin/bash -c "php /usr/local/bin/wp-install.php && docker-php-entrypoint php-fpm"
+    #command: /bin/bash -c "php /usr/local/bin/wp-install.php && docker-php-entrypoint php-fpm"
     env_file: .env
     volumes:
       - ./wordpress:/var/www/html
@@ -41,10 +41,21 @@ services:
       - traefik_network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.nginxa.rule=Host(`www.kaaz.app`, `kaaz.app`)"
+      - "traefik.http.routers.nginxa.rule=Host(`www.idsound.fr`, `idsound.fr`)"
       - "traefik.http.routers.nginxa.priority=10"
       - "traefik.http.routers.nginxa.entrypoints=websecure"
       - "traefik.http.routers.nginxa.tls.certresolver=myresolver"
+
+  nginx-exporter:
+    image: nginx/nginx-prometheus-exporter:0.8.0
+    command:
+      - '-nginx.scrape-uri=http://nginxa/status'
+    depends_on:
+      - nginxa
+    ports:
+      - "9113:9113"
+    networks:
+      - traefik_network
 
   phpmyadmin:
     depends_on:
@@ -59,13 +70,52 @@ services:
       - traefik_network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.phpmyadmin.rule=Host(`phpmyadmin.kaaz.app`)"
+      - "traefik.http.routers.phpmyadmin.rule=Host(`phpmyadmin.idsound.fr`)"
       - "traefik.http.routers.phpmyadmin.priority=10"
       - "traefik.http.routers.phpmyadmin.entrypoints=websecure"
       - "traefik.http.routers.phpmyadmin.tls.certresolver=myresolver"
 
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    networks:
+      - traefik_network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.prometheus.rule=Host(`prometheus.idsound.fr`)"
+      - "traefik.http.routers.prometheus.priority=10"
+      - "traefik.http.routers.prometheus.entrypoints=websecure"
+      - "traefik.http.routers.prometheus.tls.certresolver=myresolver"
+
+  grafana:
+    image: grafana/grafana:latest
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning/:/etc/grafana/provisioning/
+    environment:
+      GF_SECURITY_DISABLE_INITIAL_ADMIN_CREATION: "true"
+      GF_INSTALL_PLUGINS: grafana-piechart-panel
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: "Admin"
+      GF_AUTH_PROXY_ENABLED: "false"
+      GF_USERS_ALLOW_SIGN_UP: "false"
+    ports:
+      - "3000:3000"
+    networks:
+      - traefik_network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.grafana.rule=Host(`grafana.idsound.fr`)"
+      - "traefik.http.routers.grafana.priority=10"
+      - "traefik.http.routers.grafana.entrypoints=websecure"
+      - "traefik.http.routers.grafana.tls.certresolver=myresolver"
+
 volumes:
   db_data:
+  grafana_data:
 
 networks:
   wordpress-network:

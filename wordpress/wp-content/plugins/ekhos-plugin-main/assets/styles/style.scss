@@ -1,0 +1,36 @@
+@import "functions.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+@font-face {
+  font-family: 'OwnersWide';
+  src: url('/wp-content/plugins/ekhos/assets/fonts/owners-wide.ttf') format('truetype');
+}
+
+.tools_page_ekhos-ids #wpcontent {
+  padding-left: 0;
+  background-color: $color1;
+}
+
+.tools_page_ekhos-ids #wpwrap {
+  background-color: $color1;
+}
+
+.tools_page_ekhos-ids select.max-w-full-select {
+  width: 100%;
+  max-width: 100%;
+}
+
+.tools_page_ekhos-ids #idsbody {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 30px;
+  box-sizing: border-box;
+
+  input[type=file] {
+    padding: 0!important;
+  }
+}
